@@ -2,10 +2,6 @@
 Jin's research and class
 
 <html>
-<head>
-  <title> Jin's home for reseach and CS classes </title>
-  <link rel=stylesheet href="index.css" type="text/css" media=screen>
-</head>
 <body>
 <h1> Jin's Research and Class</h1>
 <hr>

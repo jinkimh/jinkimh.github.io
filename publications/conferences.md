@@ -2,10 +2,7 @@
 layout: default
 title: "International Conferences"
 ---
-
-<hr style="border-color:#444; margin:50px 0;">
-
-
+<hr style="border-color:#000; margin:30px 0;">
 <section class="section">
   <div class="container" markdown="1">
 

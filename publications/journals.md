@@ -3,6 +3,7 @@ layout: default
 title: "International Journals"
 ---
 
+<hr style="border-color:#000; margin:30px 0;">
  
 
 <section class="section">

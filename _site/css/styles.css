@@ -1157,3 +1157,43 @@ body {
   padding-top: calc(60px + 20px);
 }
 
+
+/* ========================= */
+/* Mobile navbar (<= 767px)  */
+/* ========================= */
+@media (max-width: 767px) {
+
+  /* 전체 네비게이션 바 배경/테두리 */
+  .navbar-inverse {
+    background-color: #000;      /* 검은 배경 */
+    border-color: #222;
+  }
+
+  /* 접힌 메뉴 영역의 배경 */
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-form {
+    background-color: #000;      /* 드롭다운도 검은 배경 */
+  }
+
+  /* 로고 텍스트, 메뉴 텍스트 색상 */
+  .navbar-inverse .navbar-brand,
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;                 /* 흰 글자 */
+  }
+
+  /* hover / 선택 시 스타일 */
+  .navbar-inverse .navbar-nav > li > a:hover,
+  .navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: #333;
+  }
+
+  /* 햄버거 버튼 색상 */
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+
+  .navbar-inverse .navbar-toggle {
+    border-color: #fff;
+  }
+}

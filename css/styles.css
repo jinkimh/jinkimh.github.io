@@ -1265,7 +1265,7 @@ body {
 
   /* 각 메뉴 항목 글자를 흰색으로 */
   .navbar-inverse .navbar-nav > li > a {
-    color: #fff !important;
+    color: #000 !important;
   }
 
   /* 터치/호버 시 배경은 살짝 밝게, 글자는 그대로 흰색 */

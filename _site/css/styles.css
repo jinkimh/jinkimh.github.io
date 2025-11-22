@@ -1226,33 +1226,32 @@ body {
 /* ===========================
    Mobile navbar fix
    =========================== */
+/* ===== 모바일 메뉴 색상 수정 (맨 아래에 추가) ===== */
 @media (max-width: 767px) {
 
-  /* 접힌(navbar-toggle) 상태에서 나오는 패널 배경 */
+  /* 펼쳐진 메뉴 전체 박스 배경을 검정으로 */
   .navbar-inverse .navbar-collapse {
-    background-color: #000;   /* 검은색 배경 */
+    background-color: #000 !important;
   }
 
-  /* 각 메뉴 글자 색 */
+  /* 각 메뉴 글자를 흰색으로 */
   .navbar-inverse .navbar-nav > li > a {
-    color: #fff;              /* 흰색 글자 */
+    color: #fff !important;
   }
 
+  /* 메뉴 hover / focus 상태도 잘 보이도록 */
   .navbar-inverse .navbar-nav > li > a:hover,
   .navbar-inverse .navbar-nav > li > a:focus {
-    background-color: #222;   /* 살짝 밝은 검정 */
-    color: #fff;
+    background-color: #222 !important;
+    color: #fff !important;
   }
 
-  /* Publication 같은 드롭다운 안의 항목들 */
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    background-color: #000;
-    color: #fff;
-  }
-
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #222;
-    color: #fff;
+  /* active(선택된) 메뉴도 확실히 보이게 */
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #333 !important;
+    color: #fff !important;
   }
 }
+

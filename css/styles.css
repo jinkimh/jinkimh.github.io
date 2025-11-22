@@ -1159,41 +1159,41 @@ body {
 
 
 /* ========================= */
-/* Mobile navbar (<= 767px)  */
+/* Mobile Navbar Fix (<=767) */
 /* ========================= */
 @media (max-width: 767px) {
 
-  /* 전체 네비게이션 바 배경/테두리 */
-  .navbar-inverse {
-    background-color: #000;      /* 검은 배경 */
-    border-color: #222;
+  /* 전체 모바일 네비 배경 */
+  .navbar-inverse .navbar-collapse {
+    background-color: #000 !important;
+    border-color: #222 !important;
   }
 
-  /* 접힌 메뉴 영역의 배경 */
-  .navbar-inverse .navbar-collapse,
-  .navbar-inverse .navbar-form {
-    background-color: #000;      /* 드롭다운도 검은 배경 */
-  }
-
-  /* 로고 텍스트, 메뉴 텍스트 색상 */
-  .navbar-inverse .navbar-brand,
+  /* 메뉴 항목 글자색 */
   .navbar-inverse .navbar-nav > li > a {
-    color: #fff;                 /* 흰 글자 */
+    color: #fff !important;
+    background-color: transparent !important;
   }
 
-  /* hover / 선택 시 스타일 */
+  /* hover / focus 시 */
   .navbar-inverse .navbar-nav > li > a:hover,
   .navbar-inverse .navbar-nav > li > a:focus {
-    color: #fff;
-    background-color: #333;
+    color: #fff !important;
+    background-color: #333 !important;
   }
 
-  /* 햄버거 버튼 색상 */
+  /* 토글 버튼(햄버거) 아이콘 */
   .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
+  /* 토글 버튼 테두리 */
   .navbar-inverse .navbar-toggle {
-    border-color: #fff;
+    border-color: #fff !important;
+  }
+
+  /* brand 글씨 (혹시 글씨라면) */
+  .navbar-inverse .navbar-brand {
+    color: #fff !important;
   }
 }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Under Construction</title>
+  <title>Photos</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -87,7 +87,7 @@
           </li>
 
           <!-- Research (Dropdown) -->
-          <li class="has-dropdown active">
+          <li class="has-dropdown ">
             <a href="/research/">Research</a>
             <ul class="dropdown">
               <li>
@@ -144,54 +144,144 @@
 
 <!-- Page Content -->
 <style>
-  .uc-container {
-    text-align: center;
-    padding: 120px 20px;
+  /* 사진 페이지 전용 간단 스타일 */
+  .photos-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
     color: #ffffff;
   }
 
-  .uc-icon {
-    font-size: 80px;
-    margin-bottom: 20px;
-    opacity: 0.85;
+  .photos-page .event-block {
+    margin-bottom: 50px;
   }
 
-  .uc-title {
-    font-size: 36px;
-    font-weight: 700;
+  .photos-page .event-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .photos-page .event-meta {
+    font-size: 14px;
+    color: #cccccc;
     margin-bottom: 15px;
   }
 
-  .uc-text {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 680px;
-    margin: 0 auto;
-    opacity: 0.9;
+  .photo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
   }
 
-  .uc-sub {
-    margin-top: 25px;
-    font-size: 15px;
-    opacity: 0.7;
+  .photo-table td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #444;
+    background-color: #111;
+  }
+
+  .photo-table img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .photo-caption {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #dddddd;
+  }
+
+  @media (max-width: 768px) {
+    .photo-table td {
+      display: block;
+      width: 100%;
+    }
   }
 </style>
 
-<div class="uc-container">
-  <div class="uc-icon">🚧</div>
+<section class="page-section photos-page">
+  <div class="container">
 
-  <div class="uc-title">Page Under Construction</div>
+    <div class="heading text-center">
+      <h2>Lab Photos</h2>
+      <p class="section-text">
+        AiX Lab events, competitions, workshops, and daily research moments.
+      </p>
+    </div>
 
-  <p class="uc-text">
-    This page is currently being prepared.  
-    AiX Lab is updating our research portfolio, publications, and project details.
-    Please check back soon for new content.
-  </p>
+    <!-- ====================================================== -->
+    <!-- ① 이벤트 블록 예시 – 필요할 때마다 복사해서 사용하세요 -->
+    <!-- ====================================================== -->
+    <div class="event-block">
+      <h3 class="event-title">2025 RoboRacer Workshop @ GNU</h3>
+      <div class="event-meta">
+        Date: 2025-03-15 · Location: Gyeongsang National University · Category: Robot Racing
+      </div>
 
-  <p class="uc-sub">
-    If you have any questions, feel free to contact the AiX Lab team.
-  </p>
-</div>
+      <table class="photo-table">
+        <tr>
+          <td>
+            <img src="/images/photos/roboracer-2025-01.jpg" alt="RoboRacer Workshop 1">
+            <div class="photo-caption">Opening session &amp; introduction</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-02.jpg" alt="RoboRacer Workshop 2">
+            <div class="photo-caption">Teams preparing their F1TENTH cars</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-03.jpg" alt="RoboRacer Workshop 3">
+            <div class="photo-caption">Track testing &amp; tuning</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-04.jpg" alt="RoboRacer Workshop 4">
+            <div class="photo-caption">Group photo at the end</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ② 또 다른 이벤트 예시 -->
+    <!-- ====================================================== -->
+    <div class="event-block">
+      <h3 class="event-title">Medical AI Meeting with Ophthalmology Dept.</h3>
+      <div class="event-meta">
+        Date: 2025-02-10 · Location: GNU Hospital · Category: Medical AI
+      </div>
+
+      <table class="photo-table">
+        <tr>
+          <td>
+            <img src="/images/photos/medai-2025-01.jpg" alt="Medical AI Meeting 1">
+            <div class="photo-caption">Discussion on OCT datasets</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-02.jpg" alt="Medical AI Meeting 2">
+            <div class="photo-caption">LLM-based clinical decision support</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-03.jpg" alt="Medical AI Meeting 3">
+            <div class="photo-caption">Joint lab members</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-04.jpg" alt="Medical AI Meeting 4">
+            <div class="photo-caption">Closing &amp; next steps</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ③ 새로운 이벤트를 추가하고 싶으면 -->
+    <!--    위의 .event-block 하나를 복사해서 수정하면 됩니다. -->
+    <!-- ====================================================== -->
+
+  </div>
+</section>
 
 
 <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>

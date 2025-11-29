@@ -1,0 +1,145 @@
+---
+layout: default
+nav: photos
+title: "Photos"
+---
+
+<style>
+  /* 사진 페이지 전용 간단 스타일 */
+  .photos-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    color: #ffffff;
+  }
+
+  .photos-page .event-block {
+    margin-bottom: 50px;
+  }
+
+  .photos-page .event-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .photos-page .event-meta {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 15px;
+  }
+
+  .photo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .photo-table td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #444;
+    background-color: #111;
+  }
+
+  .photo-table img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .photo-caption {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #dddddd;
+  }
+
+  @media (max-width: 768px) {
+    .photo-table td {
+      display: block;
+      width: 100%;
+    }
+  }
+</style>
+
+<section class="page-section photos-page">
+  <div class="container">
+
+    <div class="heading text-center">
+      <h2>Lab Photos</h2>
+      <p class="section-text">
+        AiX Lab events, competitions, workshops, and daily research moments.
+      </p>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ① 이벤트 블록 예시 – 필요할 때마다 복사해서 사용하세요 -->
+    <!-- ====================================================== -->
+    <div class="event-block">
+      <h3 class="event-title">2025 RoboRacer Workshop @ GNU</h3>
+      <div class="event-meta">
+        Date: 2025-03-15 · Location: Gyeongsang National University · Category: Robot Racing
+      </div>
+
+      <table class="photo-table">
+        <tr>
+          <td>
+            <img src="/images/photos/roboracer-2025-01.jpg" alt="RoboRacer Workshop 1">
+            <div class="photo-caption">Opening session &amp; introduction</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-02.jpg" alt="RoboRacer Workshop 2">
+            <div class="photo-caption">Teams preparing their F1TENTH cars</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-03.jpg" alt="RoboRacer Workshop 3">
+            <div class="photo-caption">Track testing &amp; tuning</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-04.jpg" alt="RoboRacer Workshop 4">
+            <div class="photo-caption">Group photo at the end</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ② 또 다른 이벤트 예시 -->
+    <!-- ====================================================== -->
+    <div class="event-block">
+      <h3 class="event-title">Medical AI Meeting with Ophthalmology Dept.</h3>
+      <div class="event-meta">
+        Date: 2025-02-10 · Location: GNU Hospital · Category: Medical AI
+      </div>
+
+      <table class="photo-table">
+        <tr>
+          <td>
+            <img src="/images/photos/medai-2025-01.jpg" alt="Medical AI Meeting 1">
+            <div class="photo-caption">Discussion on OCT datasets</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-02.jpg" alt="Medical AI Meeting 2">
+            <div class="photo-caption">LLM-based clinical decision support</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-03.jpg" alt="Medical AI Meeting 3">
+            <div class="photo-caption">Joint lab members</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-04.jpg" alt="Medical AI Meeting 4">
+            <div class="photo-caption">Closing &amp; next steps</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ③ 새로운 이벤트를 추가하고 싶으면 -->
+    <!--    위의 .event-block 하나를 복사해서 수정하면 됩니다. -->
+    <!-- ====================================================== -->
+
+  </div>
+</section>

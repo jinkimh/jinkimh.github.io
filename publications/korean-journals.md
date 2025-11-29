@@ -3,12 +3,14 @@ layout: default
 title: "Korean Journals"
 ---
 
-<hr style="border-color:#000; margin:30px 0;">
-
+<div class="container">
+    <div class="heading text-center">
+      <h2>   Korean Journals </h2>
+    </div>
+  </div> 
 <section class="section">
   <div class="container" markdown="1">
 
-# Korean Journals
 
 ## 2025
 - **Jin Hyun Kim** et al.  

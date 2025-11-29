@@ -2,11 +2,14 @@
 layout: default
 title: "International Conferences"
 ---
-<hr style="border-color:#000; margin:30px 0;">
+<div class="container">
+    <div class="heading text-center">
+      <h2>  International Conferences </h2>
+    </div>
+  </div> 
+
 <section class="section">
   <div class="container" markdown="1">
-
-# International Conferences
 
 ## 2025
 - Seung Ju Baek, Kuk Jin Jang, Sooyong Jang, Hyonyoung Choi, Minwook Kwon, Yong Seop Han, Seongjin Lee, **Kim, Jin Hyun**, and Insup Lee.  

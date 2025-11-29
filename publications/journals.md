@@ -3,13 +3,15 @@ layout: default
 title: "International Journals"
 ---
 
-<hr style="border-color:#000; margin:30px 0;">
- 
+  <div class="container">
+    <div class="heading text-center">
+      <h2> International Journals </h2>
+    </div>
+  </div> 
 
 <section class="section">
   <div class="container" markdown="1">
 
-# International Journals
 
 ## 2025
 - Soomin Cho, Inhye Kang, and **Kim, Jin Hyun**.  

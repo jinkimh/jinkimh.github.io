@@ -3,7 +3,12 @@ layout: default
 title: "Korean Conferences"
 ---
 
-<hr style="border-color:#000; margin:30px 0;">
+  <div class="container">
+    <div class="heading text-center">
+      <h2> Korean Conferences </h2>
+    </div>
+  </div> 
+
 
 <section class="section">
   <div class="container" markdown="1">

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Cyber Safety Lab@GNU</title>
+  <title>AiX Lab@ GNU</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -40,11 +40,12 @@
 
         <!-- Logo -->
         <a href="/" class="navbar-brand logo">
-          <img src="/images/logo_new.jpg" alt="Cyber Safety Lab" />
+          <img src="/images/aix_lab_logo.png" alt="AiX LabLab" />
         </a>
       </div>
 
       <!-- Navigation -->
+
       <div id="main-nav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="mainNav">
 
@@ -57,35 +58,60 @@
           <li >
             <a href="/portfolio.html">Academy Portfolio</a>
           </li>
+          
+          <!-- Publication (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="#" onclick="return false;">Publication</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/publications/journals">
+                  Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/conferences">
+                  Conferences
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-journals">
+                  Korean Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-conferences">
+                  Korean Conferences
+                </a>
+              </li>
+            </ul>
+          </li>
 
-      
-        <!-- Publication (Dropdown) -->
-        <li class="has-dropdown ">
-        <a href="#" onclick="return false;">Publication</a>
-        <ul class="dropdown">
-            <li>
-            <a href="/publications/journals">
-                Journals
-            </a>
-            </li>
-            <li>
-            <a href="/publications/conferences">
-                Conferences
-            </a>
-            </li>
-            <li>
-            <a href="/publications/korean-journals">
-                Korean Journals
-            </a>
-            </li>
-            <li>
-            <a href="/publications/korean-conferences">
-                Korean Conferences
-            </a>
-            </li>
-        </ul>
-        </li>
-
+          <!-- Research (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/research/">Research</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/research/formal-methods">
+                  Formal Methods
+                </a>
+              </li>
+              <li>
+                <a href="/research/medical-ai">
+                  Medical AI
+                </a>
+              </li>
+              <li>
+                <a href="/research/robot-racing">
+                  Robot Racing
+                </a>
+              </li>
+              <li>
+                <a href="/research/etc">
+                  ETC
+                </a>
+              </li>
+            </ul>
+          </li>
 
           <!-- Project -->
           <li >
@@ -101,8 +127,10 @@
           <li >
             <a href="/news.html">News</a>
           </li>
+
         </ul>
       </div>
+
     </nav>
   </div>
 </header>
@@ -116,37 +144,42 @@
 
     <div id="da-slider" class="da-slider">
 
-      <!-- Slide 1 -->
-      <div class="da-slide">
-        <h2>Trustworthiness of AI</h2>
-        <p>We develop mathematically grounded methods to ensure the safety, correctness, and reliability of AI systems.</p>
-        <a href="/about.html" class="da-link button-outline">Learn More</a>
-        <div class="da-img"></div>
-      </div>
+    <!-- Slide 1 -->
+    <div class="da-slide">
+      <h2>Formal Methods</h2>
+      <p>We develop mathematically grounded verification and runtime assurance methods to guarantee the safety and correctness of AI-driven systems.</p>
+      <a href="/about.html" class="da-link button-outline">Learn More</a>
+      <div class="da-img"></div>
+    </div>
 
-      <!-- Slide 2 -->
-      <div class="da-slide">
-        <h2>X-Small Language Models</h2>
-        <p>We build compact, trustworthy domain-specific LLMs that achieve high interpretability and safer decision-making.</p>
-        <a href="/portfolio.html" class="da-link button-outline">Ophtimus Series</a>
-        <div class="da-img"></div>
-      </div>
+    <!-- Slide 2 -->
+    <div class="da-slide">
+      <h2>Safe LLM</h2>
+      <p>We build compact and trustworthy domain-specific language models with improved interpretability, alignment, and robust decision-making.</p>
+      <a href="/portfolio.html" class="da-link button-outline">LLM Portfolio</a>
+      <div class="da-img"></div>
+    </div>
 
-      <!-- Slide 3 -->
-      <div class="da-slide">
-        <h2>Medical AI</h2>
-        <p>Our medical AI research focuses on ophthalmology, clinical decision support, and robust diagnostic modeling.</p>
-        <a href="/projects.html" class="da-link button-outline">See Projects</a>
-        <div class="da-img"></div>
-      </div>
+    <!-- Slide 3 -->
+    <div class="da-slide">
+      <h2>Medical AI</h2>
+      <p>
+        Our research spans ophthalmology, clinical decision support, and noise-robust diagnostic modeling, 
+        powered by domain-specialized LLMs for safer and more interpretable medical reasoning.
+      </p>
+      <a href="/projects.html" class="da-link button-outline">See Projects</a>
+      <div class="da-img"></div>
+    </div>
 
-      <!-- Slide 4 -->
-      <div class="da-slide">
-        <h2>Robot AI</h2>
-        <p>We study safe autonomous driving, F1TENTH robotics, and real-time AI behavior under uncertainty.</p>
-        <a href="/team.html" class="da-link button-outline">Our AV Team</a>
-        <div class="da-img"></div>
-      </div>
+
+    <!-- Slide 4 -->
+    <div class="da-slide">
+      <h2>Robot Racing</h2>
+      <p>We explore autonomous racing, RoboRacer(F1TENTH) robotics, and safe high-speed navigation under real-world uncertainty.</p>
+      <a href="/team.html" class="da-link button-outline">Racing Lab</a>
+      <div class="da-img"></div>
+    </div>
+
 
       <nav class="da-arrows">
         <span class="da-arrows-prev"></span>
@@ -167,7 +200,7 @@
     <div class="heading text-center">
       <h2>About Us</h2>
       <p>
-The Cyber Safety Lab at Gyeongsang National University is committed to advancing the safety and trustworthiness of modern intelligent systems.
+The AiX LabLab at Gyeongsang National University is committed to advancing the safety and trustworthiness of modern intelligent systems.
 We develop methods to ensure the reliability of CPS, medical AI, and autonomous driving AI through formal verification and practical software engineering.
       </p>
     </div>
@@ -204,54 +237,58 @@ We develop methods to ensure the reliability of CPS, medical AI, and autonomous 
   </div>
 </section>
 
-<section id="news" class="page-section team-member">
+<section id="news" class="page-section team-member news-section">
   <div class="container">
 
     <div class="heading text-center">
       <h2>News</h2>
-      <p>Updates from the Cyber Safety Lab, including research progress, publications, and people-related achievements.</p>
+      <p>Updates from the AiX Lab, including research progress, publications, and people-related achievements.</p>
     </div>
 
+    <div class="news-list">
+        
+          <article class="news-card">
+            <h3 class="news-card-title">People & Alumni News</h3>
 
-    <!-- ============================= -->
-    <!-- 📘 Research & Publications   -->
-    <!-- ============================= -->
-    <div class="news-category">
-      <div class="news-block">
-        <h3>Research Highlights</h3>
-        <p>
-          The Cyber Safety Lab continues advancing research in AI Safety, Medical AI,
-          and Cyber-Physical Systems. Ongoing work includes the preparation of
-          <strong>four SCI(E) publications</strong> expected to appear in 2025.
-        </p>
+            
+              <p class="news-card-meta">AiX Lab · Alumni & Careers</p>
+            
+
+            <div class="news-card-body">
+              <ul>
+  <li>
+    <p>Minwook Kwon (M.S., Aug. 2025) joined
+<a href="https://www.publicai.co.kr/">Public AI</a> as an AI engineer.</p>
+  </li>
+  <li>
+    <p>Seungju Baek (M.S., Mar. 2025) joined
+<a href="https://www.saltlux.com/">Saltlux</a>, contributing significantly
+to our <strong>Ophtimus</strong> research series.</p>
+  </li>
+</ul>
+
+            </div>
+          </article>
+        
+          <article class="news-card">
+            <h3 class="news-card-title">Research Highlights</h3>
+
+            
+              <p class="news-card-meta">AiX Lab · Research Highlights 2025</p>
+            
+
+            <div class="news-card-body">
+              <p>The AiX Lab continues advancing research in AI Safety, Medical AI,
+and reliable machine learning systems.
+Our recent achievements include four SCI(E) publications in 2025, spanning
+formally verified CPS code generation, ophthalmic medical AI,
+video-based gait anomaly detection, and domain-specific large language models.</p>
+
+            </div>
+          </article>
+        
       </div>
-
-    </div>
-
-
-    <!-- ============================= -->
-    <!-- 👥 People / Alumni News       -->
-    <!-- ============================= -->
-    <div class="news-category">
     
-
-      <div class="news-block">
-        <h3>People & Alumni News</h3>
-        <ul>
-          <li>
-            Minwook Kwon (M.S., Aug. 2025) joined
-            <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a>
-            as an AI engineer.
-          </li>
-
-          <li>
-            Seungju Baek (M.S., Mar. 2025) joined
-            <a href="https://www.saltlux.com/" target="_blank">Saltlux</a>,
-            contributing significantly to our <strong>Ophtimus</strong> research series.
-          </li>
-        </ul>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -307,7 +344,7 @@ We develop methods to ensure the reliability of CPS, medical AI, and autonomous 
 
 	<div class="col-sm-5">
 	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315.40486550591197!2d128.0983068!3d35.1544417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356f3284b0e293b5%3A0x1db43b77fffbe671!2z6rK96riw64-EIOywqeyekOyEvO2VnOuptCDtj6zsm5AgSUMU7IiY7Jyg7KCV!5e0!3m2!1sko!2skr!4v1732271558000!5m2!1sko!2skr"
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.01115865905!2d128.09058067714597!3d35.15634245862682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efb00259a0d23%3A0x1de6bcc219b626ae!2z6rK97IOB6rWt66a964yA7ZWZ6rWQIElDVOycte2VqeyEvO2EsA!5e0!3m2!1sko!2skr!4v1764433290357!5m2!1sko!2skr"
 		width="100%"
 		height="300"
 		style="border:0;"
@@ -339,25 +376,29 @@ We develop methods to ensure the reliability of CPS, medical AI, and autonomous 
       </div>
 
       <div class="col-sm-4">
-        <form method="post" action="" id="contactfrm" role="form">
+        <form method="POST" action="https://formspree.io/f/movoovay">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
           </div>
 
           <div class="form-group">
             <label for="comments">Comments</label>
-            <textarea name="comment" class="form-control" id="comments" rows="3" placeholder="Enter your message…"></textarea>
+            <textarea name="message" class="form-control" id="comments" rows="3" placeholder="Enter your message…" required></textarea>
           </div>
 
-          <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+          <button name="submit" type="submit" class="btn btn-lg btn-primary">Submit</button>
+
+          <!-- Optional: 메시지 전송 성공/실패 표시 -->
           <div class="result"></div>
         </form>
+
+
       </div>
 
     </div>

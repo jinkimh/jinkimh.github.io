@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cyber Safety Lab@GNU"
+title: "AiX Lab@ GNU"
 nav: home
 ---
 
@@ -10,37 +10,42 @@ nav: home
 
     <div id="da-slider" class="da-slider">
 
-      <!-- Slide 1 -->
-      <div class="da-slide">
-        <h2>Trustworthiness of AI</h2>
-        <p>We develop mathematically grounded methods to ensure the safety, correctness, and reliability of AI systems.</p>
-        <a href="/about.html" class="da-link button-outline">Learn More</a>
-        <div class="da-img"></div>
-      </div>
+    <!-- Slide 1 -->
+    <div class="da-slide">
+      <h2>Formal Methods</h2>
+      <p>We develop mathematically grounded verification and runtime assurance methods to guarantee the safety and correctness of AI-driven systems.</p>
+      <a href="/about.html" class="da-link button-outline">Learn More</a>
+      <div class="da-img"></div>
+    </div>
 
-      <!-- Slide 2 -->
-      <div class="da-slide">
-        <h2>X-Small Language Models</h2>
-        <p>We build compact, trustworthy domain-specific LLMs that achieve high interpretability and safer decision-making.</p>
-        <a href="/portfolio.html" class="da-link button-outline">Ophtimus Series</a>
-        <div class="da-img"></div>
-      </div>
+    <!-- Slide 2 -->
+    <div class="da-slide">
+      <h2>Safe LLM</h2>
+      <p>We build compact and trustworthy domain-specific language models with improved interpretability, alignment, and robust decision-making.</p>
+      <a href="/portfolio.html" class="da-link button-outline">LLM Portfolio</a>
+      <div class="da-img"></div>
+    </div>
 
-      <!-- Slide 3 -->
-      <div class="da-slide">
-        <h2>Medical AI</h2>
-        <p>Our medical AI research focuses on ophthalmology, clinical decision support, and robust diagnostic modeling.</p>
-        <a href="/projects.html" class="da-link button-outline">See Projects</a>
-        <div class="da-img"></div>
-      </div>
+    <!-- Slide 3 -->
+    <div class="da-slide">
+      <h2>Medical AI</h2>
+      <p>
+        Our research spans ophthalmology, clinical decision support, and noise-robust diagnostic modeling, 
+        powered by domain-specialized LLMs for safer and more interpretable medical reasoning.
+      </p>
+      <a href="/projects.html" class="da-link button-outline">See Projects</a>
+      <div class="da-img"></div>
+    </div>
 
-      <!-- Slide 4 -->
-      <div class="da-slide">
-        <h2>Robot AI</h2>
-        <p>We study safe autonomous driving, F1TENTH robotics, and real-time AI behavior under uncertainty.</p>
-        <a href="/team.html" class="da-link button-outline">Our AV Team</a>
-        <div class="da-img"></div>
-      </div>
+
+    <!-- Slide 4 -->
+    <div class="da-slide">
+      <h2>Robot Racing</h2>
+      <p>We explore autonomous racing, RoboRacer(F1TENTH) robotics, and safe high-speed navigation under real-world uncertainty.</p>
+      <a href="/team.html" class="da-link button-outline">Racing Lab</a>
+      <div class="da-img"></div>
+    </div>
+
 
       <nav class="da-arrows">
         <span class="da-arrows-prev"></span>
@@ -61,7 +66,7 @@ nav: home
     <div class="heading text-center">
       <h2>About Us</h2>
       <p>
-The Cyber Safety Lab at Gyeongsang National University is committed to advancing the safety and trustworthiness of modern intelligent systems.
+The AiX LabLab at Gyeongsang National University is committed to advancing the safety and trustworthiness of modern intelligent systems.
 We develop methods to ensure the reliability of CPS, medical AI, and autonomous driving AI through formal verification and practical software engineering.
       </p>
     </div>
@@ -98,54 +103,67 @@ We develop methods to ensure the reliability of CPS, medical AI, and autonomous 
   </div>
 </section>
 
-<section id="news" class="page-section team-member">
+<section id="news" class="page-section team-member news-section">
   <div class="container">
 
     <div class="heading text-center">
       <h2>News</h2>
-      <p>Updates from the Cyber Safety Lab, including research progress, publications, and people-related achievements.</p>
+      <p>Updates from the AiX Lab, including research progress, publications, and people-related achievements.</p>
     </div>
 
+    {%- comment -%}
+      news 컬렉션 문서 가져오기 (Jekyll 버전에 따라 site.news 또는 site.collections.news.docs 사용)
+    {%- endcomment -%}
+    {% assign news_docs = site.news | default: site.collections.news.docs | default: empty %}
 
-    <!-- ============================= -->
-    <!-- 📘 Research & Publications   -->
-    <!-- ============================= -->
-    <div class="news-category">
-      <div class="news-block">
-        <h3>Research Highlights</h3>
-        <p>
-          The Cyber Safety Lab continues advancing research in AI Safety, Medical AI,
-          and Cyber-Physical Systems. Ongoing work includes the preparation of
-          <strong>four SCI(E) publications</strong> expected to appear in 2025.
-        </p>
+    {% if news_docs and news_docs != empty %}
+      {%- assign sorted_news = news_docs | sort: "date" | reverse -%}
+
+      <div class="news-list">
+        {% for item in sorted_news %}
+          <article class="news-card">
+            <h3 class="news-card-title">{{ item.title }}</h3>
+
+            {% if item.meta %}
+              <p class="news-card-meta">{{ item.meta }}</p>
+            {% endif %}
+
+            <div class="news-card-body">
+              {{ item.content | markdownify }}
+            </div>
+          </article>
+        {% endfor %}
       </div>
+    {% else %}
+      <div class="news-list">
+        <article class="news-card">
+          <h3 class="news-card-title">Research Highlights</h3>
+          <p class="news-card-body">
+            The AiX Lab continues advancing research in AI Safety, Medical AI,
+            and Cyber-Physical Systems. Ongoing work includes the preparation of
+            <strong>four SCI(E) publications</strong> expected to appear in 2025.
+          </p>
+        </article>
 
-    </div>
-
-
-    <!-- ============================= -->
-    <!-- 👥 People / Alumni News       -->
-    <!-- ============================= -->
-    <div class="news-category">
-    
-
-      <div class="news-block">
-        <h3>People & Alumni News</h3>
-        <ul>
-          <li>
-            Minwook Kwon (M.S., Aug. 2025) joined
-            <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a>
-            as an AI engineer.
-          </li>
-
-          <li>
-            Seungju Baek (M.S., Mar. 2025) joined
-            <a href="https://www.saltlux.com/" target="_blank">Saltlux</a>,
-            contributing significantly to our <strong>Ophtimus</strong> research series.
-          </li>
-        </ul>
+        <article class="news-card">
+          <h3 class="news-card-title">People & Alumni News</h3>
+          <div class="news-card-body">
+            <ul>
+              <li>
+                Minwook Kwon (M.S., Aug. 2025) joined
+                <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a>
+                as an AI engineer.
+              </li>
+              <li>
+                Seungju Baek (M.S., Mar. 2025) joined
+                <a href="https://www.saltlux.com/" target="_blank">Saltlux</a>,
+                contributing significantly to our <strong>Ophtimus</strong> research series.
+              </li>
+            </ul>
+          </div>
+        </article>
       </div>
-    </div>
+    {% endif %}
 
   </div>
 </section>
@@ -201,7 +219,7 @@ We develop methods to ensure the reliability of CPS, medical AI, and autonomous 
 
 	<div class="col-sm-5">
 	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315.40486550591197!2d128.0983068!3d35.1544417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356f3284b0e293b5%3A0x1db43b77fffbe671!2z6rK96riw64-EIOywqeyekOyEvO2VnOuptCDtj6zsm5AgSUMU7IiY7Jyg7KCV!5e0!3m2!1sko!2skr!4v1732271558000!5m2!1sko!2skr"
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.01115865905!2d128.09058067714597!3d35.15634245862682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efb00259a0d23%3A0x1de6bcc219b626ae!2z6rK97IOB6rWt66a964yA7ZWZ6rWQIElDVOycte2VqeyEvO2EsA!5e0!3m2!1sko!2skr!4v1764433290357!5m2!1sko!2skr"
 		width="100%"
 		height="300"
 		style="border:0;"
@@ -233,25 +251,29 @@ We develop methods to ensure the reliability of CPS, medical AI, and autonomous 
       </div>
 
       <div class="col-sm-4">
-        <form method="post" action="" id="contactfrm" role="form">
+        <form method="POST" action="https://formspree.io/f/movoovay">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
           </div>
 
           <div class="form-group">
             <label for="comments">Comments</label>
-            <textarea name="comment" class="form-control" id="comments" rows="3" placeholder="Enter your message…"></textarea>
+            <textarea name="message" class="form-control" id="comments" rows="3" placeholder="Enter your message…" required></textarea>
           </div>
 
-          <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+          <button name="submit" type="submit" class="btn btn-lg btn-primary">Submit</button>
+
+          <!-- Optional: 메시지 전송 성공/실패 표시 -->
           <div class="result"></div>
         </form>
+
+
       </div>
 
     </div>

@@ -1,0 +1,12 @@
+---
+title: "Research Highlights"
+date: 2025-01-01
+category: "Research"
+meta: "AiX Lab · Research Highlights 2025"
+---
+
+The AiX Lab continues advancing research in AI Safety, Medical AI,
+and reliable machine learning systems.
+Our recent achievements include four SCI(E) publications in 2025, spanning
+formally verified CPS code generation, ophthalmic medical AI,
+video-based gait anomaly detection, and domain-specific large language models.

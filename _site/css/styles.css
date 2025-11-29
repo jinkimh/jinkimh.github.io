@@ -6,6 +6,10 @@ License: Free to use for personal and commercial, but you need to place back lin
 */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,900,500);
 
+/* ==========================================================
+   RESET & TYPOGRAPHY
+   ========================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -48,25 +52,6 @@ h3 {
     font-size: 2em;
 }
 
-.button-outline {
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    vertical-align: middle;
-    zoom: 1;
-    color: #fff;
-    padding: 10px 25px;
-    border: 2px solid #fff;
-    border-radius: 0px;
-    font-size: 16px;
-    font-weight: 400;
-    background: rgba(255,255,255,0.15);
-}
-
-    .button-outline:hover {
-        color: #fff;
-        background: rgba(255,255,255,0.35);
-    }
-
 a {
     color: #1371AF;
     text-decoration: none;
@@ -78,22 +63,55 @@ a {
     transition: all 0.2s linear;
 }
 
-    a:hover {
-        color: #2593DB;
-        text-decoration: none;
-    }
+a:hover {
+    color: #2593DB;
+    text-decoration: none;
+}
+
+/* ==========================================================
+   BUTTONS / FORMS / UTILITIES
+   ========================================================== */
+
+.button-outline {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(255,255,255,0.15);
+}
+
+.button-outline:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.35);
+}
 
 .btn {
     border: 0px;
     border-radius: 0px;
+    font-weight: 200;
 }
 
-    .btn:hover {
-        background: #2593DB;
-    }
+.btn:hover {
+    background: #2593DB;
+}
 
 .btn-primary {
     background: #1371AF;
+}
+
+.btn-dark {
+    background: #444;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #000;
+    color: #fff;
 }
 
 .form-control {
@@ -104,11 +122,13 @@ a {
     margin: 30px 0;
 }
 
-.copyright {
-    color: #6D6D6D;
-    background: #202527;
-    padding: 20px 0;
+hr {
+    border-color: #ddd;
 }
+
+/* ==========================================================
+   LAYOUT / GLOBAL
+   ========================================================== */
 
 #top {
     position: relative;
@@ -128,149 +148,45 @@ a {
     border-radius: 10px;
 }
 
-    .tray .fa {
-        color: #1371AF;
-        display: block;
-        text-align: center;
-        font-size: 3em;
-    }
-/* Header 
-----------------------------------------------*/
-#main-nav {
-    background: white;
-}
-
-.header {
-    position: fixed;
-    width: 100%;
-    background: transparent;
-    z-index: 10;
-    border-radius: 0;
-    /*  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border-top: 2px solid #1371AF;*/
-}
-
-    .header .navbar-brand {
-        margin-left: 15px;
-    }
-
-.navbar-inverse .navbar-toggle {
-    border-color: #1371AF;
-    background-color: #1371AF;
-}
-
-    .navbar-inverse .navbar-toggle .icon-bar {
-        /*background-color: #1371AF;*/
-    }
-
-    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-        background: #1371AF;
-    }
-
-        .navbar-inverse .navbar-toggle:hover .icon-bar {
-            background: #fff;
-        }
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+.tray .fa {
     color: #1371AF;
-}
-
-.navbar-toggle {
-}
-/*----Nav ----*/
-.header .navbar-brand {
-    float: left;
-    padding: 16px 15px;
-    line-height: 18px;
-    height: 50px;
-    /*color:#1371AF;*/
-}
-
-.navbar-brand b {
-    color: #1371AF;
-}
-
-.logo {
-    font-size: 2.2em;
-    text-shadow: none;
-}
-
-    .logo:hover {
-        color: #5A5A5A;
-    }
-
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-    color: #2593DB;
-    box-shadow: none;
-}
-
-.header .navbar {
-    margin: 0;
-    background: #fff;
-    border: 0;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #858585;
-    font-size: 1.2em;
-}
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #1371AF;
-    background: none;
-}
-
-.navbar-nav > li:hover, .navbar-nav > li a:hover {
-    color: #1371AF;
-}
-
-.header .navbar-nav > li > a {
-    padding: 25px 18px;
-}
-
-.header .navbar, .navbar-inverse {
-    background: none;
+    display: block;
+    text-align: center;
+    font-size: 3em;
 }
 
 .page-section {
     width: 100%;
     height: auto;
-    padding: 0 0 0 0;
+    padding: 0;
 }
 
-    .page-section h1 {
-        font-size: 3.5em;
-        margin: 90px 0 30px;
-        line-height: 1.2em;
-    }
+.page-section h1 {
+    font-size: 3.5em;
+    margin: 90px 0 30px;
+    line-height: 1.2em;
+}
 
-        .page-section h1 span {
-            font-weight: 200;
-        }
+.page-section h1 span {
+    font-weight: 200;
+}
 
-    .page-section h2 {
-        color: #1371AF;
-    }
+.page-section h2 {
+    color: #1371AF;
+}
 
-    .page-section p {
-        font-size: 1.1em;
-        line-height: 1.6em;
-    }
+.page-section p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
 
 .darkBg {
     background: #2d3538;
 }
 
-    .darkBg h2 {
-    }
-
-    .darkBg h3 {
-        color: #CACACA;
-    }
-
-    .darkBg .media {
-        margin-bottom: 20px;
-    }
+.darkBg .media {
+    margin-bottom: 20px;
+}
 
 #services .fa {
     color: #E0E0E0;
@@ -296,14 +212,140 @@ a {
 .img-circle {
     border-radius: 5%;
 }
-/*--- Banner ----*/
+
+.heading {
+    padding-bottom: 30px;
+}
+
+.heading p {
+    font-size: 1.2em;
+}
+
+.pdingBtm30 {
+    padding-bottom: 30px;
+}
+
+.copyright {
+    color: #6D6D6D;
+    background: #202527;
+    padding: 20px 0;
+}
+
+.socialIcons {
+    float: left;
+    margin-right: 20px;
+}
+
+.socialIcons li {
+    list-style: none;
+    display: inline;
+    margin-right: 6px;
+}
+
+/* ==========================================================
+   HEADER / NAVBAR
+   ========================================================== */
+
+#main-nav {
+    background: white;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+    border-radius: 0;
+}
+
+.header .navbar-brand {
+    float: left;
+    padding: 16px 15px;
+    line-height: 18px;
+    height: 50px;
+}
+
+.navbar-brand b {
+    color: #1371AF;
+}
+
+.logo {
+    font-size: 2.2em;
+    text-shadow: none;
+}
+
+.logo:hover {
+    color: #5A5A5A;
+}
+
+.header .navbar {
+    margin: 0;
+    background: #fff;
+    border: 0;
+}
+
+.header .navbar, 
+.navbar-inverse {
+    background: none;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+    color: #2593DB;
+    box-shadow: none;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #1371AF;
+    background-color: #1371AF;
+}
+
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+    background: #1371AF;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+    background: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #858585;
+    font-size: 1.2em;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #1371AF;
+}
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #1371AF;
+    background: none;
+}
+
+.navbar-nav > li:hover, 
+.navbar-nav > li a:hover {
+    color: #1371AF;
+}
+
+.header .navbar-nav > li > a {
+    padding: 25px 18px;
+}
+
+/* ==========================================================
+   BANNER
+   ========================================================== */
+
 #overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: 0;
     background-size: 2px 100%;
-    background: url("../images/overlay.png") rgba(0,0,0,.6) !IMPORTANT;
+    background: url("../images/overlay.png") rgba(0,0,0,.6) !important;
 }
 
 .banner-container {
@@ -314,7 +356,6 @@ a {
     max-height: 600px;
     height: 600px;
     background: #0d1836 url("../images/banner-bg.jpg") left bottom no-repeat;
-    background-size: 100% 100%;
     background-size: cover;
 }
 
@@ -334,93 +375,62 @@ a {
     z-index: 3;
 }
 
-    .banner-content h2 {
-        color: #fff;
-        font-size: 3.5em;
-        margin: 2% 0 30px;
-        line-height: 1.2em;
-    }
-
-    .banner-content p {
-        font-size: 1.9em;
-        font-weight: normal;
-        color: #B9B9B9;
-    }
-
-.sub-heading {
-    padding: 15px 0;
-}
-
-    .sub-heading h2 {
-        font-size: 25px;
-        margin: 15px 0 8px !important;
-    }
-
-    .sub-heading p {
-        color: #5A5A5A;
-    }
-
-.heading {
-    padding-bottom: 30px;
-}
-
-    .heading p {
-        font-size: 1.2em;
-    }
-
-.pdingBtm30 {
-    padding-bottom: 30px;
-}
-/* Services
-    -------------------------------------------------*/
-.media-heading {
+.banner-content h2 {
     color: #fff;
+    font-size: 3.5em;
+    margin: 2% 0 30px;
+    line-height: 1.2em;
 }
-/* Team
-    ---------------------------------------------------*/
+
+.banner-content p {
+    font-size: 1.9em;
+    font-weight: normal;
+    color: #B9B9B9;
+}
+
+/* ==========================================================
+   TEAM
+   ========================================================== */
+
 .team-member {
     margin-bottom: 15px;
 }
 
-    .team-member .designation {
-        margin-top: 5px;
-        display: block;
-        font-size: 13px;
-    }
+.team-member .designation {
+    margin-top: 5px;
+    display: block;
+    font-size: 13px;
+}
 
-    .team-member .member-img img {
-        max-width: 250px;
-        margin: 0 auto;
-        /*border:2px #D3D3D3 solid;*/
-    }
+.team-member .member-img img {
+    max-width: 250px;
+    margin: 0 auto;
+}
 
-    .team-member h3 {
-        font-size: 22px;
-        line-height: 32px;
-        margin: 10px 0 0 15px;
-        /*text-align:center;*/
-    }
+.team-member h3 {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 10px 0 0 15px;
+}
 
-    .team-member .pos {
-        display: block;
-        color: #fff;
-        margin: 0 0 0 15px;
-        /*text-align:center;*/
-    }
+.team-member .pos {
+    display: block;
+    color: #fff;
+    margin: 0 0 0 15px;
+}
 
-    .team-member .contact a {
-        padding: 0 8px;
-    }
+.team-member .contact a {
+    padding: 0 8px;
+}
 
 .descrition {
     min-height: 90px;
-    /*text-align: center;*/
-    /*border-bottom: 1px solid #dadde2;*/
     padding: 5px 15px;
 }
 
-
-/* ------- */
+/* ==========================================================
+   PORTFOLIO
+   ========================================================== */
 
 .isotopeWrapper article {
     margin-bottom: 30px;
@@ -431,24 +441,24 @@ a {
 }
 
 #portfolio article p {
-    margin-bottom: 1.45em; /*set next row on the baseline*/
+    margin-bottom: 1.45em;
 }
 
 nav#filter {
     margin-bottom: 1.5em;
 }
 
-    nav#filter li {
-        display: inline-block;
-        margin: 0 0 0 5px;
-    }
+nav#filter li {
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
 
-    nav#filter a {
-        padding: 4px 12px;
-        line-height: 20px;
-        border: 1px solid #1371AF;
-        text-decoration: none;
-    }
+nav#filter a {
+    padding: 4px 12px;
+    line-height: 20px;
+    border: 1px solid #1371AF;
+    text-decoration: none;
+}
 
 .current {
     background: #1371AF;
@@ -468,23 +478,23 @@ nav#filter {
     transition: all 0.2s ease-in-out;
 }
 
-    .portfolio-item img {
-        -webkit-transition: all 300ms linear;
-        -moz-transition: all 300ms linear;
-        -o-transition: all 300ms linear;
-        -ms-transition: all 300ms linear;
-        transition: all 300ms linear;
-    }
+.portfolio-item img {
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
 
-    .portfolio-item .portfolio-desc {
-        display: block;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        color: rgba(220, 220, 220);
-    }
+.portfolio-item .portfolio-desc {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: rgba(220, 220, 220);
+}
 
 .fancybox-overlay {
     background: rgba(0, 0, 0, 0.64);
@@ -504,10 +514,9 @@ nav#filter {
     display: block;
 }
 
-    .portfolio-item .portfolio-desc a:hover {
-        /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);*/
-        text-decoration: none;
-    }
+.portfolio-item .portfolio-desc a:hover {
+    text-decoration: none;
+}
 
 .portfolio-item .portfolio-desc .folio-info {
     top: -20px;
@@ -524,8 +533,6 @@ nav#filter {
     top: 5px;
 }
 
-
-
 .portfolio-item .portfolio-desc .folio-info h5 {
     text-transform: uppercase;
     text-align: center;
@@ -538,97 +545,9 @@ nav#filter {
     font-size: 12px;
 }
 
-.btn {
-    font-weight: 200;
-}
-
-.btn-dark {
-    background: #444;
-    color: #fff;
-}
-
-    .btn-dark:hover {
-        background: #000;
-        color: #fff;
-    }
-
-.back-to-top {
-    display: inline-block;
-    clear: both;
-    background: #fff;
-    color: #333;
-    padding: 0 10px 5px;
-    margin: 20px 0 0;
-    text-shadow: none;
-}
-
-    .back-to-top:hover {
-        background: #333;
-        color: #fff;
-        text-decoration: none;
-    }
-
-hr {
-    border-color: #ddd;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-#navigation {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background: #ffffff;
-    box-shadow: 0 10px 10px -10px #000000;
-}
-
-    #navigation > li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-        #navigation > li > a {
-            margin: 1px;
-            color: #000000;
-            background: #cccccc;
-            display: block;
-            padding: 5px;
-            text-decoration: none;
-            transition: all 400ms;
-        }
-
-            #navigation > li > a.current,
-            #navigation > li:hover > a {
-                background: #999999;
-            }
-
-.pageSection {
-    min-height: 600px;
-    padding: 20px;
-    background: #dddddd;
-}
-
-    .pageSection:nth-child(odd) {
-        background: #eeeeee;
-    }
-
-.socialIcons {
-    float: left;
-    margin-right: 20px;
-}
-
-    .socialIcons li {
-        list-style: none;
-        display: inline;
-        margin-right: 6px;
-    }
+/* ==========================================================
+   FOOTER
+   ========================================================== */
 
 footer {
     background-color: #242424;
@@ -637,28 +556,345 @@ footer {
     padding-top: 20px;
 }
 
-    footer ul li {
-        list-style: none;
-    }
+footer ul li {
+    list-style: none;
+}
 
 .contact ul li {
     margin-bottom: 10px;
 }
 
-    .contact ul li i {
-        margin-right: 15px;
-    }
-
-.addBg {
-    background: #fff !important;
-    -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
-    -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
-    box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
+.contact ul li i {
+    margin-right: 15px;
 }
 
-    .addBg ~ .navbar-header {
-        display: none;
+/* ==========================================================
+   DARK THEME OVERRIDE (Cyber Safety Lab)
+   ========================================================== */
+
+/* 배경/글자/기본 폰트 크기 */
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+}
+
+/* 섹션 배경 */
+.page-section,
+.pDark,
+.darkBg {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* 본문 글자 */
+p,
+.section-text,
+.list-unstyled li {
+    color: #e6e6e6 !important;
+    font-size: 18px !important;
+}
+
+/* 모든 제목 */
+h1, h2, h3, h4, h5, h6,
+.heading h2 {
+    color: #ffffff !important;
+}
+
+/* 링크 색상 */
+a {
+    color: #66b2ff !important;
+}
+
+a:hover {
+    color: #99ccff !important;
+}
+
+/* 네비게이션 바 전체를 다크로 */
+.header .navbar,
+.navbar-inverse,
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* 메뉴 글자 */
+.navbar-inverse .navbar-nav > li > a {
+    color: #dddddd !important;
+    font-size: 17px !important;
+}
+
+/* 메뉴 Hover / Active */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff !important;
+    background-color: #222222 !important;
+    border-radius: 2px;
+}
+
+/* Brand (로고 텍스트) */
+.navbar-inverse .navbar-brand {
+    color: #ffffff !important;
+    background-color: #000000 !important;
+}
+
+/* 모바일 토글버튼 */
+.navbar-inverse .navbar-toggle {
+    background-color: #222 !important;
+    border-color: #444 !important;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #ffffff !important;
+}
+
+/* Tray (About Us 아이콘 박스) */
+.tray {
+    border: 1px solid #337ab7 !important;
+    background-color: #090909 !important;
+}
+
+.tray .fa {
+    color: #4fa3ff !important;
+}
+
+/* PI Profile text */
+.pi-profile-text {
+    color: #f0f0f0 !important;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+}
+
+/* Latest News 리스트 */
+ul.section-text li {
+    margin-bottom: 12px;
+    font-size: 18px !important;
+}
+
+/* Footer / Copyright */
+footer.page-section.darkBg,
+.copyright {
+    background-color: #000000 !important;
+    color: #cccccc !important;
+}
+
+.socialIcons i {
+    color: #ffffff !important;
+}
+
+/* 버튼 */
+.btn-primary {
+    background-color: #1371AF !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #0f5f90 !important;
+}
+
+/* TEAM PAGE TITLE FIX */
+.page-section h2 {
+    color: #ffffff !important;
+}
+
+/* ==========================================================
+   Publication dropdown 메뉴
+   ========================================================== */
+
+#mainNav li.has-dropdown {
+    position: relative;
+}
+
+/* 기본은 숨김 */
+#mainNav li.has-dropdown > ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    padding: 8px 16px;
+    min-width: 220px;
+    z-index: 2000;
+    list-style: none;
+}
+
+/* hover / focus 시 표시 */
+#mainNav li.has-dropdown:hover > ul.dropdown,
+#mainNav li.has-dropdown:focus-within > ul.dropdown {
+    display: block;
+}
+
+#mainNav ul.dropdown li {
+    display: block;
+}
+
+#mainNav ul.dropdown li a {
+    display: block;
+    padding: 4px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+#mainNav ul.dropdown li a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   고정 헤더 & 상단 여백
+   ========================================================== */
+
+/* 헤더가 본문을 가리는 현상 해결 */
+header.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #000;
+    height: 80px;
+}
+
+/* 헤더 아래 공간 확보 */
+body {
+    padding-top: calc(60px + 20px);
+}
+
+/* 헤더 로고 크기 축소 */
+.navbar-brand img,
+.navbar-header img,
+.site-logo img {
+    max-height: 80px;
+    height: auto;
+    width: auto;
+}
+
+/* 네비게이션 영역 높이 */
+.navbar,
+.navbar-nav > li > a {
+    line-height: 60px !important;
+    height: 60px !important;
+}
+
+/* 헤더 전체 높이 조정 */
+.header .navbar {
+    margin-bottom: 0;
+    min-height: 64px;
+}
+
+.header .navbar-brand {
+    padding: 8px 15px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar-brand img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* 메뉴 텍스트 패딩 */
+.header .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 24px;
+}
+
+/* ==========================================================
+   News Section (AiX Lab)
+   ========================================================== */
+
+.news-section {
+    background: #000;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.news-section .heading h2 {
+    color: #fff;
+}
+
+.news-section .heading p {
+    color: #ddd;
+}
+
+/* 카드 리스트 컨테이너 */
+.news-list {
+    margin-top: 30px;
+}
+
+/* 개별 뉴스 카드 */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+}
+
+/* 제목 / 메타 / 본문 */
+.news-card-title {
+    margin: 0;
+    color: #fff;
+}
+
+.news-card-meta {
+    margin: 0 0 6px 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.news-card-body {
+    color: #ccc;
+}
+
+/* 링크 색상 */
+.news-card-body a {
+    color: #5ab4ff;
+    text-decoration: none;
+}
+
+.news-card-body a:hover {
+    text-decoration: underline;
+}
+
+/* News article page */
+.news-article-title {
+    text-align: left;
+    color: #ffcc33;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.news-article-meta {
+    text-align: left;
+    color: #bbbbbb;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.news-article-body {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* 모바일에서 카드 여백 */
+@media (max-width: 768px) {
+    .news-card {
+        padding: 20px;
     }
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
 
 .da-slide {
     top: 15%;
@@ -677,6 +913,8 @@ footer {
 @media (max-width: 768px) {
     .banner-container {
         background-size: contain;
+        width: 100%;
+        max-height: 432px;
     }
 
     .navbar-header {
@@ -694,11 +932,6 @@ footer {
         max-width: 100%;
     }
 
-    .banner-container {
-        width: 100%;
-        max-height: 432px;
-    }
-
     .bannerOverlay {
         max-height: 432px;
     }
@@ -714,7 +947,6 @@ footer {
         padding: 25px 12px;
     }
 
-
     .portfolio-item:hover .folio-info {
         top: 0px;
     }
@@ -723,9 +955,9 @@ footer {
         padding: 0px;
     }
 
-        .portfolio-item .portfolio-desc .folio-info h5 {
-            font-size: 1em;
-        }
+    .portfolio-item .portfolio-desc .folio-info h5 {
+        font-size: 1em;
+    }
 }
 
 @media (max-width:760px) {
@@ -734,7 +966,8 @@ footer {
         font-size: 14px;
     }
 
-    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    .navbar-inverse .navbar-collapse, 
+    .navbar-inverse .navbar-form {
         border-color: #A8A8A8;
     }
 }
@@ -745,15 +978,18 @@ footer {
         background-size: contain;
         height: 270px;
     }
+
     .header .navbar-brand {
         float: left;
         padding: 10px 0px;
     }
+
     .webThemez {
-    width:100%;
-    text-align:center;
-    display:block;
+        width:100%;
+        text-align:center;
+        display:block;
     }
+
     .bannerOverlay {
         height: 270px;
     }
@@ -770,18 +1006,18 @@ footer {
         top: 26%;
     }
 
-        .da-slide h2 {
-            font-size: 40px;
-            text-align: center;
-            width: initial;
-            top: 10px;
-        }
+    .da-slide h2 {
+        font-size: 40px;
+        text-align: center;
+        width: initial;
+        top: 10px;
+    }
 
-        .da-slide p {
-            width: 65%;
-            top: 65px;
-            height: 50px;
-        }
+    .da-slide p {
+        width: 65%;
+        top: 65px;
+        height: 50px;
+    }
 
     .page-section h1 {
         font-size: 3em;
@@ -855,423 +1091,118 @@ footer {
     }
 }
 
-
-/* ===== Global Dark Theme Override (Cyber Safety Lab) ===== */
-
-/* 기본 글자 크기 / 색 / 배경 */
-body {
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 18px;      /* 전체 글자 키우기 */
-  line-height: 1.7;     /* 줄 간격 여유 있게 */
-}
-
-/* 공통 섹션 배경과 글자 색 */
-.page-section,
-.pDark,
-.darkBg {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-/* heading 들은 약간 강조된 밝기 */
-h1, h2, h3, h4, h5, h6,
-.heading h2 {
-  color: #ffffff;
-}
-
-/* 일반 텍스트 / 설명 텍스트 */
-p,
-.section-text,
-.list-unstyled li,
-address {
-  color: #f0f0f0;
-}
-
-/* 링크 색상 – 너무 튀지 않게 파란색 톤 */
-a {
-  color: #66b2ff;
-}
-a:hover,
-a:focus {
-  color: #99ccff;
-  text-decoration: none;
-}
-
-/* 네비게이션 바 - 배경과 텍스트 재조정 */
-.header .navbar-inverse {
-  background-color: #111111;
-  border-color: #222222;
-}
-
-.header .navbar-inverse .navbar-nav > li > a {
-  color: #f0f0f0;
-  font-size: 16px;
-}
-
-.header .navbar-inverse .navbar-nav > li.active > a,
-.header .navbar-inverse .navbar-nav > li > a:hover,
-.header .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: #333333;
-}
-
-/* “Contact Us” 푸터 영역도 다크톤 유지 */
-footer.page-section.darkBg {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-footer.page-section.darkBg h2,
-footer.page-section.darkBg h4 {
-  color: #ffffff;
-}
-
-/* 소셜 아이콘 흰색 계열로 */
-.socialIcons i {
-  color: #ffffff;
-}
-
-/* 버튼(파란색 계열) – 어두운 배경에서 잘 보이게 */
-.btn-primary,
-.btn-lg.btn-primary {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-  color: #ffffff;
-}
-
-.btn-primary:hover,
-.btn-lg.btn-primary:hover {
-  background-color: #286090;
-  border-color: #204d74;
-  color: #ffffff;
-}
-
-/* PI Profile 영역 텍스트 살짝 더 키우기 */
-.pi-profile-text {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-
-/* ==========================================================
-   GLOBAL DARK THEME OVERRIDE (Cyber Safety Lab)
-   ========================================================== */
-
-/* 배경/글자/기본 폰트 크기 */
-body {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    font-size: 18px !important;
-    line-height: 1.75 !important;
-}
-
-/* 섹션 배경 */
-.page-section,
-.pDark,
-.darkBg {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-/* 본문 글자 */
-p,
-.section-text,
-.list-unstyled li {
-    color: #e6e6e6 !important;
-    font-size: 18px !important;
-}
-
-/* 모든 제목 */
-h1, h2, h3, h4, h5, h6,
-.heading h2 {
-    color: #ffffff !important;
-}
-
-/* 링크 색상 */
-a {
-    color: #66b2ff !important;
-}
-a:hover {
-    color: #99ccff !important;
-}
-
-/* 네비게이션 바 */
-.header .navbar,
-.navbar-inverse {
-    background-color: #000000 !important;
-    border-color: #222 !important;
-}
-.navbar-inverse .navbar-nav > li > a {
-    color: #dddddd !important;
-    font-size: 17px !important;
-}
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > .active > a {
-    color: #ffffff !important;
-    background-color: #222 !important;
-}
-
-/* Tray (About Us 아이콘 박스) */
-.tray {
-    border: 1px solid #337ab7 !important;
-    background-color: #090909 !important;
-}
-.tray .fa {
-    color: #4fa3ff !important;
-}
-
-/* PI Profile text */
-.pi-profile-text {
-    color: #f0f0f0 !important;
-    font-size: 18px !important;
-    line-height: 1.8 !important;
-}
-
-/* Latest News 리스트 */
-ul.section-text li {
-    margin-bottom: 12px;
-    font-size: 18px !important;
-}
-
-/* Footer */
-footer.page-section.darkBg,
-.copyright {
-    background-color: #000000 !important;
-    color: #cccccc !important;
-}
-.socialIcons i {
-    color: #ffffff !important;
-}
-
-/* 버튼 */
-.btn-primary {
-    background-color: #1371AF !important;
-    color: #ffffff !important;
-}
-.btn-primary:hover {
-    background-color: #0f5f90 !important;
-}
-
-/* ==========================================================
-   FIX: NAVBAR DARK THEME FULL OVERRIDE
-   ========================================================== */
-
-.header .navbar,
-.navbar-inverse,
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-    background-color: #000000 !important;
-    border-color: #000000 !important;
-}
-
-/* 메뉴 글자 흰색 */
-.navbar-inverse .navbar-nav > li > a {
-    color: #ffffff !important;
-    font-size: 18px !important;
-    font-weight: 500 !important;
-}
-
-/* 메뉴 Hover / Active: 배경 진하게 */
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-    color: #ffffff !important;
-    background-color: #222222 !important;
-    border-radius: 2px;
-}
-
-/* Brand (로고 영역) 배경도 완전 검은색 */
-.navbar-inverse .navbar-brand {
-    color: #ffffff !important;
-    background-color: #000000 !important;
-}
-
-/* 모바일 토글버튼도 다크 테마 */
-.navbar-inverse .navbar-toggle {
-    background-color: #222 !important;
-    border-color: #444 !important;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #ffffff !important;
-}
-/* TEAM PAGE TITLE FIX */
-.page-section h2 {
-  color: #ffffff !important;
-}
-
- /* ───── Publication dropdown 메뉴 기본 설정 ───── */
-#mainNav li.has-dropdown {
-  position: relative;
-}
-
-/* 기본은 숨김 */
-#mainNav li.has-dropdown > ul.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;           /* 부모 li 바로 아래 */
-  left: 0;
-  background-color: #000;  /* 검은 배경 */
-  padding: 8px 16px;
-  min-width: 220px;
-  z-index: 2000;
-  list-style: none;
-}
-
-/* Publication 위에 마우스를 올렸을 때만 표시 */
-#mainNav li.has-dropdown:hover > ul.dropdown,
-#mainNav li.has-dropdown:focus-within > ul.dropdown {
-  display: block;
-}
-
-/* 드롭다운 내부 항목들 */
-#mainNav ul.dropdown li {
-  display: block;
-}
-
-#mainNav ul.dropdown li a {
-  display: block;
-  padding: 4px 0;
-  color: #fff;              /* 글자 흰색 */
-  text-decoration: none;
-}
-
-#mainNav ul.dropdown li a:hover {
-  text-decoration: underline;
-}
-
-
-/* 헤더가 본문을 가리는 현상 해결 */
-header.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  background: #000;
-  height: 80px;  /* 현재 메뉴바 실제 높이 */
-}
-
-/* 헤더 아래 공간 확보 */
-body {
-  padding-top: calc(60px + 20px);
-}
-
-
-/* ===== News Section Cards ===== */
-.news-grid {
-  margin-top: 30px;
-}
-
-.news-card {
-  background-color: #1c1c1c;   /* 주변보다 약간 밝은 검은색 */
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px 22px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-.news-card-title {
-  font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 12px;
-  color: #ffffff;
-}
-
-.news-card-text {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #dddddd;
-}
-
-.news-tag {
-  display: inline-block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background-color: #007bff;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 999px;
-  margin-right: 8px;
-}
-
-.news-list {
-  padding-left: 18px;
-  margin: 0;
-}
-
-.news-list li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #dddddd;
-}
-
-.news-list a {
-  color: #66b2ff;
-}
-
-.news-list a:hover {
-  text-decoration: underline;
-}
-
-/* 모바일에서 카드 간격 조금 여유 */
-@media (max-width: 767px) {
-  .news-card {
-    margin-bottom: 16px;
-  }
-}
-
 /* ===========================
-   Mobile navbar fix
+   Mobile navbar fix (dark)
    =========================== */
-/* ===== 모바일 메뉴 색상 수정 (맨 아래에 추가) ===== */
 @media (max-width: 767px) {
+    /* 펼쳐진 메뉴 박스 배경 */
+    .navbar-inverse .navbar-collapse {
+        background-color: #000 !important;
+    }
 
-  /* 펼쳐진 메뉴 전체 박스 배경을 검정으로 */
-  .navbar-inverse .navbar-collapse {
-    background-color: #000 !important;
+    /* 각 메뉴 글자를 흰색으로 (검은 배경 대비) */
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff !important;
+    }
+
+    /* hover / focus */
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+        background-color: #222 !important;
+        color: #fff !important;
+    }
+
+    /* active 메뉴 */
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+    .navbar-inverse .navbar-nav > .active > a:focus {
+        background-color: #333 !important;
+        color: #fff !important;
+    }
+}
+
+/* ===== NAVBAR ALIGNMENT FIX (logo + menu center) ===== */
+
+/* 전체 메뉴바 높이 */
+header.header {
+  height: 90px;  /* 원하는 높이로 조절 가능 (예: 80~100px) */
+}
+
+/* navbar 안의 요소들을 세로 가운데 정렬 */
+.header .navbar {
+  min-height: 90px;
+  display: flex;
+  align-items: center;   /* 로고 + 메뉴 세로 가운데 */
+}
+
+/* 로고 영역: 세로 가운데 정렬 */
+.header .navbar-brand {
+  height: 90px;
+  padding: 0 20px;       /* 좌우 여백만, 위/아래 여백은 없애고 가운데 정렬 */
+  display: flex;
+  align-items: center;   /* 로고 이미지 세로 가운데 */
+}
+
+/* 로고 이미지 크기 */
+.header .navbar-brand img {
+  max-height: 64px;      /* 메뉴바보다 조금 작은 크기 */
+  height: auto;
+  width: auto;
+}
+
+/* 메뉴 텍스트를 위아래 기준 정확히 가운데 정렬 */
+.header .navbar-nav > li > a {
+  height: 90px !important;
+  line-height: 90px !important;  /* 텍스트를 세로 가운데 */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* 모바일에서는 메뉴바를 너무 크게 하지 않도록 다시 줄이기 */
+@media (max-width: 767px) {
+  header.header {
+    height: auto;
   }
 
-  /* 각 메뉴 글자를 흰색으로 */
-  .navbar-inverse .navbar-nav > li > a {
-    color: #fff !important;
+  .header .navbar {
+    min-height: 50px;
+    display: block;
   }
 
-  /* 메뉴 hover / focus 상태도 잘 보이도록 */
-  .navbar-inverse .navbar-nav > li > a:hover,
-  .navbar-inverse .navbar-nav > li > a:focus {
-    background-color: #222 !important;
-    color: #fff !important;
+  .header .navbar-brand {
+    height: 50px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
   }
 
-  /* active(선택된) 메뉴도 확실히 보이게 */
-  .navbar-inverse .navbar-nav > .active > a,
-  .navbar-inverse .navbar-nav > .active > a:hover,
-  .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #333 !important;
-    color: #fff !important;
+  .header .navbar-nav > li > a {
+    height: auto !important;
+    line-height: 1.4 !important;
+    padding: 10px 15px;
   }
 }
 
-/* ===== Mobile navbar color fix ===== */
-@media (max-width: 767px) {
+/* ===== Hero banner background position fix ===== */
 
-  /* 접힌 상태에서 펼쳐진 메뉴 배경을 검은색으로 */
-  .navbar-inverse .navbar-collapse {
-    background-color: #000 !important;
-  }
+/* 기본: 달이 너무 위로 잘리지 않도록, 위쪽을 기준으로 정렬 */
+.banner-container {
+  background-position: center top !important;   /* 원래 left bottom → center top */
+  background-size: cover;                       /* 비율 유지하며 꽉 채우기 */
+}
 
-  /* 각 메뉴 항목 글자를 흰색으로 */
-  .navbar-inverse .navbar-nav > li > a {
-    color: #000 !important;
+/* 화면이 아주 넓을 때 약간만 더 아래로 내리고 싶으면 */
+@media (min-width: 1400px) {
+  .banner-container {
+    background-position: center 55% !important; /* 0% = 딱 맨 위, 15% 정도 살짝 아래 */
   }
+}
 
-  /* 터치/호버 시 배경은 살짝 밝게, 글자는 그대로 흰색 */
-  .navbar-inverse .navbar-nav > li > a:hover,
-  .navbar-inverse .navbar-nav > li > a:focus {
-    background-color: #222 !important;
-    color: #fff !important;
-  }
+/* ===== Increase bottom spacing before footer ===== */
+.page-section {
+    padding-bottom: 80px !important;   /* 기본 0 → 여유 있게 80px */
+}
+
+body {
+    padding-bottom: 100px !important;  /* 전체 페이지 바닥 여백 추가 */
 }

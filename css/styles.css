@@ -1275,3 +1275,29 @@ body {
     background-color: #ffffff !important;
   }
 }
+
+
+/* ==========================================
+   MOBILE HEADER / NAVBAR COLOR FIX
+   ========================================== */
+@media (max-width: 767px) {
+
+  /* 헤더 전체(로고+메뉴 영역) 배경을 검정으로 통일 */
+  header.header,
+  .header .navbar,
+  .navbar-header,
+  #main-nav {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+  }
+
+  /* 햄버거 버튼은 어두운 회색 박스 + 흰 줄 */
+  .navbar-inverse .navbar-toggle {
+    background-color: #222222 !important;  /* 아이콘 뒤 박스 */
+    border-color: #555555 !important;
+  }
+
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #ffffff !important;  /* 햄버거 줄은 흰색 */
+  }
+}

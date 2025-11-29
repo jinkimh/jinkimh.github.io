@@ -1206,3 +1206,26 @@ header.header {
 body {
     padding-bottom: 100px !important;  /* 전체 페이지 바닥 여백 추가 */
 }
+
+/* ===== FINAL LOGO SIZE OVERRIDE ===== */
+.navbar-brand img {
+    max-height: 48px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.navbar-header img,
+.site-logo img {
+    max-height: 48px !important;
+    height: auto !important;
+}
+/* ===== Student profile photo avatar ===== */
+.student-photo-rect {
+  width: 220px;            /* 원하는 크기 */
+  height: 280px;           /* 원하는 높이 */
+  object-fit: cover;       /* 비율 유지하면서 중앙 기준으로 채움 */
+  border-radius: 12px;     /* 깔끔한 라운드 박스 */
+  display: block;
+  margin: 0 auto 10px;     /* 중앙 정렬 */
+  border: 2px solid #fff;  /* 테두리 */
+}

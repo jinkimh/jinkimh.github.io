@@ -78,6 +78,5 @@ title: "Korean Journals"
 - Na-Young Lee, **Jin Hyun Kim**, Ah-Young Sung, Yong-Ah Ahn, Jin-Young Choi, Byung-Ju Choi, and Jang-Su Lee.  
   “Development of nuclear power plant I&C embedded software using formal verification and testing.”  
   *Journal of KIISE* (in Korean), 2(06), June 2004.
-
-  </div>
+</div>
 </section>

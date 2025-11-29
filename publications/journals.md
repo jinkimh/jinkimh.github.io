@@ -105,6 +105,5 @@ title: "International Journals"
 - **Jin Hyun Kim**, Na Young Lee, and Jin-Young Choi.  
   “Formal specification and verification of PLC for certification.”  
   *SIGBED Review*, Special Issue on Workshop on Innovative Techniques for Certification of Embedded Systems, 3(4), October 2006.
-
-  </div>
+</div>
 </section>

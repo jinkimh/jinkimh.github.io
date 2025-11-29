@@ -24,6 +24,5 @@ Entries can be organized by year in the same style as the other publication page
 
 ## Earlier Years
 - *(To be updated)*
-
-  </div>
+</div>
 </section>

@@ -1191,7 +1191,7 @@ header.header {
 /* 화면이 아주 넓을 때 약간만 더 아래로 내리고 싶으면 */
 @media (min-width: 1400px) {
   .banner-container {
-    background-position: center 25% !important; /* 0% = 딱 맨 위, 15% 정도 살짝 아래 */
+    background-position: center 55% !important; /* 0% = 딱 맨 위, 15% 정도 살짝 아래 */
   }
 }
 

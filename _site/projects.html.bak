@@ -116,12 +116,12 @@
 
           <!-- Project -->
           <li class="active">
-            <a href="/projects.html">Project</a>
+            <a href="/projects/">Project</a>
           </li>
 
           <!-- Team -->
           <li >
-            <a href="/team.html">Team</a>
+            <a href="/teams/">Team</a>
           </li>
 
           <!-- News -->

@@ -17,7 +17,7 @@ title: "Projects"
       <!-- 설명 문구 필요하면 여기에 추가 -->
       <!-- <p>Short description about our project gallery.</p> -->
     </div>
-<!--
+
     <div class="row">
       <nav id="filter" class="col-md-12 text-center">
         <ul>
@@ -164,7 +164,6 @@ title: "Projects"
 
     </div><!-- /.row -->
   </div><!-- /.container -->
--->
 </section>
 
 <!-- =========================== -->

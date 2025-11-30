@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en-gb" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Photos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/da-slider.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Logo style -->
+  <style>
+    .navbar-brand img {
+      width: 250px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+
+      <!-- Mobile toggle -->
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="navbar-brand logo">
+          <img src="/images/aix_lab_logo.png" alt="AiX Lab" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="mainNav">
+
+          <!-- About Us -->
+          <li >
+            <a href="/about.html">About Us</a>
+          </li>
+
+          <!-- Academy Portfolio 
+          <li >
+            <a href="/portfolio.html">Academy Portfolio</a>
+          </li>
+          -->
+          
+          <!-- Publication (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/publications/journals">Publication</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/publications/journals">
+                  Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/conferences">
+                  Conferences
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-journals">
+                  Korean Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-conferences">
+                  Korean Conferences
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Research (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/research/">Research</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/research/formal-methods">
+                  Formal Methods
+                </a>
+              </li>
+              <li>
+                <a href="/research/medical-ai">
+                  Medical AI
+                </a>
+              </li>
+              <li>
+                <a href="/research/robot-racing">
+                  Robot Racing
+                </a>
+              </li>
+              <li>
+                <a href="/research/etc">
+                  ETC
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Project -->
+          <li >
+            <a href="/projects.html">Project</a>
+          </li>
+
+          <!-- Team -->
+          <li >
+            <a href="/team.html">Team</a>
+          </li>
+
+          <!-- News -->
+          <li >
+            <a href="/news.html">News</a>
+          </li>
+          
+          <!-- Gallery -->
+          <li >
+            <a href="/photos.html">Gallery</a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- Page Content -->
+<style>
+  /* 사진 페이지 전용 간단 스타일 */
+  .photos-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    color: #ffffff;
+  }
+
+  .photos-page .event-block {
+    margin-bottom: 50px;
+  }
+
+  .photos-page .event-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .photos-page .event-meta {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 15px;
+  }
+
+  .photo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .photo-table td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #444;
+    background-color: #111;
+  }
+
+  .photo-table img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .photo-caption {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #dddddd;
+  }
+
+  @media (max-width: 768px) {
+    .photo-table td {
+      display: block;
+      width: 100%;
+    }
+  }
+</style>
+
+<section class="page-section photos-page">
+  <div class="container">
+
+    <div class="heading text-center">
+      <h2>Lab Photos</h2>
+      <p class="section-text">
+        AiX Lab events, competitions, workshops, and daily research moments.
+      </p>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ① 이벤트 블록 예시 – 필요할 때마다 복사해서 사용하세요 -->
+    <!-- ====================================================== -->
+    <div class="event-block">
+      <h3 class="event-title">2025 RoboRacer Workshop @ GNU</h3>
+      <div class="event-meta">
+        Date: 2025-03-15 · Location: Gyeongsang National University · Category: Robot Racing
+      </div>
+
+      <table class="photo-table">
+        <tr>
+          <td>
+            <img src="/images/photos/roboracer-2025-01.jpg" alt="RoboRacer Workshop 1">
+            <div class="photo-caption">Opening session &amp; introduction</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-02.jpg" alt="RoboRacer Workshop 2">
+            <div class="photo-caption">Teams preparing their F1TENTH cars</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-03.jpg" alt="RoboRacer Workshop 3">
+            <div class="photo-caption">Track testing &amp; tuning</div>
+          </td>
+          <td>
+            <img src="/images/photos/roboracer-2025-04.jpg" alt="RoboRacer Workshop 4">
+            <div class="photo-caption">Group photo at the end</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ② 또 다른 이벤트 예시 -->
+    <!-- ====================================================== -->
+    <div class="event-block">
+      <h3 class="event-title">Medical AI Meeting with Ophthalmology Dept.</h3>
+      <div class="event-meta">
+        Date: 2025-02-10 · Location: GNU Hospital · Category: Medical AI
+      </div>
+
+      <table class="photo-table">
+        <tr>
+          <td>
+            <img src="/images/photos/medai-2025-01.jpg" alt="Medical AI Meeting 1">
+            <div class="photo-caption">Discussion on OCT datasets</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-02.jpg" alt="Medical AI Meeting 2">
+            <div class="photo-caption">LLM-based clinical decision support</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-03.jpg" alt="Medical AI Meeting 3">
+            <div class="photo-caption">Joint lab members</div>
+          </td>
+          <td>
+            <img src="/images/photos/medai-2025-04.jpg" alt="Medical AI Meeting 4">
+            <div class="photo-caption">Closing &amp; next steps</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ③ 새로운 이벤트를 추가하고 싶으면 -->
+    <!--    위의 .event-block 하나를 복사해서 수정하면 됩니다. -->
+    <!-- ====================================================== -->
+
+  </div>
+</section>
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!-- JS -->
+<script src="/js/modernizr-latest.js"></script>
+<script src="/js/jquery-1.8.2.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.nav.js"></script>
+<script src="/js/jquery.cslider.js"></script>
+<script src="/js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+---
+layout: default
+title: "AiX Lab@ GNU"
+nav: home
+---
+
+<section id="home" class="page-section">
+	<div class="banner-container">
+  <div class="container banner-content">
+
+    <div id="da-slider" class="da-slider">
+
+    <!-- Slide 1 -->
+    <div class="da-slide">
+      <h2>Formal Methods</h2>
+      <p>We develop mathematically grounded verification and runtime assurance methods to guarantee the safety and correctness of AI-driven systems.</p>
+      <a href="/research/formal-methods" class="da-link button-outline">Learn More</a>
+      <div class="da-img"></div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="da-slide">
+      <h2>Safe LLM</h2>
+      <p>We build compact and trustworthy domain-specific language models with improved interpretability, alignment, and robust decision-making.</p>
+      <a href="/research/medical-ai" class="da-link button-outline">LLM Portfolio</a>
+      <div class="da-img"></div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="da-slide">
+      <h2>Medical AI</h2>
+      <p>
+        Our research spans ophthalmology, clinical decision support, and noise-robust diagnostic modeling, 
+        powered by domain-specialized LLMs for safer and more interpretable medical reasoning.
+      </p>
+      <a href="/research/medical-ai" class="da-link button-outline">See Projects</a>
+      <div class="da-img"></div>
+    </div>
+
+
+    <!-- Slide 4 -->
+    <div class="da-slide">
+      <h2>Robot Racing</h2>
+      <p>We explore autonomous racing, RoboRacer(F1TENTH) robotics, and safe high-speed navigation under real-world uncertainty.</p>
+      <a href="/team.html" class="da-link button-outline">Racing Lab</a>
+      <div class="da-img"></div>
+    </div>
+
+
+      <nav class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+      </nav>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+</section>
+
+<section id="aboutUs" class="page-section pDark pdingBtm30">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>About Us</h2>
+      <p>
+      AiX Lab at Gyeongsang National University advances 
+        <strong>trustworthy AI</strong> through mathematically grounded verification,
+        safe domain-specialized LLMs, clinically meaningful medical intelligence,
+        and real-world autonomous racing platforms.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="tray text-center">
+          <h3><i class="fa fa-desktop color"></i> &nbsp;Research</h3>
+          <p>We conduct research on the safety of software systems.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="tray text-center">
+          <h3><i class="fa fa-cloud color"></i> &nbsp;Education</h3>
+          <p>We provide education in AI, formal methods, and software engineering.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="tray text-center">
+          <h3><i class="fa fa-gear color"></i> &nbsp;Development</h3>
+          <p>We develop medical AI and autonomous driving software for racing.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="tray text-center">
+          <h3><i class="fa fa-plane color"></i> &nbsp;Competition</h3>
+          <p>We compete with other teams to build safer and more reliable software.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+layout: default
+title: "News"
+nav: news
+---
+
+<section id="news" class="page-section team-member news-section">
+  <div class="container">
+
+    <div class="heading text-center">
+      <h2>News</h2>
+      <p>
+        Updates from the AiX Lab, including research progress, publications, and people-related achievements.
+      </p>
+    </div>
+
+    <div class="news-list">
+
+      <!-- (1) 항상 맨 위: 모집 중 안내 (가장 최신) -->
+      <article class="news-card">
+        <h3 class="news-card-title">AiX Lab – 학부/석사/박사 과정 모집 안내</h3>
+        <p class="news-card-meta">Updated: 2025</p>
+        <div class="news-card-body">
+          <p>
+            AiX Lab은 <strong>학부연구생</strong>, <strong>석사과정</strong>, 
+            <strong>박사과정</strong>, <strong>석·박 통합과정</strong> 지원자를 모집하고 있습니다.
+          </p>
+          <p>
+            주요 연구 분야는 <strong>Medical AI</strong>, 
+            <strong>Autonomous Driving (F1TENTH / RoboRacer)</strong>, 
+            <strong>AI Safety &amp; CPS Verification</strong>입니다.
+          </p>
+          <p>
+            자세한 모집 요강 및 지원 양식은 아래 페이지에서 확인하실 수 있습니다.
+          </p>
+          <p>
+            🔗 <a href="https://aix.gnu.ac.kr/join.html" target="_blank">
+            https://aix.gnu.ac.kr/join.html</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- (2) NeurIPS 2025 참가 -->
+      <article class="news-card">
+        <h3 class="news-card-title">NeurIPS 2025 – Conference Participation</h3>
+        <p class="news-card-meta">Dec 2–7, 2025 · San Diego Convention Center</p>
+        <div class="news-card-body">
+          <p>
+            미국 샌디에이고에서 열린 <strong>NeurIPS 2025</strong>에  
+            <strong>김진현</strong>, <strong>조민아</strong>, <strong>조은아</strong>가 참가했습니다.
+          </p>
+          <p>
+            LLM Safety, World Models, Medical AI 세션 및 워크숍에 집중 참여하며 
+            향후 연구 방향과 공동 연구 기회를 모색했습니다.
+          </p>
+        </div>
+      </article>
+
+      <!-- (3) Publications – SCI(E) 4편 게재 -->
+      <article class="news-card">
+        <h3 class="news-card-title">2025 – SCI(E) 논문 4편 게재 완료</h3>
+        <p class="news-card-meta">2025</p>
+        <div class="news-card-body">
+          <p>
+            2025년에 총 <strong>4편의 SCI(E) 논문</strong>이 게재 또는 출판 승인되었습니다 
+            (IEEE Access 2편, Scientific Reports 2편).
+          </p>
+          <ul>
+            <li>
+              <strong>Soomin Cho, Inhye Kang, Kim, Jin Hyun.</strong><br>
+              “From Timed Automata to Go: Formally Verified Code Generation and Runtime Monitoring for Cyber-Physical Systems.”<br>
+              <em>IEEE Access, 13:161729–161749, 2025.</em>
+            </li>
+            <li>
+              <strong>Kim, Jin Hyun et al.</strong><br>
+              “Low-Cost and Fast Epiretinal Membrane Detection and Quantification Based on SD-OCT.”<br>
+              <em>IEEE Access, Accepted for Publication, 2025.</em>
+            </li>
+            <li>
+              <strong>Kim, Jin Hyun et al.</strong><br>
+              “Noise-Robust Markerless Video Gait Anomaly Detection via Two-Stage Acquisition and LSTM Autoencoders.”<br>
+              <em>Scientific Reports, Accepted for Publication, 2025.</em>
+            </li>
+            <li>
+              <strong>Kim, Jin Hyun et al.</strong><br>
+              “Ophtimus-V2-Tx: A Compact Domain-Specific LLM for Ophthalmic Diagnosis and Treatment Planning.”<br>
+              <em>Scientific Reports, Accepted for Publication, 2025.</em>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- (4) Research Highlights -->
+      <article class="news-card">
+        <h3 class="news-card-title">Research Highlights</h3>
+        <p class="news-card-meta">2025</p>
+        <div class="news-card-body">
+          <p>
+            AiX Lab은 <strong>Medical AI</strong>, <strong>Autonomous Driving</strong>, 
+            <strong>AI Safety &amp; CPS Verification</strong> 분야에서
+            여러 연구 과제를 동시에 수행하고 있습니다.
+          </p>
+          <p>
+            F1TENTH / RoboRacer 기반 자율주행 레이싱, 안과 영상 정량화, 
+            포멀 메서드 기반 CPS 검증 및 코드 생성/모니터링 연구 등이 포함됩니다.
+          </p>
+        </div>
+      </article>
+
+      <!-- (5) People & Alumni -->
+      <article class="news-card">
+        <h3 class="news-card-title">People &amp; Alumni News</h3>
+        <p class="news-card-meta">2025</p>
+        <div class="news-card-body">
+          <ul>
+            <li>
+              <strong>Minwook Kwon (M.S., Aug. 2025)</strong> – 
+              <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a> 입사 (AI Engineer).
+            </li>
+            <li>
+              <strong>Seungju Baek (M.S., Mar. 2025)</strong> – 
+              <a href="https://www.saltlux.com/" target="_blank">Saltlux</a> 합류, 
+              재학 중 <strong>Ophtimus</strong> 안과 LLM 연구에 핵심 기여.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="collaborators" class="page-section team-member">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>What our collaborators say</h2>
+      <p>We work closely with clinicians and autonomous driving researchers in Korea and abroad.</p>
+    </div>
+
+    <div class="gap"></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <blockquote>
+          <p>
+            Our clinical collaborators often describe our group as one of the key experts in
+            applying AI to medicine, especially in ophthalmology.
+          </p>
+          <small>Ophthalmology collaborators</small>
+        </blockquote>
+      </div>
+
+      <div class="col-md-6">
+        <blockquote>
+          <p>
+            Colleagues in autonomous driving research recognize us as specialists in the
+            F1TENTH platform and one of the leading teams in Korean autonomous racing.
+          </p>
+          <small>Autonomous driving collaborators</small>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="page-section darkBg" id="contactUs">
+  <div class="container">
+
+    <div class="row">
+      <div class="heading text-center">
+        <h2>Contact Us</h2>
+        <p>
+          We would love to hear from you! Whether you have questions, need further information about our research,
+          or want to collaborate with us, please feel free to get in touch.
+        </p>
+      </div>
+    </div>
+
+	<div class="col-sm-5">
+	<iframe
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.01115865905!2d128.09058067714597!3d35.15634245862682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efb00259a0d23%3A0x1de6bcc219b626ae!2z6rK97IOB6rWt66a964yA7ZWZ6rWQIElDVOycte2VqeyEvO2EsA!5e0!3m2!1sko!2skr!4v1764433290357!5m2!1sko!2skr"
+		width="100%"
+		height="300"
+		style="border:0;"
+		allowfullscreen=""
+		loading="lazy"
+		referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
+	</div>
+
+      <div class="col-sm-3">
+        <h4>Address:</h4>
+		<address>
+		ICT Convergence Center (601), Room 302,<br>
+		Gyeongsang National University,<br>
+		501 Jinju-daero, Jinju-si,<br>
+		Gyeongsangnam-do, South Korea<br>
+		</address>
+
+		<address>
+		대한민국 경상남도 진주시 진주대로 501,<br>
+		경상국립대학교 ICT융합센터(601동) 302호<br>
+		</address>
+
+        <h4>Contact Info:</h4>
+        <ul>
+          <li><i class="fa fa-phone"></i> +82-55-772-9174</li>
+          <li><a href="mailto:jin.kim@gnu.ac.kr"><i class="fa fa-envelope-o"></i> jin.kim@gnu.ac.kr</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <form method="POST" action="https://formspree.io/f/movoovay">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea name="message" class="form-control" id="comments" rows="3" placeholder="Enter your message…" required></textarea>
+          </div>
+
+          <button name="submit" type="submit" class="btn btn-lg btn-primary">Submit</button>
+
+          <!-- Optional: 메시지 전송 성공/실패 표시 -->
+          <div class="result"></div>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</footer>

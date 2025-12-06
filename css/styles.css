@@ -1302,3 +1302,164 @@ body {
   }
 }
 
+/* ============================= */
+/* Join 페이지 (Hero + Invitation + Form) */
+/* ============================= */
+
+.join-page-dark {
+  background-color: #000;
+  padding: 40px 0 60px;
+  color: #fff;
+}
+
+/* Hero 배너 */
+.join-hero {
+  background: #111;
+  padding: 30px 25px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+.join-hero h2,
+.join-hero p {
+  color: #fff;
+}
+.join-hero-side {
+  text-align: right;
+}
+
+/* 공통 섹션 타이틀 */
+.section-title-with-line h2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+.section-title-with-line .underline {
+  width: 70px;
+  height: 3px;
+  background: #1e88e5;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+/* ✅ 초대장 섹션이 안 보이는 문제 해결용 */
+.join-section-dark {
+  background-color: #000;
+}
+
+#invitation .join-intro-box {
+  background: #111;
+  padding: 22px 25px;
+  border-left: 6px solid #1e88e5;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+/* 초대장 안의 모든 글자를 흰색으로 강제 */
+#invitation .join-intro-box,
+#invitation .join-intro-box p,
+#invitation .join-intro-box li,
+#invitation .join-intro-box strong {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Form 카드 */
+.join-form-card {
+  background: #111;
+  padding: 24px 22px 26px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  margin-top: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+}
+
+.join-section-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 16px;
+}
+
+.join-divider {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 22px 0;
+}
+
+/* 인풋/텍스트 필드 */
+.join-form-card .form-control {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+.join-form-card .form-control:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 2px rgba(30,136,229,0.4);
+}
+.join-form-card .form-control::placeholder {
+  color: #777;
+}
+
+/* 체크박스 */
+.join-form-card .checkbox label {
+  color: #eee;
+}
+
+/* 필수표시 */
+.required-star {
+  color: #ff5252;
+}
+
+/* 버튼 */
+.join-submit-btn {
+  margin-top: 14px;
+  padding: 12px 32px;
+  border-radius: 30px;
+  background: #1e88e5;
+  border-color: #1e88e5;
+}
+.join-submit-btn:hover {
+  background: #1565c0;
+  border-color: #1565c0;
+}
+
+/* 초대장 내부 bullet list만 들여쓰기 */
+#invitation .join-intro-box ul {
+  margin-left: 40px;   /* 원하는 만큼 조절 (기본: 40px) */
+  padding-left: 10px;  /* bullet 간격 */
+}
+
+/* Hero divider */
+.join-hero-divider {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 22px 0;
+}
+
+/* Hero info box */
+.join-hero-info {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.join-hero-info .hero-info-title {
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.hero-info-list {
+  list-style: disc;
+  margin-left: 22px;
+  margin-bottom: 12px;
+  color: #efefef;
+}
+
+.hero-info-desc {
+  margin-bottom: 10px;
+  color: #ccc;
+}

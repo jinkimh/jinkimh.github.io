@@ -1630,3 +1630,40 @@ body {
     margin-bottom: 6px;
     font-size: 14px;
   }
+
+   .news-section {
+    padding: 40px 0 60px;
+  }
+  .news-list-flat {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 0;
+  }
+  .news-list-flat li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+  }
+  .news-list-flat li:last-child {
+    border-bottom: none;
+  }
+  .news-date {
+    display: inline-block;
+    min-width: 70px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #bbb;
+  }
+  .news-tag {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: #1e88e5;
+    color: #fff;
+    margin: 0 6px 0 4px;
+  }

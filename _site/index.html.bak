@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>AiX Lab @ GNU</title>
+  <title>AiX Lab@ GNU</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -151,64 +151,60 @@
 
 <!-- Page Content -->
 <section id="home" class="page-section">
-  <div class="banner-container">
-    <div class="container banner-content">
+	<div class="banner-container">
+  <div class="container banner-content">
 
-      <div id="da-slider" class="da-slider">
+    <div id="da-slider" class="da-slider">
 
-        <!-- Slide 1 -->
-        <div class="da-slide">
-          <h2>Formal Methods</h2>
-          <p>
-            We design mathematically grounded verification and runtime assurance techniques
-            to guarantee the safety and correctness of AI-driven cyber-physical systems.
-          </p>
-          <a href="/research/formal-methods" class="da-link button-outline">Explore Formal Methods</a>
-          <div class="da-img"></div>
-        </div>
+    <!-- Slide 1 -->
+    <div class="da-slide">
+      <h2>Formal Methods</h2>
+      <p>We develop mathematically grounded verification and runtime assurance methods to guarantee the safety and correctness of AI-driven systems.</p>
+      <a href="/research/formal-methods" class="da-link button-outline">Learn More</a>
+      <div class="da-img"></div>
+    </div>
 
-        <!-- Slide 2 -->
-        <div class="da-slide">
-          <h2>Safe LLM</h2>
-          <p>
-            We build compact, trustworthy, and domain-specialized language models with
-            improved interpretability, alignment, and robust decision-making for safety-critical use.
-          </p>
-          <a href="/research/medical-ai" class="da-link button-outline">Safe LLM Portfolio</a>
-          <div class="da-img"></div>
-        </div>
+    <!-- Slide 2 -->
+    <div class="da-slide">
+      <h2>Safe LLM</h2>
+      <p>We build compact and trustworthy domain-specific language models with improved interpretability, alignment, and robust decision-making.</p>
+      <a href="/research/medical-ai" class="da-link button-outline">LLM Portfolio</a>
+      <div class="da-img"></div>
+    </div>
 
-        <!-- Slide 3 -->
-        <div class="da-slide">
-          <h2>Medical AI</h2>
-          <p>
-            Our work spans ophthalmology, clinical decision support, and noise-robust diagnosis,
-            powered by domain-specialized LLMs for safer and more explainable medical intelligence.
-          </p>
-          <a href="/research/medical-ai" class="da-link button-outline">View Medical AI Projects</a>
-          <div class="da-img"></div>
-        </div>
+    <!-- Slide 3 -->
+    <div class="da-slide">
+      <h2>Medical AI</h2>
+      <p>
+        Our research spans ophthalmology, clinical decision support, and noise-robust diagnostic modeling, 
+        powered by domain-specialized LLMs for safer and more interpretable medical reasoning.
+      </p>
+      <a href="/research/medical-ai" class="da-link button-outline">See Projects</a>
+      <div class="da-img"></div>
+    </div>
 
-        <!-- Slide 4 -->
-        <div class="da-slide">
-          <h2>Robot Racing</h2>
-          <p>
-            We explore autonomous racing, RoboRacer (F1TENTH) robotics, and safe high-speed navigation
-            under real-world uncertainty, from simulation to physical track.
-          </p>
-          <a href="/team.html" class="da-link button-outline">RoboRacer Lab</a>
-          <div class="da-img"></div>
-        </div>
 
-        <nav class="da-arrows">
-          <span class="da-arrows-prev"></span>
-          <span class="da-arrows-next"></span>
-        </nav>
+    <!-- Slide 4 -->
+    <div class="da-slide">
+      <h2>Robot Racing</h2>
+      <p>We explore autonomous racing, RoboRacer(F1TENTH) robotics, and safe high-speed navigation under real-world uncertainty.</p>
+      <a href="/team.html" class="da-link button-outline">Racing Lab</a>
+      <div class="da-img"></div>
+    </div>
 
-      </div>
+
+      <nav class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+      </nav>
 
     </div>
+
   </div>
+</div>
+
+
+
 </section>
 
 <section id="aboutUs" class="page-section pDark pdingBtm30">
@@ -216,7 +212,7 @@
     <div class="heading text-center">
       <h2>About Us</h2>
       <p>
-        AiX Lab at Gyeongsang National University advances
+      AiX Lab at Gyeongsang National University advances 
         <strong>trustworthy AI</strong> through mathematically grounded verification,
         safe domain-specialized LLMs, clinically meaningful medical intelligence,
         and real-world autonomous racing platforms.
@@ -227,45 +223,39 @@
       <div class="col-md-3 col-sm-6">
         <div class="tray text-center">
           <h3><i class="fa fa-desktop color"></i> &nbsp;Research</h3>
-          <p>
-            We study the safety, reliability, and performance of software and AI systems,
-            from formal specifications to real-world deployments.
-          </p>
+          <p>We conduct research on the safety of software systems.</p>
         </div>
       </div>
 
       <div class="col-md-3 col-sm-6">
         <div class="tray text-center">
           <h3><i class="fa fa-cloud color"></i> &nbsp;Education</h3>
-          <p>
-            We teach AI, formal methods, and software engineering with hands-on labs,
-            focusing on building trustworthy, system-level thinking.
-          </p>
+          <p>We provide education in AI, formal methods, and software engineering.</p>
         </div>
       </div>
 
       <div class="col-md-3 col-sm-6">
         <div class="tray text-center">
           <h3><i class="fa fa-gear color"></i> &nbsp;Development</h3>
-          <p>
-            We develop medical AI pipelines and autonomous driving stacks for
-            real-world racing and clinical applications.
-          </p>
+          <p>We develop medical AI and autonomous driving software for racing.</p>
         </div>
       </div>
 
       <div class="col-md-3 col-sm-6">
         <div class="tray text-center">
           <h3><i class="fa fa-plane color"></i> &nbsp;Competition</h3>
-          <p>
-            We participate in F1TENTH, RoboRacer, and AI challenges,
-            testing our ideas in competitive and realistic environments.
-          </p>
+          <p>We compete with other teams to build safer and more reliable software.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+---
+layout: default
+title: "News"
+nav: news
+---
 
 <section id="news" class="page-section team-member news-section">
   <div class="container">
@@ -273,8 +263,7 @@
     <div class="heading text-center">
       <h2>News</h2>
       <p>
-        Recent updates from AiX Lab, including research progress, publications,
-        conference activities, and people-related achievements.
+        Updates from the AiX Lab, including research progress, publications, and people-related achievements.
       </p>
     </div>
 
@@ -282,16 +271,16 @@
 
       <!-- (1) 항상 맨 위: 모집 중 안내 (가장 최신) -->
       <article class="news-card">
-        <h3 class="news-card-title">AiX Lab – 학부연구생/석사/박사/석박통합 과정 모집 안내</h3>
+        <h3 class="news-card-title">AiX Lab – 학부/석사/박사 과정 모집 안내</h3>
         <p class="news-card-meta">Updated: 2025</p>
         <div class="news-card-body">
           <p>
-            AiX Lab은 <strong>학부연구생</strong>, <strong>석사과정</strong>,
-            <strong>박사과정</strong>, <strong>석·박 통합과정</strong> 지원자를 상시 모집하고 있습니다.
+            AiX Lab은 <strong>학부연구생</strong>, <strong>석사과정</strong>, 
+            <strong>박사과정</strong>, <strong>석·박 통합과정</strong> 지원자를 모집하고 있습니다.
           </p>
           <p>
-            주요 연구 분야는 <strong>Medical AI</strong>,
-            <strong>Autonomous Driving (F1TENTH / RoboRacer)</strong>,
+            주요 연구 분야는 <strong>Medical AI</strong>, 
+            <strong>Autonomous Driving (F1TENTH / RoboRacer)</strong>, 
             <strong>AI Safety &amp; CPS Verification</strong>입니다.
           </p>
           <p>
@@ -310,11 +299,11 @@
         <p class="news-card-meta">Dec 2–7, 2025 · San Diego Convention Center</p>
         <div class="news-card-body">
           <p>
-            미국 샌디에이고에서 열린 <strong>NeurIPS 2025</strong>에
+            미국 샌디에이고에서 열린 <strong>NeurIPS 2025</strong>에  
             <strong>김진현</strong>, <strong>조민아</strong>, <strong>조은아</strong>가 참가했습니다.
           </p>
           <p>
-            LLM Safety, World Models, Medical AI 세션 및 워크숍에 집중 참여하며,
+            LLM Safety, World Models, Medical AI 세션 및 워크숍에 집중 참여하며 
             향후 연구 방향과 공동 연구 기회를 모색했습니다.
           </p>
         </div>
@@ -326,7 +315,7 @@
         <p class="news-card-meta">2025</p>
         <div class="news-card-body">
           <p>
-            2025년에 총 <strong>4편의 SCI(E) 논문</strong>이 게재 또는 출판 승인되었습니다
+            2025년에 총 <strong>4편의 SCI(E) 논문</strong>이 게재 또는 출판 승인되었습니다 
             (IEEE Access 2편, Scientific Reports 2편).
           </p>
           <ul>
@@ -360,14 +349,13 @@
         <p class="news-card-meta">2025</p>
         <div class="news-card-body">
           <p>
-            AiX Lab은 <strong>Medical AI</strong>, <strong>Autonomous Driving</strong>,
+            AiX Lab은 <strong>Medical AI</strong>, <strong>Autonomous Driving</strong>, 
             <strong>AI Safety &amp; CPS Verification</strong> 분야에서
             여러 연구 과제를 동시에 수행하고 있습니다.
           </p>
           <p>
-            F1TENTH / RoboRacer 기반 자율주행 레이싱, 안과 영상 정량화,
-            포멀 메서드 기반 CPS 검증 및 코드 생성·모니터링 연구 등을 통해
-            이론과 실험을 함께 발전시키고 있습니다.
+            F1TENTH / RoboRacer 기반 자율주행 레이싱, 안과 영상 정량화, 
+            포멀 메서드 기반 CPS 검증 및 코드 생성/모니터링 연구 등이 포함됩니다.
           </p>
         </div>
       </article>
@@ -379,12 +367,12 @@
         <div class="news-card-body">
           <ul>
             <li>
-              <strong>Minwook Kwon (M.S., Aug. 2025)</strong> &ndash;
+              <strong>Minwook Kwon (M.S., Aug. 2025)</strong> – 
               <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a> 입사 (AI Engineer).
             </li>
             <li>
-              <strong>Seungju Baek (M.S., Mar. 2025)</strong> &ndash;
-              <a href="https://www.saltlux.com/" target="_blank">Saltlux</a> 합류,
+              <strong>Seungju Baek (M.S., Mar. 2025)</strong> – 
+              <a href="https://www.saltlux.com/" target="_blank">Saltlux</a> 합류, 
               재학 중 <strong>Ophtimus</strong> 안과 LLM 연구에 핵심 기여.
             </li>
           </ul>
@@ -396,14 +384,12 @@
   </div>
 </section>
 
+
 <section id="collaborators" class="page-section team-member">
   <div class="container">
     <div class="heading text-center">
-      <h2>What Our Collaborators Say</h2>
-      <p>
-        We work closely with clinicians and autonomous driving researchers in Korea and abroad,
-        turning theory into impactful systems.
-      </p>
+      <h2>What our collaborators say</h2>
+      <p>We work closely with clinicians and autonomous driving researchers in Korea and abroad.</p>
     </div>
 
     <div class="gap"></div>
@@ -412,8 +398,8 @@
       <div class="col-md-6">
         <blockquote>
           <p>
-            “AiX Lab is one of our key partners in translating AI into
-            clinically meaningful tools, especially in ophthalmology.”
+            Our clinical collaborators often describe our group as one of the key experts in
+            applying AI to medicine, especially in ophthalmology.
           </p>
           <small>Ophthalmology collaborators</small>
         </blockquote>
@@ -422,8 +408,8 @@
       <div class="col-md-6">
         <blockquote>
           <p>
-            “Within the F1TENTH and RoboRacer community in Korea,
-            AiX Lab is widely recognized as a leading team in autonomous racing and safety.”
+            Colleagues in autonomous driving research recognize us as specialists in the
+            F1TENTH platform and one of the leading teams in Korean autonomous racing.
           </p>
           <small>Autonomous driving collaborators</small>
         </blockquote>
@@ -432,6 +418,8 @@
   </div>
 </section>
 
+
+
 <footer class="page-section darkBg" id="contactUs">
   <div class="container">
 
@@ -439,74 +427,72 @@
       <div class="heading text-center">
         <h2>Contact Us</h2>
         <p>
-          We are always open to collaboration and discussion.  
-          If you have questions about our research, education programs, or joint projects,
-          please feel free to reach out.
+          We would love to hear from you! Whether you have questions, need further information about our research,
+          or want to collaborate with us, please feel free to get in touch.
         </p>
       </div>
     </div>
 
-    <div class="col-sm-5">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.01115865905!2d128.09058067714597!3d35.15634245862682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efb00259a0d23%3A0x1de6bcc219b626ae!2z6rK97IOB6rWt66a964yA7ZWZ6rWQIElDVOycte2VqeyEvO2EsA!5e0!3m2!1sko!2skr!4v1764433290357!5m2!1sko!2skr"
-        width="100%"
-        height="300"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+	<div class="col-sm-5">
+	<iframe
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.01115865905!2d128.09058067714597!3d35.15634245862682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efb00259a0d23%3A0x1de6bcc219b626ae!2z6rK97IOB6rWt66a964yA7ZWZ6rWQIElDVOycte2VqeyEvO2EsA!5e0!3m2!1sko!2skr!4v1764433290357!5m2!1sko!2skr"
+		width="100%"
+		height="300"
+		style="border:0;"
+		allowfullscreen=""
+		loading="lazy"
+		referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
+	</div>
+
+      <div class="col-sm-3">
+        <h4>Address:</h4>
+		<address>
+		ICT Convergence Center (601), Room 302,<br>
+		Gyeongsang National University,<br>
+		501 Jinju-daero, Jinju-si,<br>
+		Gyeongsangnam-do, South Korea<br>
+		</address>
+
+		<address>
+		대한민국 경상남도 진주시 진주대로 501,<br>
+		경상국립대학교 ICT융합센터(601동) 302호<br>
+		</address>
+
+        <h4>Contact Info:</h4>
+        <ul>
+          <li><i class="fa fa-phone"></i> +82-55-772-9174</li>
+          <li><a href="mailto:jin.kim@gnu.ac.kr"><i class="fa fa-envelope-o"></i> jin.kim@gnu.ac.kr</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <form method="POST" action="https://formspree.io/f/movoovay">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea name="message" class="form-control" id="comments" rows="3" placeholder="Enter your message…" required></textarea>
+          </div>
+
+          <button name="submit" type="submit" class="btn btn-lg btn-primary">Submit</button>
+
+          <!-- Optional: 메시지 전송 성공/실패 표시 -->
+          <div class="result"></div>
+        </form>
+
+
+      </div>
+
     </div>
-
-    <div class="col-sm-3">
-      <h4>Address</h4>
-      <address>
-        ICT Convergence Center (601), Room 302 <br>
-        Gyeongsang National University<br>
-        501 Jinju-daero, 52828, Jinju-si<br>
-        Gyeongsangnam-do, South Korea<br>
-      </address>
-
-      <address>
-        대한민국 경상남도 진주시 진주대로 501<br>
-        경상국립대학교 ICT융합센터(601동) 302호<br>
-      </address>
-
-      <h4>Contact Info</h4>
-      <ul>
-        <li><i class="fa fa-phone"></i> +82-55-772-9174 | +82-10-9253-1935</li>
-        <li>
-          <a href="mailto:jin.kim@gnu.ac.kr">
-            <i class="fa fa-envelope-o"></i> jin.kim@gnu.ac.kr
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="col-sm-4">
-      <form method="POST" action="https://formspree.io/f/movoovay">
-        <div class="form-group">
-          <label for="name">Name / 이름</label>
-          <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email / 이메일</label>
-          <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="comments">Message</label>
-          <textarea name="message" class="form-control" id="comments" rows="3"
-                    placeholder="Tell us how we can help you…" required></textarea>
-        </div>
-
-        <button name="submit" type="submit" class="btn btn-lg btn-primary">Submit</button>
-
-        <div class="result"></div>
-      </form>
-    </div>
-
   </div>
 </footer>
 

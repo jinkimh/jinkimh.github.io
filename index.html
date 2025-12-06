@@ -110,18 +110,38 @@ nav: home
 
     <div class="heading text-center">
       <h2>News</h2>
-      <p>Updates from the AiX Lab, including research progress, publications, and people-related achievements.</p>
+      <p>
+        Updates from the AiX Lab, including research progress, publications, and people-related achievements.
+      </p>
     </div>
 
-    {%- comment -%}
-      news 컬렉션 문서 가져오기 (Jekyll 버전에 따라 site.news 또는 site.collections.news.docs 사용)
-    {%- endcomment -%}
     {% assign news_docs = site.news | default: site.collections.news.docs | default: empty %}
 
     {% if news_docs and news_docs != empty %}
-      {%- assign sorted_news = news_docs | sort: "date" | reverse -%}
+      {% assign sorted_news = news_docs | sort: "date" | reverse %}
 
       <div class="news-list">
+        <!-- Always place recruitment news at top -->
+        <article class="news-card">
+          <h3 class="news-card-title">AiX Lab – 학부/석사/박사 과정 모집 안내</h3>
+          <p class="news-card-meta">Updated: 2025</p>
+          <div class="news-card-body">
+            <p>
+              AiX Lab은 <strong>학부연구생</strong>, <strong>석사과정</strong>, 
+              <strong>박사과정</strong>, <strong>석·박 통합과정</strong> 지원자를 모집하고 있습니다.
+            </p>
+            <p>
+              관심 분야는 <strong>Medical AI</strong>, <strong>Autonomous Driving (F1TENTH / RoboRacer)</strong>, 
+              <strong>AI Safety & CPS Verification</strong>입니다.
+            </p>
+            <p>
+              자세한 모집 요강 및 지원 양식은 아래 페이지에서 확인할 수 있습니다.
+            </p>
+            <p>🔗 <a href="https://aix.gnu.ac.kr/join.html" target="_blank">https://aix.gnu.ac.kr/join.html</a></p>
+          </div>
+        </article>
+
+        <!-- Then show all collection news in reverse chronological order -->
         {% for item in sorted_news %}
           <article class="news-card">
             <h3 class="news-card-title">{{ item.title }}</h3>
@@ -136,34 +156,81 @@ nav: home
           </article>
         {% endfor %}
       </div>
+
     {% else %}
+      <!-- ===================================== -->
+      <!-- Fallback News (No Jekyll collection) -->
+      <!-- ===================================== -->
+
       <div class="news-list">
+
+        <!-- (1) Always Top: Recruitment News -->
+        <article class="news-card">
+          <h3 class="news-card-title">AiX Lab – 학부/석사/박사 과정 모집 안내</h3>
+          <p class="news-card-meta">Updated: 2025</p>
+          <div class="news-card-body">
+            <p>
+              AiX Lab은 <strong>학부연구생</strong>, <strong>석사과정</strong>, 
+              <strong>박사과정</strong>, <strong>석·박 통합과정</strong> 지원자를 모집하고 있습니다.
+            </p>
+            <p>
+              관심 분야는 <strong>Medical AI</strong>, <strong>Autonomous Driving (F1TENTH / RoboRacer)</strong>, 
+              <strong>AI Safety & CPS Verification</strong>입니다.
+            </p>
+            <p>🔗 <a href="https://aix.gnu.ac.kr/join.html" target="_blank">지원 페이지 보기</a></p>
+          </div>
+        </article>
+
+        <!-- (2) NeurIPS 2025 -->
+        <article class="news-card">
+          <h3 class="news-card-title">NeurIPS 2025 – Conference Participation</h3>
+          <p class="news-card-meta">Dec 2–7, 2025 · San Diego Convention Center</p>
+          <div class="news-card-body">
+            <p>
+              <strong>김진현</strong>, <strong>조민아</strong>, <strong>조은아</strong>가 
+              미국 샌디에이고에서 열린 <strong>NeurIPS 2025</strong>에 참가했습니다.
+            </p>
+            <p>
+              LLM Safety, World Models, Medical AI 워크숍에 참여하며 향후 연구 방향을 논의했습니다.
+            </p>
+          </div>
+        </article>
+
+        <!-- (3) Publications -->
+        <article class="news-card">
+          <h3 class="news-card-title">2025 – SCI(E) 논문 4편 게재 완료</h3>
+          <p class="news-card-meta">2025</p>
+          <div class="news-card-body">
+            <p>IEEE Access 2편, Scientific Reports 2편이 2025년에 출판 승인되었습니다.</p>
+            <ul>
+              <li>Soomin Cho, Inhye Kang, Kim, Jin Hyun. <em>IEEE Access, 2025.</em></li>
+              <li>Kim, Jin Hyun et al. “ERM Quantification”, <em>IEEE Access, 2025.</em></li>
+              <li>Kim, Jin Hyun et al. “Video Gait Anomaly Detection”, <em>Scientific Reports, 2025.</em></li>
+              <li>Kim, Jin Hyun et al. “Ophtimus-V2-Tx LLM”, <em>Scientific Reports, 2025.</em></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- (4) Research Updates -->
         <article class="news-card">
           <h3 class="news-card-title">Research Highlights</h3>
+          <p class="news-card-meta">2025</p>
           <p class="news-card-body">
-            The AiX Lab continues advancing research in AI Safety, Medical AI,
-            and Cyber-Physical Systems. Ongoing work includes the preparation of
-            <strong>four SCI(E) publications</strong> expected to appear in 2025.
+            Medical AI, Autonomous Driving, CPS Verification 등 다양한 연구 프로젝트가 진행 중입니다.
           </p>
         </article>
 
+        <!-- (5) Alumni -->
         <article class="news-card">
           <h3 class="news-card-title">People & Alumni News</h3>
           <div class="news-card-body">
             <ul>
-              <li>
-                Minwook Kwon (M.S., Aug. 2025) joined
-                <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a>
-                as an AI engineer.
-              </li>
-              <li>
-                Seungju Baek (M.S., Mar. 2025) joined
-                <a href="https://www.saltlux.com/" target="_blank">Saltlux</a>,
-                contributing significantly to our <strong>Ophtimus</strong> research series.
-              </li>
+              <li>Minwook Kwon → Public AI (AI Engineer)</li>
+              <li>Seungju Baek → Saltlux (AI Research Engineer)</li>
             </ul>
           </div>
         </article>
+
       </div>
     {% endif %}
 

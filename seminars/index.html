@@ -28,9 +28,16 @@ title: "Seminars - AiX Lab @ GNU"
           <strong>분야:</strong> {{ seminar.category }}
         </p>
         <p>{{ seminar.description }}</p>
-        {% if seminar.video_url %}
-        <a href="#seminar-{{ seminar.id }}" class="da-link button-outline" data-toggle="modal">영상 보기</a>
-        {% endif %}
+        <div style="margin-top: 15px;">
+          {% if seminar.video_url %}
+          <a href="#seminar-{{ seminar.id }}" class="da-link button-outline" data-toggle="modal" style="margin-right: 10px;">영상 보기</a>
+          {% endif %}
+          {% if seminar.slide_file and seminar.slide_file != '' %}
+          <a href="{{ seminar.slide_file }}" class="da-link button-outline" download style="background-color: #5cb85c; border-color: #4cae4c; color: white;">
+            <i class="fa fa-download"></i> 슬라이드 다운로드
+          </a>
+          {% endif %}
+        </div>
         <div class="da-img" style="background-image: url('{{ seminar.image }}');"></div>
       </div>
       {% endfor %}
@@ -62,13 +69,20 @@ title: "Seminars - AiX Lab @ GNU"
             <p><strong>날짜:</strong> {{ seminar.date | date: "%Y년 %m월 %d일" }}</p>
             <p><strong>분야:</strong> <span class="label label-info">{{ seminar.category }}</span></p>
             <p>{{ seminar.description }}</p>
-            {% if seminar.video_url %}
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seminar-{{ seminar.id }}">
-              <i class="fa fa-play"></i> 영상 보기
-            </button>
-            {% else %}
-            <p class="text-muted"><i class="fa fa-info-circle"></i> 영상 준비 중</p>
-            {% endif %}
+            <div style="margin-top: 15px;">
+              {% if seminar.video_url %}
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seminar-{{ seminar.id }}" style="margin-right: 10px;">
+                <i class="fa fa-play"></i> 영상 보기
+              </button>
+              {% endif %}
+              {% if seminar.slide_file and seminar.slide_file != '' %}
+              <a href="{{ seminar.slide_file }}" class="btn btn-success" download>
+                <i class="fa fa-download"></i> 슬라이드 다운로드
+              </a>
+              {% else %}
+              <span class="text-muted"><i class="fa fa-file-o"></i> 슬라이드 준비 중</span>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
@@ -93,6 +107,14 @@ title: "Seminars - AiX Lab @ GNU"
               <p><strong>날짜:</strong> {{ seminar.date | date: "%Y년 %m월 %d일" }}</p>
               <p><strong>분야:</strong> {{ seminar.category }}</p>
               <p>{{ seminar.description }}</p>
+              {% if seminar.slide_file and seminar.slide_file != '' %}
+              <hr>
+              <p>
+                <a href="{{ seminar.slide_file }}" class="btn btn-success" download>
+                  <i class="fa fa-download"></i> 슬라이드 다운로드
+                </a>
+              </p>
+              {% endif %}
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>

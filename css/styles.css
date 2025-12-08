@@ -4,7 +4,7 @@ Author URI: http://webthemez.com/
 Description: This theme is a best responsive web template. It would be great for a corporate websites, business websites, personal blog.
 License: Free to use for personal and commercial, but you need to place back link in the bottom of the template.
 */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,900,500);
+/* Google Fonts removed - using system fonts for better performance */
 
 /* ==========================================================
    RESET & TYPOGRAPHY
@@ -13,12 +13,12 @@ License: Free to use for personal and commercial, but you need to place back lin
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'sans-serif', arial;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
     font-size: 14px;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     background: #fff;
     margin-top: 60px;

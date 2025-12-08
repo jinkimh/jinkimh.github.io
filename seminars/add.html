@@ -88,11 +88,40 @@ title: "세미나 추가 - AiX Lab @ GNU"
           <div class="form-group">
             <label for="slide_file" class="col-sm-3 control-label">슬라이드 파일</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="slide_file" name="slide_file" placeholder="예: /seminars/slides/seminar-1.pdf">
+              <div class="panel panel-info" style="margin-bottom: 10px;">
+                <div class="panel-body" style="padding: 10px;">
+                  <label for="slide_upload" class="btn btn-primary" style="margin-bottom: 0;">
+                    <i class="fa fa-upload"></i> 파일 선택 및 업로드
+                    <input type="file" id="slide_upload" name="slide_upload" accept=".pdf,.ppt,.pptx,.zip" style="display: none;">
+                  </label>
+                  <span id="slide_file_name" style="margin-left: 10px; color: #666;"></span>
+                  <div id="slide_upload_progress" style="display: none; margin-top: 10px;">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%">
+                        <span id="upload_percent">0%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="slide_upload_result" style="margin-top: 10px;"></div>
+                </div>
+              </div>
+              <input type="text" class="form-control" id="slide_file" name="slide_file" placeholder="예: /seminars/slides/seminar-1.pdf" readonly>
               <small class="help-block">
-                슬라이드 파일 경로를 입력하세요. 파일은 <code>/seminars/slides/</code> 폴더에 업로드해야 합니다.<br>
-                지원 형식: PDF, PPT, PPTX 등<br>
-                예: <code>/seminars/slides/medical-ai-2025-01-15.pdf</code>
+                파일을 선택하면 자동으로 GitHub에 업로드됩니다. 또는 직접 경로를 입력할 수도 있습니다.<br>
+                지원 형식: PDF, PPT, PPTX, ZIP 등<br>
+                <strong>GitHub 업로드 사용 시:</strong> GitHub Personal Access Token이 필요합니다 (아래 입력 필드 참조)
+              </small>
+            </div>
+          </div>
+
+          <div class="form-group" id="github_token_group" style="display: none;">
+            <label for="github_token" class="col-sm-3 control-label">GitHub Token</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" id="github_token" name="github_token" placeholder="GitHub Personal Access Token (업로드 시 필요)">
+              <small class="help-block">
+                GitHub API를 사용하여 파일을 업로드하려면 Personal Access Token이 필요합니다.<br>
+                <a href="https://github.com/settings/tokens" target="_blank">토큰 생성하기</a> (권한: <code>repo</code> 필요)<br>
+                또는 <a href="https://github.com/jinkimh/jinkimh.github.io/upload/main/seminars/slides" target="_blank">GitHub 웹 인터페이스로 직접 업로드</a>
               </small>
             </div>
           </div>
@@ -134,6 +163,165 @@ title: "세미나 추가 - AiX Lab @ GNU"
     // 오늘 날짜를 기본값으로 설정
     var today = new Date().toISOString().split('T')[0];
     $('#date').val(today);
+
+    // 파일 선택 시
+    $('#slide_upload').on('change', function(e) {
+      var file = e.target.files[0];
+      if (!file) return;
+
+      // 파일명 표시
+      $('#slide_file_name').text('선택된 파일: ' + file.name);
+      
+      // GitHub Token 입력 필드 표시
+      $('#github_token_group').slideDown();
+      
+      // 파일 업로드 시작
+      uploadFileToGitHub(file);
+    });
+
+    // 파일을 GitHub에 업로드
+    function uploadFileToGitHub(file) {
+      var token = $('#github_token').val();
+      if (!token) {
+        $('#slide_upload_result').html(
+          '<div class="alert alert-warning">' +
+          '<i class="fa fa-exclamation-triangle"></i> GitHub Personal Access Token을 입력하세요.' +
+          '</div>'
+        );
+        return;
+      }
+
+      // 진행률 표시
+      $('#slide_upload_progress').show();
+      updateProgress(10);
+
+      // 파일을 Base64로 변환
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var content = e.target.result.split(',')[1]; // Base64 데이터만 추출
+        
+        // 파일명 생성 (카테고리-날짜 형식)
+        var category = $('#category').val().toLowerCase().replace(/\s+/g, '-');
+        var date = $('#date').val().replace(/-/g, '');
+        var extension = file.name.split('.').pop();
+        var filename = category + '-' + date + '.' + extension;
+        var filePath = 'seminars/slides/' + filename;
+
+        updateProgress(30);
+
+        // GitHub API를 사용하여 파일 업로드
+        var apiUrl = 'https://api.github.com/repos/jinkimh/jinkimh.github.io/contents/' + filePath;
+        
+        // 먼저 파일이 존재하는지 확인
+        $.ajax({
+          url: apiUrl,
+          method: 'GET',
+          headers: {
+            'Authorization': 'token ' + token,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          success: function(data) {
+            // 파일이 존재하면 업데이트 (SHA 필요)
+            updateFile(apiUrl, content, data.sha, token, filePath);
+          },
+          error: function(xhr) {
+            if (xhr.status === 404) {
+              // 파일이 없으면 새로 생성
+              createFile(apiUrl, content, token, filePath);
+            } else {
+              showError('파일 확인 중 오류가 발생했습니다: ' + xhr.responseJSON.message);
+            }
+          }
+        });
+      };
+      
+      reader.readAsDataURL(file);
+    }
+
+    function createFile(apiUrl, content, token, filePath) {
+      updateProgress(50);
+      
+      $.ajax({
+        url: apiUrl,
+        method: 'PUT',
+        headers: {
+          'Authorization': 'token ' + token,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        data: JSON.stringify({
+          message: 'Upload seminar slide: ' + filePath,
+          content: content
+        }),
+        success: function(data) {
+          updateProgress(100);
+          var fileUrl = '/' + filePath;
+          $('#slide_file').val(fileUrl);
+          $('#slide_upload_result').html(
+            '<div class="alert alert-success">' +
+            '<i class="fa fa-check-circle"></i> 파일이 성공적으로 업로드되었습니다!<br>' +
+            '경로: <code>' + fileUrl + '</code>' +
+            '</div>'
+          );
+          setTimeout(function() {
+            $('#slide_upload_progress').hide();
+          }, 2000);
+        },
+        error: function(xhr) {
+          showError('파일 업로드 중 오류가 발생했습니다: ' + (xhr.responseJSON ? xhr.responseJSON.message : 'Unknown error'));
+        }
+      });
+    }
+
+    function updateFile(apiUrl, content, sha, token, filePath) {
+      updateProgress(50);
+      
+      $.ajax({
+        url: apiUrl,
+        method: 'PUT',
+        headers: {
+          'Authorization': 'token ' + token,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        data: JSON.stringify({
+          message: 'Update seminar slide: ' + filePath,
+          content: content,
+          sha: sha
+        }),
+        success: function(data) {
+          updateProgress(100);
+          var fileUrl = '/' + filePath;
+          $('#slide_file').val(fileUrl);
+          $('#slide_upload_result').html(
+            '<div class="alert alert-success">' +
+            '<i class="fa fa-check-circle"></i> 파일이 성공적으로 업데이트되었습니다!<br>' +
+            '경로: <code>' + fileUrl + '</code>' +
+            '</div>'
+          );
+          setTimeout(function() {
+            $('#slide_upload_progress').hide();
+          }, 2000);
+        },
+        error: function(xhr) {
+          showError('파일 업데이트 중 오류가 발생했습니다: ' + (xhr.responseJSON ? xhr.responseJSON.message : 'Unknown error'));
+        }
+      });
+    }
+
+    function updateProgress(percent) {
+      $('.progress-bar').css('width', percent + '%');
+      $('#upload_percent').text(percent + '%');
+    }
+
+    function showError(message) {
+      $('#slide_upload_progress').hide();
+      $('#slide_upload_result').html(
+        '<div class="alert alert-danger">' +
+        '<i class="fa fa-exclamation-circle"></i> ' + message +
+        '</div>'
+      );
+    }
 
     // 폼 제출 처리
     $('#seminar-form').on('submit', function(e) {

@@ -1,1 +1,4 @@
-Sitemap: http://0.0.0.0:4000/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://aix.gnu.ac.kr/sitemap.xml

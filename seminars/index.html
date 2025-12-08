@@ -1,0 +1,142 @@
+---
+layout: default
+nav: seminars
+title: "Seminars - AiX Lab @ GNU"
+---
+
+<section id="seminars" class="page-section">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>Seminars</h2>
+      <p>
+        AiX Lab에서 진행되는 세미나 및 강연 영상을 확인하실 수 있습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 세미나 슬라이더 -->
+<section class="page-section">
+  <div class="container">
+    <div id="seminar-slider" class="da-slider">
+      {% for seminar in site.data.seminars %}
+      <div class="da-slide">
+        <h2>{{ seminar.title }}</h2>
+        <p>
+          <strong>연사:</strong> {{ seminar.speaker }}{% if seminar.speaker_affiliation %} ({{ seminar.speaker_affiliation }}){% endif %}<br>
+          <strong>날짜:</strong> {{ seminar.date | date: "%Y년 %m월 %d일" }}<br>
+          <strong>분야:</strong> {{ seminar.category }}
+        </p>
+        <p>{{ seminar.description }}</p>
+        {% if seminar.video_url %}
+        <a href="#seminar-{{ seminar.id }}" class="da-link button-outline" data-toggle="modal">영상 보기</a>
+        {% endif %}
+        <div class="da-img" style="background-image: url('{{ seminar.image }}');"></div>
+      </div>
+      {% endfor %}
+      
+      <nav class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- 세미나 목록 -->
+<section class="page-section darkBg">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>세미나 목록</h2>
+    </div>
+    
+    <div class="row" style="margin-top: 40px;">
+      {% for seminar in site.data.seminars %}
+      <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+        <div class="panel panel-default" style="height: 100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ seminar.title }}</h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>연사:</strong> {{ seminar.speaker }}{% if seminar.speaker_affiliation %}<br><small>{{ seminar.speaker_affiliation }}</small>{% endif %}</p>
+            <p><strong>날짜:</strong> {{ seminar.date | date: "%Y년 %m월 %d일" }}</p>
+            <p><strong>분야:</strong> <span class="label label-info">{{ seminar.category }}</span></p>
+            <p>{{ seminar.description }}</p>
+            {% if seminar.video_url %}
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seminar-{{ seminar.id }}">
+              <i class="fa fa-play"></i> 영상 보기
+            </button>
+            {% else %}
+            <p class="text-muted"><i class="fa fa-info-circle"></i> 영상 준비 중</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      
+      <!-- 영상 모달 -->
+      {% if seminar.video_url %}
+      <div class="modal fade" id="seminar-{{ seminar.id }}" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">{{ seminar.title }}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ seminar.video_url }}?autoplay=0" allowfullscreen></iframe>
+              </div>
+              <hr>
+              <p><strong>연사:</strong> {{ seminar.speaker }}{% if seminar.speaker_affiliation %} ({{ seminar.speaker_affiliation }}){% endif %}</p>
+              <p><strong>날짜:</strong> {{ seminar.date | date: "%Y년 %m월 %d일" }}</p>
+              <p><strong>분야:</strong> {{ seminar.category }}</p>
+              <p>{{ seminar.description }}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 세미나 추가 버튼 (관리자용) -->
+<section class="page-section">
+  <div class="container text-center">
+    <a href="/seminars/add.html" class="btn btn-lg btn-success">
+      <i class="fa fa-plus"></i> 새 세미나 추가
+    </a>
+  </div>
+</section>
+
+<style>
+  .panel {
+    transition: transform 0.2s;
+  }
+  .panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  #seminar-slider {
+    margin-bottom: 50px;
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    // 세미나 슬라이더 초기화
+    if ($('#seminar-slider').length) {
+      $('#seminar-slider').cslider({
+        autoplay: true,
+        bgincrement: 50
+      });
+    }
+  });
+</script>
+

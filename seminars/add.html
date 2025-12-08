@@ -1,0 +1,214 @@
+---
+layout: default
+nav: seminars
+title: "세미나 추가 - AiX Lab @ GNU"
+---
+
+<section id="seminar-add" class="page-section">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>새 세미나 추가</h2>
+      <p>
+        세미나 정보를 입력하여 추가하세요. 제출 후 <code>_data/seminars.yml</code> 파일을 수정해야 합니다.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form id="seminar-form" class="form-horizontal">
+          <div class="form-group">
+            <label for="title" class="col-sm-3 control-label">세미나 제목 *</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="title" name="title" placeholder="예: Medical AI and Domain-Specialized LLMs" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="col-sm-3 control-label">날짜 *</label>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="speaker" class="col-sm-3 control-label">연사 이름 *</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="speaker" name="speaker" placeholder="예: Dr. Jin Hyun Kim" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="speaker_affiliation" class="col-sm-3 control-label">연사 소속</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="speaker_affiliation" name="speaker_affiliation" placeholder="예: AiX Lab @ GNU">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="category" class="col-sm-3 control-label">분야 *</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="category" name="category" required>
+                <option value="">선택하세요</option>
+                <option value="Medical AI">Medical AI</option>
+                <option value="Formal Methods">Formal Methods</option>
+                <option value="Robot Racing">Robot Racing</option>
+                <option value="AI Safety">AI Safety</option>
+                <option value="ETC">ETC</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="video_url" class="col-sm-3 control-label">영상 URL</label>
+            <div class="col-sm-9">
+              <input type="url" class="form-control" id="video_url" name="video_url" placeholder="예: https://www.youtube.com/embed/VIDEO_ID">
+              <small class="help-block">
+                YouTube 영상의 경우, 공유 > 퍼가기에서 iframe src URL을 복사하세요.<br>
+                예: https://www.youtube.com/embed/5JCrCxaQ-n4
+              </small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="col-sm-3 control-label">설명 *</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="description" name="description" rows="4" placeholder="세미나에 대한 간단한 설명을 입력하세요." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="image" class="col-sm-3 control-label">이미지 URL</label>
+            <div class="col-sm-9">
+              <input type="url" class="form-control" id="image" name="image" placeholder="예: /images/aix_lab_logo.png">
+              <small class="help-block">슬라이더에 표시될 이미지 URL을 입력하세요.</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa fa-save"></i> 세미나 정보 생성
+              </button>
+              <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='/seminars/'">
+                <i class="fa fa-arrow-left"></i> 목록으로 돌아가기
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- 생성된 YAML 출력 영역 -->
+        <div id="yaml-output" class="panel panel-success" style="display: none; margin-top: 30px;">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-code"></i> 생성된 YAML 코드
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>아래 코드를 복사하여 <code>_data/seminars.yml</code> 파일에 추가하세요:</strong></p>
+            <pre id="yaml-code" style="background: #f5f5f5; padding: 15px; border-radius: 4px; overflow-x: auto;"></pre>
+            <button type="button" class="btn btn-success" onclick="copyToClipboard()">
+              <i class="fa fa-copy"></i> 코드 복사
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function() {
+    // 오늘 날짜를 기본값으로 설정
+    var today = new Date().toISOString().split('T')[0];
+    $('#date').val(today);
+
+    // 폼 제출 처리
+    $('#seminar-form').on('submit', function(e) {
+      e.preventDefault();
+      
+      // 폼 데이터 수집
+      var formData = {
+        title: $('#title').val(),
+        date: $('#date').val(),
+        speaker: $('#speaker').val(),
+        speaker_affiliation: $('#speaker_affiliation').val() || '',
+        category: $('#category').val(),
+        video_url: $('#video_url').val() || '',
+        description: $('#description').val(),
+        image: $('#image').val() || '/images/aix_lab_logo.png'
+      };
+
+      // ID 생성 (현재 시간 기반)
+      var id = Date.now();
+
+      // YAML 생성
+      var yaml = `- id: ${id}
+  title: "${formData.title}"
+  date: "${formData.date}"
+  speaker: "${formData.speaker}"`;
+      
+      if (formData.speaker_affiliation) {
+        yaml += `\n  speaker_affiliation: "${formData.speaker_affiliation}"`;
+      }
+      
+      yaml += `\n  video_url: "${formData.video_url}"
+  description: "${formData.description}"
+  image: "${formData.image}"
+  category: "${formData.category}"`;
+
+      // YAML 출력
+      $('#yaml-code').text(yaml);
+      $('#yaml-output').slideDown();
+      
+      // 스크롤
+      $('html, body').animate({
+        scrollTop: $('#yaml-output').offset().top - 100
+      }, 500);
+    });
+  });
+
+  function copyToClipboard() {
+    var code = document.getElementById('yaml-code');
+    var textArea = document.createElement('textarea');
+    textArea.value = code.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    
+    // 피드백
+    var btn = event.target.closest('button');
+    var originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fa fa-check"></i> 복사됨!';
+    btn.classList.add('btn-success');
+    setTimeout(function() {
+      btn.innerHTML = originalText;
+      btn.classList.remove('btn-success');
+    }, 2000);
+  }
+</script>
+
+<style>
+  .form-horizontal .control-label {
+    text-align: left;
+    font-weight: bold;
+  }
+  .help-block {
+    margin-top: 5px;
+    color: #666;
+  }
+  #yaml-output {
+    animation: slideDown 0.3s ease-out;
+  }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+

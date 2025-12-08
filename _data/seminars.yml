@@ -1,0 +1,33 @@
+# 세미나 데이터
+# 각 세미나는 제목, 날짜, 연사, 영상 URL, 설명 등을 포함합니다
+
+- id: 1
+  title: "Medical AI and Domain-Specialized LLMs"
+  date: "2025-01-15"
+  speaker: "Dr. Jin Hyun Kim"
+  speaker_affiliation: "AiX Lab @ GNU"
+  video_url: "https://www.youtube.com/embed/5JCrCxaQ-n4"
+  description: "안과 영상 분석 및 도메인 특화 LLM을 활용한 의료 AI 연구에 대해 소개합니다."
+  image: "/images/aix_lab_logo.png"
+  category: "Medical AI"
+
+- id: 2
+  title: "Formal Methods for Cyber-Physical Systems"
+  date: "2025-01-10"
+  speaker: "Dr. Jin Hyun Kim"
+  speaker_affiliation: "AiX Lab @ GNU"
+  video_url: ""
+  description: "포멀 메서드를 활용한 사이버-물리 시스템 검증 및 런타임 모니터링 기법을 소개합니다."
+  image: "/images/aix_lab_logo.png"
+  category: "Formal Methods"
+
+- id: 3
+  title: "Autonomous Racing with F1TENTH"
+  date: "2025-01-05"
+  speaker: "AiX Lab Team"
+  speaker_affiliation: "AiX Lab @ GNU"
+  video_url: ""
+  description: "F1TENTH 플랫폼을 활용한 자율주행 레이싱 연구 및 실험 결과를 공유합니다."
+  image: "/images/aix_lab_logo.png"
+  category: "Robot Racing"
+

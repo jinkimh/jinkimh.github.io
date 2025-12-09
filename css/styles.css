@@ -1755,10 +1755,13 @@ body {
   .photo-grid-row {
     margin-left: -10px;
     margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .photo-grid-col {
     padding: 10px;
+    display: flex;
   }
 
   .photo-card {

@@ -4,7 +4,7 @@ Author URI: http://webthemez.com/
 Description: This theme is a best responsive web template. It would be great for a corporate websites, business websites, personal blog.
 License: Free to use for personal and commercial, but you need to place back link in the bottom of the template.
 */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,900,500);
+/* Google Fonts removed - using system fonts for better performance */
 
 /* ==========================================================
    RESET & TYPOGRAPHY
@@ -13,12 +13,12 @@ License: Free to use for personal and commercial, but you need to place back lin
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'sans-serif', arial;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
     font-size: 14px;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     background: #fff;
     margin-top: 60px;
@@ -897,7 +897,7 @@ body {
    ========================================================== */
 
 .da-slide {
-    top: 15%;
+    top: -5%; /* 배너를 20% 위로 올림 (15% -> -5%) */
 }
 
 @media (min-width: 768px) {
@@ -910,7 +910,43 @@ body {
     }
 }
 
+/* ==========================================================
+   MOBILE UX IMPROVEMENTS
+   ========================================================== */
 @media (max-width: 768px) {
+    /* Touch Targets - Minimum 44x44px */
+    .btn,
+    .button-outline,
+    button,
+    .navbar-toggle,
+    .navbar-nav > li > a {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px 20px;
+        touch-action: manipulation; /* Disable double-tap zoom */
+    }
+    
+    /* Form inputs - iOS zoom prevention */
+    input[type="text"],
+    input[type="email"],
+    input[type="submit"],
+    textarea,
+    select {
+        min-height: 44px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Links in content */
+    .page-section a,
+    .news-card a,
+    article a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        margin: -8px -12px; /* Compensate for padding */
+    }
+
     .banner-container {
         background-size: contain;
         width: 100%;
@@ -926,6 +962,9 @@ body {
         -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
         -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
         box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
 
     .team-member .member-img img {
@@ -944,7 +983,55 @@ body {
     }
 
     .header .navbar-nav > li > a {
-        padding: 25px 12px;
+        padding: 15px 20px !important;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Mobile navigation improvements */
+    .navbar-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+        margin: 8px 15px;
+    }
+    
+    .navbar-toggle .icon-bar {
+        width: 22px;
+        height: 3px;
+        margin: 3px 0;
+    }
+    
+    /* Better mobile menu spacing */
+    #main-nav .navbar-nav {
+        margin: 0;
+    }
+    
+    #main-nav .navbar-nav > li {
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #main-nav .navbar-nav > li:last-child {
+        border-bottom: none;
+    }
+    
+    /* Dropdown menus on mobile */
+    .has-dropdown > .dropdown {
+        position: static;
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        background-color: #f5f5f5;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+    
+    .has-dropdown > .dropdown > li > a {
+        padding: 12px 20px;
+        min-height: 44px;
     }
 
     .portfolio-item:hover .folio-info {
@@ -962,8 +1049,9 @@ body {
 
 @media (max-width:760px) {
     .header .navbar-nav > li > a {
-        padding: 7px 12px;
-        font-size: 14px;
+        padding: 15px 20px !important;
+        font-size: 16px; /* Better readability */
+        min-height: 44px;
     }
 
     .navbar-inverse .navbar-collapse, 
@@ -1003,7 +1091,7 @@ body {
     }
 
     .da-slide {
-        top: 26%;
+        top: 6%; /* 배너를 20% 위로 올림 (26% -> 6%) */
     }
 
     .da-slide h2 {
@@ -1096,25 +1184,42 @@ body {
    =========================== */
 @media (max-width: 767px) {
     /* 펼쳐진 메뉴 박스 배경 */
+    #main-nav {
+        background: #fff !important;
+    }
  
     /* 각 메뉴 글자를 흰색으로 (검은 배경 대비) */
     .navbar-inverse .navbar-nav > li > a {
-        color: #fff !important;
+        color: #858585 !important;
+        min-height: 44px;
+        padding: 15px 20px !important;
     }
 
     /* hover / focus */
     .navbar-inverse .navbar-nav > li > a:hover,
     .navbar-inverse .navbar-nav > li > a:focus {
-        background-color: #222 !important;
-        color: #fff !important;
+        background-color: #f5f5f5 !important;
+        color: #1371AF !important;
     }
 
     /* active 메뉴 */
     .navbar-inverse .navbar-nav > .active > a,
     .navbar-inverse .navbar-nav > .active > a:hover,
     .navbar-inverse .navbar-nav > .active > a:focus {
-        background-color: #333 !important;
-        color: #fff !important;
+        background-color: #e8e8e8 !important;
+        color: #1371AF !important;
+    }
+    
+    /* Dropdown on mobile */
+    .has-dropdown > .dropdown > li > a {
+        color: #858585 !important;
+        padding: 12px 20px !important;
+        min-height: 44px;
+    }
+    
+    .has-dropdown > .dropdown > li > a:hover {
+        background-color: #f5f5f5 !important;
+        color: #1371AF !important;
     }
 }
 

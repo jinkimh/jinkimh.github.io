@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; frame-src 'self' https://www.youtube.com https://www.google.com; connect-src 'self' https://formspree.io https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+   <!-- 🔥 SEO 기본 메타 태그 -->
+  <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="author" content="AiX Lab">
+
+  <title>세미나 추가 - AiX Lab @ GNU</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aix.gnu.ac.kr/seminars/add.html">
+  <meta property="og:title" content="세미나 추가 - AiX Lab @ GNU">
+  <meta property="og:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta property="og:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+  <meta property="og:site_name" content="AiX Lab @ GNU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aix.gnu.ac.kr/seminars/add.html">
+  <meta name="twitter:title" content="세미나 추가 - AiX Lab @ GNU">
+  <meta name="twitter:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="twitter:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AiX Lab",
+    "alternateName": "AiX Lab @ GNU",
+    "url": "https://aix.gnu.ac.kr",
+    "logo": "https://aix.gnu.ac.kr/images/aix_lab_logo.png",
+    "description": "AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ICT Convergence Center (601), Room 302, 501 Jinju-daero",
+      "addressLocality": "Jinju-si",
+      "addressRegion": "Gyeongsangnam-do",
+      "postalCode": "52828",
+      "addressCountry": "KR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-55-772-9174",
+      "email": "jin.kim@gnu.ac.kr",
+      "contactType": "Research Lab"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Gyeongsang National University",
+      "url": "https://www.gnu.ac.kr"
+    },
+    "sameAs": [
+      "https://jin-kim.net"
+    ]
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/da-slider.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
+
+  <!-- Logo style -->
+  <style>
+    .navbar-brand img {
+      width: 250px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+
+      <!-- Mobile toggle -->
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="navbar-brand logo">
+          <img src="/images/aix_lab_logo.png" alt="AiX Lab" loading="eager" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="mainNav">
+
+          <!-- About Us -->
+          <li >
+            <a href="/about.html">About Us</a>
+          </li>
+
+          <!-- Academy Portfolio 
+          <li >
+            <a href="/portfolio.html">Academy Portfolio</a>
+          </li>
+          -->
+          
+          <!-- Publication (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/publications/journals">Publication</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/publications/journals">
+                  Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/conferences">
+                  Conferences
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-journals">
+                  Korean Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-conferences">
+                  Korean Conferences
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Research (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/research/">Research</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/research/formal-methods">
+                  Formal Methods
+                </a>
+              </li>
+              <li>
+                <a href="/research/medical-ai">
+                  Medical AI
+                </a>
+              </li>
+              <li>
+                <a href="/research/robot-racing">
+                  Robot Racing
+                </a>
+              </li>
+              <li>
+                <a href="/research/etc">
+                  ETC
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Project -->
+          <li >
+            <a href="/projects/">Project</a>
+          </li>
+
+          <!-- Team -->
+          <li >
+            <a href="/teams/">Team</a>
+          </li>
+
+          <!-- News -->
+          <li >
+            <a href="/news.html">News</a>
+          </li>
+          
+          <!-- Seminars -->
+          <li class="active">
+            <a href="/seminars/">Seminars</a>
+          </li>
+          
+          <!-- Gallery -->
+          <li >
+            <a href="/gallery/photos.html">Gallery</a>
+          </li>
+
+          <!-- Join -->
+          <li >
+            <a href="/join.html">Join</a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- Page Content -->
+<section id="seminar-add" class="page-section">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>새 세미나 추가</h2>
+      <p>
+        세미나 정보를 입력하여 추가하세요. 제출 후 <code>_data/seminars.yml</code> 파일을 수정해야 합니다.<br>
+        <strong>슬라이드 파일 업로드:</strong> 슬라이드 파일(PDF, PPT 등)을 <code>/seminars/slides/</code> 폴더에 업로드한 후 경로를 입력하세요.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form id="seminar-form" class="form-horizontal">
+          <div class="form-group">
+            <label for="title" class="col-sm-3 control-label">세미나 제목 *</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="title" name="title" placeholder="예: Medical AI and Domain-Specialized LLMs" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="col-sm-3 control-label">날짜 *</label>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="speaker" class="col-sm-3 control-label">연사 이름 *</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="speaker" name="speaker" placeholder="예: Dr. Jin Hyun Kim" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="speaker_affiliation" class="col-sm-3 control-label">연사 소속</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="speaker_affiliation" name="speaker_affiliation" placeholder="예: AiX Lab @ GNU">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="category" class="col-sm-3 control-label">분야 *</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="category" name="category" required>
+                <option value="">선택하세요</option>
+                <option value="Medical AI">Medical AI</option>
+                <option value="Formal Methods">Formal Methods</option>
+                <option value="Robot Racing">Robot Racing</option>
+                <option value="AI Safety">AI Safety</option>
+                <option value="ETC">ETC</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="video_url" class="col-sm-3 control-label">영상 URL</label>
+            <div class="col-sm-9">
+              <input type="url" class="form-control" id="video_url" name="video_url" placeholder="예: https://www.youtube.com/embed/VIDEO_ID">
+              <small class="help-block">
+                YouTube 영상의 경우, 공유 > 퍼가기에서 iframe src URL을 복사하세요.<br>
+                예: https://www.youtube.com/embed/5JCrCxaQ-n4
+              </small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description" class="col-sm-3 control-label">설명 *</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="description" name="description" rows="4" placeholder="세미나에 대한 간단한 설명을 입력하세요." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="image" class="col-sm-3 control-label">이미지 URL</label>
+            <div class="col-sm-9">
+              <input type="url" class="form-control" id="image" name="image" placeholder="예: /images/aix_lab_logo.png">
+              <small class="help-block">슬라이더에 표시될 이미지 URL을 입력하세요.</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="slide_file" class="col-sm-3 control-label">슬라이드 파일</label>
+            <div class="col-sm-9">
+              <div class="panel panel-info" style="margin-bottom: 10px;">
+                <div class="panel-body" style="padding: 10px;">
+                  <label for="slide_upload" class="btn btn-primary" style="margin-bottom: 0;">
+                    <i class="fa fa-upload"></i> 파일 선택 및 업로드
+                    <input type="file" id="slide_upload" name="slide_upload" accept=".pdf,.ppt,.pptx,.zip" style="display: none;">
+                  </label>
+                  <span id="slide_file_name" style="margin-left: 10px; color: #666;"></span>
+                  <div id="slide_upload_progress" style="display: none; margin-top: 10px;">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%">
+                        <span id="upload_percent">0%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="slide_upload_result" style="margin-top: 10px;"></div>
+                </div>
+              </div>
+              <input type="text" class="form-control" id="slide_file" name="slide_file" placeholder="예: /seminars/slides/seminar-1.pdf" readonly>
+              <small class="help-block">
+                파일을 선택하면 자동으로 GitHub에 업로드됩니다. 또는 직접 경로를 입력할 수도 있습니다.<br>
+                지원 형식: PDF, PPT, PPTX, ZIP 등<br>
+                <strong>GitHub 업로드 사용 시:</strong> GitHub Personal Access Token이 필요합니다 (아래 입력 필드 참조)
+              </small>
+            </div>
+          </div>
+
+          <div class="form-group" id="github_token_group" style="display: none;">
+            <label for="github_token" class="col-sm-3 control-label">GitHub Token</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" id="github_token" name="github_token" placeholder="GitHub Personal Access Token (업로드 시 필요)">
+              <small class="help-block">
+                GitHub API를 사용하여 파일을 업로드하려면 Personal Access Token이 필요합니다.<br>
+                <a href="https://github.com/settings/tokens" target="_blank">토큰 생성하기</a> (권한: <code>repo</code> 필요)<br>
+                또는 <a href="https://github.com/jinkimh/jinkimh.github.io/upload/main/seminars/slides" target="_blank">GitHub 웹 인터페이스로 직접 업로드</a>
+              </small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa fa-save"></i> 세미나 정보 생성
+              </button>
+              <button type="button" class="btn btn-default btn-lg" onclick="window.location.href='/seminars/'">
+                <i class="fa fa-arrow-left"></i> 목록으로 돌아가기
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- 생성된 YAML 출력 영역 -->
+        <div id="yaml-output" class="panel panel-success" style="display: none; margin-top: 30px;">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <i class="fa fa-code"></i> 생성된 YAML 코드
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>아래 코드를 복사하여 <code>_data/seminars.yml</code> 파일에 추가하세요:</strong></p>
+            <pre id="yaml-code" style="background: #f5f5f5; padding: 15px; border-radius: 4px; overflow-x: auto;"></pre>
+            <button type="button" class="btn btn-success" onclick="copyToClipboard()">
+              <i class="fa fa-copy"></i> 코드 복사
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function() {
+    // 오늘 날짜를 기본값으로 설정
+    var today = new Date().toISOString().split('T')[0];
+    $('#date').val(today);
+
+    // 파일 선택 시
+    $('#slide_upload').on('change', function(e) {
+      var file = e.target.files[0];
+      if (!file) return;
+
+      // 파일명 표시
+      $('#slide_file_name').text('선택된 파일: ' + file.name);
+      
+      // GitHub Token 입력 필드 표시
+      $('#github_token_group').slideDown();
+      
+      // 파일 업로드 시작
+      uploadFileToGitHub(file);
+    });
+
+    // 파일을 GitHub에 업로드
+    function uploadFileToGitHub(file) {
+      var token = $('#github_token').val();
+      if (!token) {
+        $('#slide_upload_result').html(
+          '<div class="alert alert-warning">' +
+          '<i class="fa fa-exclamation-triangle"></i> GitHub Personal Access Token을 입력하세요.' +
+          '</div>'
+        );
+        return;
+      }
+
+      // 진행률 표시
+      $('#slide_upload_progress').show();
+      updateProgress(10);
+
+      // 파일을 Base64로 변환
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var content = e.target.result.split(',')[1]; // Base64 데이터만 추출
+        
+        // 파일명 생성 (카테고리-날짜 형식)
+        var category = $('#category').val().toLowerCase().replace(/\s+/g, '-');
+        var date = $('#date').val().replace(/-/g, '');
+        var extension = file.name.split('.').pop();
+        var filename = category + '-' + date + '.' + extension;
+        var filePath = 'seminars/slides/' + filename;
+
+        updateProgress(30);
+
+        // GitHub API를 사용하여 파일 업로드
+        var apiUrl = 'https://api.github.com/repos/jinkimh/jinkimh.github.io/contents/' + filePath;
+        
+        // 먼저 파일이 존재하는지 확인
+        $.ajax({
+          url: apiUrl,
+          method: 'GET',
+          headers: {
+            'Authorization': 'token ' + token,
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          success: function(data) {
+            // 파일이 존재하면 업데이트 (SHA 필요)
+            updateFile(apiUrl, content, data.sha, token, filePath);
+          },
+          error: function(xhr) {
+            if (xhr.status === 404) {
+              // 파일이 없으면 새로 생성
+              createFile(apiUrl, content, token, filePath);
+            } else {
+              showError('파일 확인 중 오류가 발생했습니다: ' + xhr.responseJSON.message);
+            }
+          }
+        });
+      };
+      
+      reader.readAsDataURL(file);
+    }
+
+    function createFile(apiUrl, content, token, filePath) {
+      updateProgress(50);
+      
+      $.ajax({
+        url: apiUrl,
+        method: 'PUT',
+        headers: {
+          'Authorization': 'token ' + token,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        data: JSON.stringify({
+          message: 'Upload seminar slide: ' + filePath,
+          content: content
+        }),
+        success: function(data) {
+          updateProgress(100);
+          var fileUrl = '/' + filePath;
+          $('#slide_file').val(fileUrl);
+          $('#slide_upload_result').html(
+            '<div class="alert alert-success">' +
+            '<i class="fa fa-check-circle"></i> 파일이 성공적으로 업로드되었습니다!<br>' +
+            '경로: <code>' + fileUrl + '</code>' +
+            '</div>'
+          );
+          setTimeout(function() {
+            $('#slide_upload_progress').hide();
+          }, 2000);
+        },
+        error: function(xhr) {
+          showError('파일 업로드 중 오류가 발생했습니다: ' + (xhr.responseJSON ? xhr.responseJSON.message : 'Unknown error'));
+        }
+      });
+    }
+
+    function updateFile(apiUrl, content, sha, token, filePath) {
+      updateProgress(50);
+      
+      $.ajax({
+        url: apiUrl,
+        method: 'PUT',
+        headers: {
+          'Authorization': 'token ' + token,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        data: JSON.stringify({
+          message: 'Update seminar slide: ' + filePath,
+          content: content,
+          sha: sha
+        }),
+        success: function(data) {
+          updateProgress(100);
+          var fileUrl = '/' + filePath;
+          $('#slide_file').val(fileUrl);
+          $('#slide_upload_result').html(
+            '<div class="alert alert-success">' +
+            '<i class="fa fa-check-circle"></i> 파일이 성공적으로 업데이트되었습니다!<br>' +
+            '경로: <code>' + fileUrl + '</code>' +
+            '</div>'
+          );
+          setTimeout(function() {
+            $('#slide_upload_progress').hide();
+          }, 2000);
+        },
+        error: function(xhr) {
+          showError('파일 업데이트 중 오류가 발생했습니다: ' + (xhr.responseJSON ? xhr.responseJSON.message : 'Unknown error'));
+        }
+      });
+    }
+
+    function updateProgress(percent) {
+      $('.progress-bar').css('width', percent + '%');
+      $('#upload_percent').text(percent + '%');
+    }
+
+    function showError(message) {
+      $('#slide_upload_progress').hide();
+      $('#slide_upload_result').html(
+        '<div class="alert alert-danger">' +
+        '<i class="fa fa-exclamation-circle"></i> ' + message +
+        '</div>'
+      );
+    }
+
+    // 폼 제출 처리
+    $('#seminar-form').on('submit', function(e) {
+      e.preventDefault();
+      
+      // 폼 데이터 수집
+      var formData = {
+        title: $('#title').val(),
+        date: $('#date').val(),
+        speaker: $('#speaker').val(),
+        speaker_affiliation: $('#speaker_affiliation').val() || '',
+        category: $('#category').val(),
+        video_url: $('#video_url').val() || '',
+        slide_file: $('#slide_file').val() || '',
+        description: $('#description').val(),
+        image: $('#image').val() || '/images/aix_lab_logo.png'
+      };
+
+      // ID 생성 (현재 시간 기반)
+      var id = Date.now();
+
+      // YAML 생성
+      var yaml = `- id: ${id}
+  title: "${formData.title}"
+  date: "${formData.date}"
+  speaker: "${formData.speaker}"`;
+      
+      if (formData.speaker_affiliation) {
+        yaml += `\n  speaker_affiliation: "${formData.speaker_affiliation}"`;
+      }
+      
+      yaml += `\n  video_url: "${formData.video_url}"
+  slide_file: "${formData.slide_file}"
+  description: "${formData.description}"
+  image: "${formData.image}"
+  category: "${formData.category}"`;
+
+      // YAML 출력
+      $('#yaml-code').text(yaml);
+      $('#yaml-output').slideDown();
+      
+      // 스크롤
+      $('html, body').animate({
+        scrollTop: $('#yaml-output').offset().top - 100
+      }, 500);
+    });
+  });
+
+  function copyToClipboard() {
+    var code = document.getElementById('yaml-code');
+    var textArea = document.createElement('textarea');
+    textArea.value = code.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    
+    // 피드백
+    var btn = event.target.closest('button');
+    var originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fa fa-check"></i> 복사됨!';
+    btn.classList.add('btn-success');
+    setTimeout(function() {
+      btn.innerHTML = originalText;
+      btn.classList.remove('btn-success');
+    }, 2000);
+  }
+</script>
+
+<style>
+  .form-horizontal .control-label {
+    text-align: left;
+    font-weight: bold;
+  }
+  .help-block {
+    margin-top: 5px;
+    color: #666;
+  }
+  #yaml-output {
+    animation: slideDown 0.3s ease-out;
+  }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!-- JS -->
+<script src="/js/modernizr-latest.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.nav.js"></script>
+<script src="/js/jquery.cslider.js"></script>
+<script src="/js/custom.js" defer></script>
+
+</body>
+</html>

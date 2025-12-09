@@ -1,15 +1,72 @@
 <!doctype html>
-<html lang="en-gb" class="no-js">
+<html lang="ko" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; frame-src 'self' https://www.youtube.com https://www.google.com; connect-src 'self' https://formspree.io https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
    <!-- 🔥 SEO 기본 메타 태그 -->
   <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
-  <meta name="keywords" content="AiX Lab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
   <meta name="author" content="AiX Lab">
 
   <title>Projects</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aix.gnu.ac.kr/projects.html.bak">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta property="og:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+  <meta property="og:site_name" content="AiX Lab @ GNU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aix.gnu.ac.kr/projects.html.bak">
+  <meta name="twitter:title" content="Projects">
+  <meta name="twitter:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="twitter:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AiX Lab",
+    "alternateName": "AiX Lab @ GNU",
+    "url": "https://aix.gnu.ac.kr",
+    "logo": "https://aix.gnu.ac.kr/images/aix_lab_logo.png",
+    "description": "AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ICT Convergence Center (601), Room 302, 501 Jinju-daero",
+      "addressLocality": "Jinju-si",
+      "addressRegion": "Gyeongsangnam-do",
+      "postalCode": "52828",
+      "addressCountry": "KR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-55-772-9174",
+      "email": "jin.kim@gnu.ac.kr",
+      "contactType": "Research Lab"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Gyeongsang National University",
+      "url": "https://www.gnu.ac.kr"
+    },
+    "sameAs": [
+      "https://jin-kim.net"
+    ]
+  }
+  </script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -17,7 +74,8 @@
   <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
   <link rel="stylesheet" type="text/css" href="/css/da-slider.css" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <link href="/font/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
 
   <!-- Logo style -->
   <style>
@@ -45,7 +103,7 @@
 
         <!-- Logo -->
         <a href="/" class="navbar-brand logo">
-          <img src="/images/aix_lab_logo.png" alt="AiX Lab" />
+          <img src="/images/aix_lab_logo.png" alt="AiX Lab" loading="eager" />
         </a>
       </div>
 
@@ -132,6 +190,11 @@
           <!-- News -->
           <li >
             <a href="/news.html">News</a>
+          </li>
+          
+          <!-- Seminars -->
+          <li >
+            <a href="/seminars/">Seminars</a>
           </li>
           
           <!-- Gallery -->
@@ -630,14 +693,14 @@
 <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
 
 <!-- JS -->
-<script src="/js/modernizr-latest.js"></script>
-<script src="/js/jquery-1.8.2.min.js"></script>
+<script src="/js/modernizr-latest.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.isotope.min.js"></script>
 <script src="/js/fancybox/jquery.fancybox.pack.js"></script>
 <script src="/js/jquery.nav.js"></script>
 <script src="/js/jquery.cslider.js"></script>
-<script src="/js/custom.js"></script>
+<script src="/js/custom.js" defer></script>
 
 </body>
 </html>

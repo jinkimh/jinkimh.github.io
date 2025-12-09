@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; frame-src 'self' https://www.youtube.com https://www.google.com; connect-src 'self' https://formspree.io https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+   <!-- 🔥 SEO 기본 메타 태그 -->
+  <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="author" content="AiX Lab">
+
+  <title>Seminars - AiX Lab @ GNU</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aix.gnu.ac.kr/seminars/">
+  <meta property="og:title" content="Seminars - AiX Lab @ GNU">
+  <meta property="og:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta property="og:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+  <meta property="og:site_name" content="AiX Lab @ GNU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aix.gnu.ac.kr/seminars/">
+  <meta name="twitter:title" content="Seminars - AiX Lab @ GNU">
+  <meta name="twitter:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="twitter:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AiX Lab",
+    "alternateName": "AiX Lab @ GNU",
+    "url": "https://aix.gnu.ac.kr",
+    "logo": "https://aix.gnu.ac.kr/images/aix_lab_logo.png",
+    "description": "AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ICT Convergence Center (601), Room 302, 501 Jinju-daero",
+      "addressLocality": "Jinju-si",
+      "addressRegion": "Gyeongsangnam-do",
+      "postalCode": "52828",
+      "addressCountry": "KR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-55-772-9174",
+      "email": "jin.kim@gnu.ac.kr",
+      "contactType": "Research Lab"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Gyeongsang National University",
+      "url": "https://www.gnu.ac.kr"
+    },
+    "sameAs": [
+      "https://jin-kim.net"
+    ]
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/da-slider.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
+
+  <!-- Logo style -->
+  <style>
+    .navbar-brand img {
+      width: 250px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+
+      <!-- Mobile toggle -->
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="navbar-brand logo">
+          <img src="/images/aix_lab_logo.png" alt="AiX Lab" loading="eager" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" id="mainNav">
+
+          <!-- About Us -->
+          <li >
+            <a href="/about.html">About Us</a>
+          </li>
+
+          <!-- Academy Portfolio 
+          <li >
+            <a href="/portfolio.html">Academy Portfolio</a>
+          </li>
+          -->
+          
+          <!-- Publication (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/publications/journals">Publication</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/publications/journals">
+                  Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/conferences">
+                  Conferences
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-journals">
+                  Korean Journals
+                </a>
+              </li>
+              <li>
+                <a href="/publications/korean-conferences">
+                  Korean Conferences
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Research (Dropdown) -->
+          <li class="has-dropdown ">
+            <a href="/research/">Research</a>
+            <ul class="dropdown">
+              <li>
+                <a href="/research/formal-methods">
+                  Formal Methods
+                </a>
+              </li>
+              <li>
+                <a href="/research/medical-ai">
+                  Medical AI
+                </a>
+              </li>
+              <li>
+                <a href="/research/robot-racing">
+                  Robot Racing
+                </a>
+              </li>
+              <li>
+                <a href="/research/etc">
+                  ETC
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Project -->
+          <li >
+            <a href="/projects/">Project</a>
+          </li>
+
+          <!-- Team -->
+          <li >
+            <a href="/teams/">Team</a>
+          </li>
+
+          <!-- News -->
+          <li >
+            <a href="/news.html">News</a>
+          </li>
+          
+          <!-- Seminars -->
+          <li class="active">
+            <a href="/seminars/">Seminars</a>
+          </li>
+          
+          <!-- Gallery -->
+          <li >
+            <a href="/gallery/photos.html">Gallery</a>
+          </li>
+
+          <!-- Join -->
+          <li >
+            <a href="/join.html">Join</a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- Page Content -->
+<section id="seminars" class="page-section" style="padding-bottom: 6px;">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>Seminars</h2>
+      <p>
+        AiX Lab에서 진행되는 세미나 및 강연 영상을 확인하실 수 있습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 세미나 슬라이더 -->
+<section class="page-section" style="padding-top: 6px; padding-bottom: 6px;">
+  <div class="container">
+    <div id="seminar-slider" class="da-slider">
+      
+      <div class="da-slide">
+        <h2>Medical AI and Domain-Specialized LLMs</h2>
+        <p>
+          <strong>연사:</strong> Dr. Jin Hyun Kim (AiX Lab @ GNU)<br>
+          <strong>날짜:</strong> 2025년 01월 15일<br>
+          <strong>분야:</strong> Medical AI
+        </p>
+        <p>안과 영상 분석 및 도메인 특화 LLM을 활용한 의료 AI 연구에 대해 소개합니다.</p>
+        <div style="margin-top: 15px;">
+          
+          <a href="#seminar-1" class="da-link button-outline" data-toggle="modal" style="margin-right: 10px;">영상 보기</a>
+          
+          
+        </div>
+        <div class="da-img" style="background-image: url('/images/aix_lab_logo.png');"></div>
+      </div>
+      
+      <div class="da-slide">
+        <h2>Formal Methods for Cyber-Physical Systems</h2>
+        <p>
+          <strong>연사:</strong> Dr. Jin Hyun Kim (AiX Lab @ GNU)<br>
+          <strong>날짜:</strong> 2025년 01월 10일<br>
+          <strong>분야:</strong> Formal Methods
+        </p>
+        <p>포멀 메서드를 활용한 사이버-물리 시스템 검증 및 런타임 모니터링 기법을 소개합니다.</p>
+        <div style="margin-top: 15px;">
+          
+          <a href="#seminar-2" class="da-link button-outline" data-toggle="modal" style="margin-right: 10px;">영상 보기</a>
+          
+          
+        </div>
+        <div class="da-img" style="background-image: url('/images/aix_lab_logo.png');"></div>
+      </div>
+      
+      <div class="da-slide">
+        <h2>Autonomous Racing with F1TENTH</h2>
+        <p>
+          <strong>연사:</strong> AiX Lab Team (AiX Lab @ GNU)<br>
+          <strong>날짜:</strong> 2025년 01월 05일<br>
+          <strong>분야:</strong> Robot Racing
+        </p>
+        <p>F1TENTH 플랫폼을 활용한 자율주행 레이싱 연구 및 실험 결과를 공유합니다.</p>
+        <div style="margin-top: 15px;">
+          
+          <a href="#seminar-3" class="da-link button-outline" data-toggle="modal" style="margin-right: 10px;">영상 보기</a>
+          
+          
+        </div>
+        <div class="da-img" style="background-image: url('/images/aix_lab_logo.png');"></div>
+      </div>
+      
+      
+      <nav class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- 세미나 목록 -->
+<section class="page-section darkBg" style="padding-top: 6px;">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>세미나 목록</h2>
+    </div>
+    
+    <div class="row" style="margin-top: 6px;">
+      
+      <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+        <div class="panel panel-default" style="height: 100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">Medical AI and Domain-Specialized LLMs</h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>연사:</strong> Dr. Jin Hyun Kim<br><small>AiX Lab @ GNU</small></p>
+            <p><strong>날짜:</strong> 2025년 01월 15일</p>
+            <p><strong>분야:</strong> <span class="label label-info">Medical AI</span></p>
+            <p>안과 영상 분석 및 도메인 특화 LLM을 활용한 의료 AI 연구에 대해 소개합니다.</p>
+            <div style="margin-top: 15px;">
+              
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seminar-1" style="margin-right: 10px;">
+                <i class="fa fa-play"></i> 영상 보기
+              </button>
+              
+              
+              <span class="text-muted"><i class="fa fa-file-o"></i> 슬라이드 준비 중</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 영상 모달 -->
+      
+      <div class="modal fade" id="seminar-1" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Medical AI and Domain-Specialized LLMs</h4>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5JCrCxaQ-n4?autoplay=0" allowfullscreen></iframe>
+              </div>
+              <hr>
+              <p><strong>연사:</strong> Dr. Jin Hyun Kim (AiX Lab @ GNU)</p>
+              <p><strong>날짜:</strong> 2025년 01월 15일</p>
+              <p><strong>분야:</strong> Medical AI</p>
+              <p>안과 영상 분석 및 도메인 특화 LLM을 활용한 의료 AI 연구에 대해 소개합니다.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+        <div class="panel panel-default" style="height: 100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">Formal Methods for Cyber-Physical Systems</h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>연사:</strong> Dr. Jin Hyun Kim<br><small>AiX Lab @ GNU</small></p>
+            <p><strong>날짜:</strong> 2025년 01월 10일</p>
+            <p><strong>분야:</strong> <span class="label label-info">Formal Methods</span></p>
+            <p>포멀 메서드를 활용한 사이버-물리 시스템 검증 및 런타임 모니터링 기법을 소개합니다.</p>
+            <div style="margin-top: 15px;">
+              
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seminar-2" style="margin-right: 10px;">
+                <i class="fa fa-play"></i> 영상 보기
+              </button>
+              
+              
+              <span class="text-muted"><i class="fa fa-file-o"></i> 슬라이드 준비 중</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 영상 모달 -->
+      
+      <div class="modal fade" id="seminar-2" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Formal Methods for Cyber-Physical Systems</h4>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="?autoplay=0" allowfullscreen></iframe>
+              </div>
+              <hr>
+              <p><strong>연사:</strong> Dr. Jin Hyun Kim (AiX Lab @ GNU)</p>
+              <p><strong>날짜:</strong> 2025년 01월 10일</p>
+              <p><strong>분야:</strong> Formal Methods</p>
+              <p>포멀 메서드를 활용한 사이버-물리 시스템 검증 및 런타임 모니터링 기법을 소개합니다.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="col-md-6 col-sm-12" style="margin-bottom: 30px;">
+        <div class="panel panel-default" style="height: 100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">Autonomous Racing with F1TENTH</h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>연사:</strong> AiX Lab Team<br><small>AiX Lab @ GNU</small></p>
+            <p><strong>날짜:</strong> 2025년 01월 05일</p>
+            <p><strong>분야:</strong> <span class="label label-info">Robot Racing</span></p>
+            <p>F1TENTH 플랫폼을 활용한 자율주행 레이싱 연구 및 실험 결과를 공유합니다.</p>
+            <div style="margin-top: 15px;">
+              
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#seminar-3" style="margin-right: 10px;">
+                <i class="fa fa-play"></i> 영상 보기
+              </button>
+              
+              
+              <span class="text-muted"><i class="fa fa-file-o"></i> 슬라이드 준비 중</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 영상 모달 -->
+      
+      <div class="modal fade" id="seminar-3" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Autonomous Racing with F1TENTH</h4>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="?autoplay=0" allowfullscreen></iframe>
+              </div>
+              <hr>
+              <p><strong>연사:</strong> AiX Lab Team (AiX Lab @ GNU)</p>
+              <p><strong>날짜:</strong> 2025년 01월 05일</p>
+              <p><strong>분야:</strong> Robot Racing</p>
+              <p>F1TENTH 플랫폼을 활용한 자율주행 레이싱 연구 및 실험 결과를 공유합니다.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<!-- 세미나 추가 버튼 (관리자용) -->
+<section class="page-section">
+  <div class="container text-center">
+    <a href="/seminars/add.html" class="btn btn-lg btn-success">
+      <i class="fa fa-plus"></i> 새 세미나 추가
+    </a>
+  </div>
+</section>
+
+<style>
+  .panel {
+    transition: transform 0.2s;
+  }
+  .panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  #seminar-slider {
+    margin-bottom: 6px;
+  }
+</style>
+
+<script>
+  $(document).ready(function() {
+    // 세미나 슬라이더 초기화
+    if ($('#seminar-slider').length) {
+      $('#seminar-slider').cslider({
+        autoplay: true,
+        bgincrement: 50
+      });
+    }
+  });
+</script>
+
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!-- JS -->
+<script src="/js/modernizr-latest.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.nav.js"></script>
+<script src="/js/jquery.cslider.js"></script>
+<script src="/js/custom.js" defer></script>
+
+</body>
+</html>

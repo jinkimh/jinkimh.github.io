@@ -769,11 +769,11 @@ footer.page-section.darkBg,
 
 #mainNav ul.dropdown li a {
     display: block;
-    padding: 10px 16px;
+    padding: 5px 16px;  /* 10px에서 50% 감소 */
     color: #fff;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
-    min-height: 44px;
+    min-height: 22px;  /* 44px에서 50% 감소 */
     display: flex;
     align-items: center;
 }
@@ -1091,8 +1091,8 @@ body {
     }
     
     .has-dropdown > .dropdown > li > a {
-        padding: 12px 20px !important;
-        min-height: 44px;
+        padding: 6px 20px !important;  /* 12px에서 50% 감소 */
+        min-height: 22px;  /* 44px에서 50% 감소 */
         color: #ffffff !important;
         background-color: transparent;
     }
@@ -1282,8 +1282,8 @@ body {
     /* Dropdown on mobile */
     .has-dropdown > .dropdown > li > a {
         color: #858585 !important;
-        padding: 12px 20px !important;
-        min-height: 44px;
+        padding: 6px 20px !important;  /* 12px에서 50% 감소 */
+        min-height: 22px;  /* 44px에서 50% 감소 */
     }
     
     .has-dropdown > .dropdown > li > a:hover {

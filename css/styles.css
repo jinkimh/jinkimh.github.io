@@ -298,25 +298,37 @@ hr {
 .navbar-inverse .navbar-toggle {
     border-color: #1371AF;
     background-color: #1371AF;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar-inverse .navbar-toggle:hover, 
 .navbar-inverse .navbar-toggle:focus {
-    background: #1371AF;
+    background: #0f5f90;
+    border-color: #0f5f90;
+    outline: 2px solid #1371AF;
+    outline-offset: 2px;
 }
 
-.navbar-inverse .navbar-toggle:hover .icon-bar {
+.navbar-inverse .navbar-toggle:hover .icon-bar,
+.navbar-inverse .navbar-toggle:focus .icon-bar {
     background: #fff;
 }
 
 .navbar-inverse .navbar-nav > li > a {
     color: #858585;
     font-size: 1.2em;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, 
 .navbar-inverse .navbar-nav > li > a:focus {
     color: #1371AF;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
+    border-radius: 2px;
 }
 
 .navbar-inverse .navbar-nav > .active > a, 
@@ -324,6 +336,9 @@ hr {
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #1371AF;
     background: none;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
+    border-radius: 2px;
 }
 
 .navbar-nav > li:hover, 
@@ -709,6 +724,17 @@ footer.page-section.darkBg,
     position: relative;
 }
 
+/* 드롭다운 아이콘 스타일 */
+#mainNav li.has-dropdown .dropdown-icon {
+    margin-left: 6px;
+    font-size: 0.85em;
+    transition: transform 0.3s ease;
+}
+
+#mainNav li.has-dropdown.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
 /* 기본은 숨김 */
 #mainNav li.has-dropdown > ul.dropdown {
     display: none;
@@ -716,31 +742,54 @@ footer.page-section.darkBg,
     top: 100%;
     left: 0;
     background-color: #000;
-    padding: 8px 16px;
+    padding: 8px 0;
     min-width: 220px;
     z-index: 2000;
     list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* hover / focus 시 표시 */
+/* hover / focus / open 시 표시 */
 #mainNav li.has-dropdown:hover > ul.dropdown,
-#mainNav li.has-dropdown:focus-within > ul.dropdown {
+#mainNav li.has-dropdown:focus-within > ul.dropdown,
+#mainNav li.has-dropdown.open > ul.dropdown {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #mainNav ul.dropdown li {
     display: block;
+    margin: 0;
 }
 
 #mainNav ul.dropdown li a {
     display: block;
-    padding: 4px 0;
+    padding: 10px 16px;
     color: #fff;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 }
 
-#mainNav ul.dropdown li a:hover {
-    text-decoration: underline;
+#mainNav ul.dropdown li a:hover,
+#mainNav ul.dropdown li a:focus {
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
+}
+
+#mainNav ul.dropdown li a:focus {
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
 }
 
 /* ==========================================================
@@ -1016,22 +1065,42 @@ body {
         border-bottom: none;
     }
     
-    /* Dropdown menus on mobile */
+    /* Dropdown menus on mobile - 기본적으로 숨김 */
     .has-dropdown > .dropdown {
         position: static;
-        display: block;
+        display: none;
         float: none;
         width: 100%;
         margin-top: 0;
-        background-color: #f5f5f5;
+        background-color: #222 !important;
         border: none;
         box-shadow: none;
-        padding-left: 20px;
+        padding: 0;
+        opacity: 1;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    /* 모바일에서 열린 상태 */
+    .has-dropdown.open > .dropdown {
+        display: block;
+        max-height: 500px;
+        padding: 8px 0;
     }
     
     .has-dropdown > .dropdown > li > a {
-        padding: 12px 20px;
+        padding: 12px 20px !important;
         min-height: 44px;
+        color: #ffffff !important;
+        background-color: transparent;
+    }
+    
+    .has-dropdown > .dropdown > li > a:hover,
+    .has-dropdown > .dropdown > li > a:focus {
+        background-color: #333 !important;
+        color: #ffffff !important;
     }
 
     .portfolio-item:hover .folio-info {
@@ -1354,8 +1423,25 @@ body {
   #main-nav li > a,
   .navbar-inverse .navbar-nav > li > a {
     color: #ffffff !important;
-    padding: 12px 18px;
+    padding: 12px 18px !important;
     font-size: 16px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 드롭다운 토글 버튼 스타일 */
+  .has-dropdown > a.dropdown-toggle {
+    position: relative;
+  }
+  
+  .has-dropdown > a.dropdown-toggle .dropdown-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .has-dropdown.open > a.dropdown-toggle .dropdown-icon {
+    transform: rotate(180deg);
   }
 
   /* hover / focus / active 상태도 동일하게 보이도록 */
@@ -1369,6 +1455,8 @@ body {
   .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: #222222 !important;
     color: #ffffff !important;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
   }
 
   /* 햄버거 버튼(토글) 스타일 유지 */
@@ -1400,10 +1488,39 @@ body {
   .navbar-inverse .navbar-toggle {
     background-color: #222222 !important;  /* 아이콘 뒤 박스 */
     border-color: #555555 !important;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+    margin: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .navbar-inverse .navbar-toggle:hover,
+  .navbar-inverse .navbar-toggle:focus {
+    background-color: #333333 !important;
+    outline: 2px solid #1371AF;
+    outline-offset: 2px;
   }
 
   .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #ffffff !important;  /* 햄버거 줄은 흰색 */
+    width: 22px;
+    height: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* 햄버거 버튼 활성화 상태 (메뉴가 열렸을 때) */
+  .navbar-inverse .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navbar-inverse .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-inverse .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 }
 

@@ -94,7 +94,14 @@
 
       <!-- Mobile toggle -->
       <div class="navbar-header">
-        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+        <button type="button" 
+                id="nav-toggle" 
+                class="navbar-toggle" 
+                data-toggle="collapse" 
+                data-target="#main-nav"
+                aria-label="메뉴 열기/닫기"
+                aria-expanded="false"
+                aria-controls="main-nav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -102,19 +109,19 @@
         </button>
 
         <!-- Logo -->
-        <a href="/" class="navbar-brand logo">
+        <a href="/" class="navbar-brand logo" aria-label="AiX Lab 홈페이지">
           <img src="/images/aix_lab_logo.png" alt="AiX Lab" loading="eager" />
         </a>
       </div>
 
       <!-- Navigation -->
 
-      <div id="main-nav" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav" id="mainNav">
+      <div id="main-nav" class="collapse navbar-collapse" role="menubar">
+        <ul class="nav navbar-nav" id="mainNav" role="menu">
 
           <!-- About Us -->
-          <li >
-            <a href="/about.html">About Us</a>
+          <li  role="none">
+            <a href="/about.html" role="menuitem">About Us</a>
           </li>
 
           <!-- Academy Portfolio 
@@ -124,26 +131,36 @@
           -->
           
           <!-- Publication (Dropdown) -->
-          <li class="has-dropdown ">
-            <a href="/publications/journals">Publication</a>
-            <ul class="dropdown">
-              <li>
-                <a href="/publications/journals">
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/publications/journals" 
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Publication 메뉴"
+               tabindex="0">
+              Publication
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Publication 하위 메뉴">
+              <li role="none">
+                <a href="/publications/journals" role="menuitem">
                   Journals
                 </a>
               </li>
-              <li>
-                <a href="/publications/conferences">
+              <li role="none">
+                <a href="/publications/conferences" role="menuitem">
                   Conferences
                 </a>
               </li>
-              <li>
-                <a href="/publications/korean-journals">
+              <li role="none">
+                <a href="/publications/korean-journals" role="menuitem">
                   Korean Journals
                 </a>
               </li>
-              <li>
-                <a href="/publications/korean-conferences">
+              <li role="none">
+                <a href="/publications/korean-conferences" role="menuitem">
                   Korean Conferences
                 </a>
               </li>
@@ -151,26 +168,36 @@
           </li>
 
           <!-- Research (Dropdown) -->
-          <li class="has-dropdown ">
-            <a href="/research/">Research</a>
-            <ul class="dropdown">
-              <li>
-                <a href="/research/formal-methods">
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/research/" 
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Research 메뉴"
+               tabindex="0">
+              Research
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Research 하위 메뉴">
+              <li role="none">
+                <a href="/research/formal-methods" role="menuitem">
                   Formal Methods
                 </a>
               </li>
-              <li>
-                <a href="/research/medical-ai">
+              <li role="none">
+                <a href="/research/medical-ai" role="menuitem">
                   Medical AI
                 </a>
               </li>
-              <li>
-                <a href="/research/robot-racing">
+              <li role="none">
+                <a href="/research/robot-racing" role="menuitem">
                   Robot Racing
                 </a>
               </li>
-              <li>
-                <a href="/research/etc">
+              <li role="none">
+                <a href="/research/etc" role="menuitem">
                   ETC
                 </a>
               </li>
@@ -178,33 +205,33 @@
           </li>
 
           <!-- Project -->
-          <li >
-            <a href="/projects/">Project</a>
+          <li  role="none">
+            <a href="/projects/" role="menuitem">Project</a>
           </li>
 
           <!-- Team -->
-          <li >
-            <a href="/teams/">Team</a>
+          <li  role="none">
+            <a href="/teams/" role="menuitem">Team</a>
           </li>
 
           <!-- News -->
-          <li >
-            <a href="/news.html">News</a>
+          <li  role="none">
+            <a href="/news.html" role="menuitem">News</a>
           </li>
           
           <!-- Seminars -->
-          <li >
-            <a href="/seminars/">Seminars</a>
+          <li  role="none">
+            <a href="/seminars/" role="menuitem">Seminars</a>
           </li>
           
           <!-- Gallery -->
-          <li >
-            <a href="/gallery/photos.html">Gallery</a>
+          <li  role="none">
+            <a href="/gallery/photos.html" role="menuitem">Gallery</a>
           </li>
 
           <!-- Join -->
-          <li >
-            <a href="/join.html">Join</a>
+          <li  role="none">
+            <a href="/join.html" role="menuitem">Join</a>
           </li>
 
 
@@ -372,7 +399,22 @@
         </div>
       </article>
 
-      <!-- (2) NeurIPS 2025 참가 -->
+      <!-- (2) F1Tenth Global Festa 2025 참가 및 5위 수상 -->
+      <article class="news-card">
+        <h3 class="news-card-title">F1Tenth Global Festa 2025 – 5위 수상</h3>
+        <p class="news-card-meta">Dec 1–2, 2025</p>
+        <div class="news-card-body">
+          <p>
+            <strong>F1Tenth Global Festa 2025</strong>에 AiX Lab 대표로 <strong>전광석화 팀</strong>이 참가하여
+            <strong>5위</strong>를 수상했습니다.
+          </p>
+          <p>
+            자율주행 레이싱 플랫폼 F1TENTH를 활용한 글로벌 대회에서 우수한 성과를 거두었습니다.
+          </p>
+        </div>
+      </article>
+
+      <!-- (3) NeurIPS 2025 참가 -->
       <article class="news-card">
         <h3 class="news-card-title">NeurIPS 2025 – Conference Participation</h3>
         <p class="news-card-meta">Dec 2–7, 2025 · San Diego Convention Center</p>
@@ -388,7 +430,7 @@
         </div>
       </article>
 
-      <!-- (3) Publications – SCI(E) 4편 게재 -->
+      <!-- (4) Publications – SCI(E) 4편 게재 -->
       <article class="news-card">
         <h3 class="news-card-title">2025 – SCI(E) 논문 4편 게재 완료</h3>
         <p class="news-card-meta">2025</p>
@@ -422,7 +464,7 @@
         </div>
       </article>
 
-      <!-- (4) Research Highlights -->
+      <!-- (5) Research Highlights -->
       <article class="news-card">
         <h3 class="news-card-title">Research Highlights</h3>
         <p class="news-card-meta">2025</p>
@@ -440,12 +482,16 @@
         </div>
       </article>
 
-      <!-- (5) People & Alumni -->
+      <!-- (6) People & Alumni -->
       <article class="news-card">
         <h3 class="news-card-title">People &amp; Alumni News</h3>
         <p class="news-card-meta">2025</p>
         <div class="news-card-body">
           <ul>
+            <li>
+              <strong>김지원 (학부 연구생 졸업)</strong> &ndash;
+              고려대 대학원 진학 후 <a href="https://www.samsung.com/" target="_blank">삼성전자</a> 입사.
+            </li>
             <li>
               <strong>Minwook Kwon (M.S., Aug. 2025)</strong> &ndash;
               <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a> 입사 (AI Engineer).

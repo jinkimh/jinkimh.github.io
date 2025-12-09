@@ -298,25 +298,37 @@ hr {
 .navbar-inverse .navbar-toggle {
     border-color: #1371AF;
     background-color: #1371AF;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar-inverse .navbar-toggle:hover, 
 .navbar-inverse .navbar-toggle:focus {
-    background: #1371AF;
+    background: #0f5f90;
+    border-color: #0f5f90;
+    outline: 2px solid #1371AF;
+    outline-offset: 2px;
 }
 
-.navbar-inverse .navbar-toggle:hover .icon-bar {
+.navbar-inverse .navbar-toggle:hover .icon-bar,
+.navbar-inverse .navbar-toggle:focus .icon-bar {
     background: #fff;
 }
 
 .navbar-inverse .navbar-nav > li > a {
     color: #858585;
     font-size: 1.2em;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, 
 .navbar-inverse .navbar-nav > li > a:focus {
     color: #1371AF;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
+    border-radius: 2px;
 }
 
 .navbar-inverse .navbar-nav > .active > a, 
@@ -324,6 +336,9 @@ hr {
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #1371AF;
     background: none;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
+    border-radius: 2px;
 }
 
 .navbar-nav > li:hover, 
@@ -709,6 +724,17 @@ footer.page-section.darkBg,
     position: relative;
 }
 
+/* 드롭다운 아이콘 스타일 */
+#mainNav li.has-dropdown .dropdown-icon {
+    margin-left: 6px;
+    font-size: 0.85em;
+    transition: transform 0.3s ease;
+}
+
+#mainNav li.has-dropdown.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
 /* 기본은 숨김 */
 #mainNav li.has-dropdown > ul.dropdown {
     display: none;
@@ -716,31 +742,54 @@ footer.page-section.darkBg,
     top: 100%;
     left: 0;
     background-color: #000;
-    padding: 8px 16px;
+    padding: 8px 0;
     min-width: 220px;
     z-index: 2000;
     list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* hover / focus 시 표시 */
+/* hover / focus / open 시 표시 */
 #mainNav li.has-dropdown:hover > ul.dropdown,
-#mainNav li.has-dropdown:focus-within > ul.dropdown {
+#mainNav li.has-dropdown:focus-within > ul.dropdown,
+#mainNav li.has-dropdown.open > ul.dropdown {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #mainNav ul.dropdown li {
     display: block;
+    margin: 0;
 }
 
 #mainNav ul.dropdown li a {
     display: block;
-    padding: 4px 0;
+    padding: 5px 16px;  /* 10px에서 50% 감소 */
     color: #fff;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    min-height: 22px;  /* 44px에서 50% 감소 */
+    display: flex;
+    align-items: center;
 }
 
-#mainNav ul.dropdown li a:hover {
-    text-decoration: underline;
+#mainNav ul.dropdown li a:hover,
+#mainNav ul.dropdown li a:focus {
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
+}
+
+#mainNav ul.dropdown li a:focus {
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
 }
 
 /* ==========================================================
@@ -962,7 +1011,7 @@ body {
         -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
         -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
         box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
-        max-height: calc(100vh - 90px);
+        max-height: calc(100vh - 45px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
@@ -1016,22 +1065,42 @@ body {
         border-bottom: none;
     }
     
-    /* Dropdown menus on mobile */
+    /* Dropdown menus on mobile - 기본적으로 숨김 */
     .has-dropdown > .dropdown {
         position: static;
-        display: block;
+        display: none;
         float: none;
         width: 100%;
         margin-top: 0;
-        background-color: #f5f5f5;
+        background-color: #222 !important;
         border: none;
         box-shadow: none;
-        padding-left: 20px;
+        padding: 0;
+        opacity: 1;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    /* 모바일에서 열린 상태 */
+    .has-dropdown.open > .dropdown {
+        display: block;
+        max-height: 500px;
+        padding: 8px 0;
     }
     
     .has-dropdown > .dropdown > li > a {
-        padding: 12px 20px;
-        min-height: 44px;
+        padding: 6px 20px !important;  /* 12px에서 50% 감소 */
+        min-height: 22px;  /* 44px에서 50% 감소 */
+        color: #ffffff !important;
+        background-color: transparent;
+    }
+    
+    .has-dropdown > .dropdown > li > a:hover,
+    .has-dropdown > .dropdown > li > a:focus {
+        background-color: #333 !important;
+        color: #ffffff !important;
     }
 
     .portfolio-item:hover .folio-info {
@@ -1213,8 +1282,8 @@ body {
     /* Dropdown on mobile */
     .has-dropdown > .dropdown > li > a {
         color: #858585 !important;
-        padding: 12px 20px !important;
-        min-height: 44px;
+        padding: 6px 20px !important;  /* 12px에서 50% 감소 */
+        min-height: 22px;  /* 44px에서 50% 감소 */
     }
     
     .has-dropdown > .dropdown > li > a:hover {
@@ -1227,19 +1296,19 @@ body {
 
 /* 전체 메뉴바 높이 */
 header.header {
-  height: 90px;  /* 원하는 높이로 조절 가능 (예: 80~100px) */
+  height: 45px;  /* 90px에서 50% 감소 */
 }
 
 /* navbar 안의 요소들을 세로 가운데 정렬 */
 .header .navbar {
-  min-height: 90px;
+  min-height: 45px;
   display: flex;
   align-items: center;   /* 로고 + 메뉴 세로 가운데 */
 }
 
 /* 로고 영역: 세로 가운데 정렬 */
 .header .navbar-brand {
-  height: 90px;
+  height: 45px;
   padding: 0 20px;       /* 좌우 여백만, 위/아래 여백은 없애고 가운데 정렬 */
   display: flex;
   align-items: center;   /* 로고 이미지 세로 가운데 */
@@ -1247,15 +1316,15 @@ header.header {
 
 /* 로고 이미지 크기 */
 .header .navbar-brand img {
-  max-height: 64px;      /* 메뉴바보다 조금 작은 크기 */
+  max-height: 32px;      /* 메뉴바 높이에 맞춰 조정 (64px에서 50% 감소) */
   height: auto;
   width: auto;
 }
 
 /* 메뉴 텍스트를 위아래 기준 정확히 가운데 정렬 */
 .header .navbar-nav > li > a {
-  height: 90px !important;
-  line-height: 90px !important;  /* 텍스트를 세로 가운데 */
+  height: 45px !important;
+  line-height: 45px !important;  /* 텍스트를 세로 가운데 */
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -1267,15 +1336,20 @@ header.header {
   }
 
   .header .navbar {
-    min-height: 50px;
+    min-height: 25px;  /* 50px에서 50% 감소 */
     display: block;
   }
 
   .header .navbar-brand {
-    height: 50px;
-    padding: 10px 15px;
+    height: 25px;  /* 50px에서 50% 감소 */
+    padding: 5px 15px;  /* 패딩도 조정 */
     display: flex;
     align-items: center;
+  }
+  
+  /* 모바일 로고 이미지 크기 조정 */
+  .header .navbar-brand img {
+    max-height: 20px;  /* 모바일에서도 비례적으로 줄임 */
   }
 
   .header .navbar-nav > li > a {
@@ -1354,8 +1428,25 @@ body {
   #main-nav li > a,
   .navbar-inverse .navbar-nav > li > a {
     color: #ffffff !important;
-    padding: 12px 18px;
+    padding: 12px 18px !important;
     font-size: 16px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* 드롭다운 토글 버튼 스타일 */
+  .has-dropdown > a.dropdown-toggle {
+    position: relative;
+  }
+  
+  .has-dropdown > a.dropdown-toggle .dropdown-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .has-dropdown.open > a.dropdown-toggle .dropdown-icon {
+    transform: rotate(180deg);
   }
 
   /* hover / focus / active 상태도 동일하게 보이도록 */
@@ -1369,6 +1460,8 @@ body {
   .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: #222222 !important;
     color: #ffffff !important;
+    outline: 2px solid #1371AF;
+    outline-offset: -2px;
   }
 
   /* 햄버거 버튼(토글) 스타일 유지 */
@@ -1400,10 +1493,39 @@ body {
   .navbar-inverse .navbar-toggle {
     background-color: #222222 !important;  /* 아이콘 뒤 박스 */
     border-color: #555555 !important;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+    margin: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .navbar-inverse .navbar-toggle:hover,
+  .navbar-inverse .navbar-toggle:focus {
+    background-color: #333333 !important;
+    outline: 2px solid #1371AF;
+    outline-offset: 2px;
   }
 
   .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #ffffff !important;  /* 햄버거 줄은 흰색 */
+    width: 22px;
+    height: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* 햄버거 버튼 활성화 상태 (메뉴가 열렸을 때) */
+  .navbar-inverse .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navbar-inverse .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-inverse .navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 }
 

@@ -1011,7 +1011,7 @@ body {
         -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
         -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
         box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
-        max-height: calc(100vh - 90px);
+        max-height: calc(100vh - 45px);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
@@ -1296,19 +1296,19 @@ body {
 
 /* 전체 메뉴바 높이 */
 header.header {
-  height: 90px;  /* 원하는 높이로 조절 가능 (예: 80~100px) */
+  height: 45px;  /* 90px에서 50% 감소 */
 }
 
 /* navbar 안의 요소들을 세로 가운데 정렬 */
 .header .navbar {
-  min-height: 90px;
+  min-height: 45px;
   display: flex;
   align-items: center;   /* 로고 + 메뉴 세로 가운데 */
 }
 
 /* 로고 영역: 세로 가운데 정렬 */
 .header .navbar-brand {
-  height: 90px;
+  height: 45px;
   padding: 0 20px;       /* 좌우 여백만, 위/아래 여백은 없애고 가운데 정렬 */
   display: flex;
   align-items: center;   /* 로고 이미지 세로 가운데 */
@@ -1316,15 +1316,15 @@ header.header {
 
 /* 로고 이미지 크기 */
 .header .navbar-brand img {
-  max-height: 64px;      /* 메뉴바보다 조금 작은 크기 */
+  max-height: 32px;      /* 메뉴바 높이에 맞춰 조정 (64px에서 50% 감소) */
   height: auto;
   width: auto;
 }
 
 /* 메뉴 텍스트를 위아래 기준 정확히 가운데 정렬 */
 .header .navbar-nav > li > a {
-  height: 90px !important;
-  line-height: 90px !important;  /* 텍스트를 세로 가운데 */
+  height: 45px !important;
+  line-height: 45px !important;  /* 텍스트를 세로 가운데 */
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -1336,15 +1336,20 @@ header.header {
   }
 
   .header .navbar {
-    min-height: 50px;
+    min-height: 25px;  /* 50px에서 50% 감소 */
     display: block;
   }
 
   .header .navbar-brand {
-    height: 50px;
-    padding: 10px 15px;
+    height: 25px;  /* 50px에서 50% 감소 */
+    padding: 5px 15px;  /* 패딩도 조정 */
     display: flex;
     align-items: center;
+  }
+  
+  /* 모바일 로고 이미지 크기 조정 */
+  .header .navbar-brand img {
+    max-height: 20px;  /* 모바일에서도 비례적으로 줄임 */
   }
 
   .header .navbar-nav > li > a {

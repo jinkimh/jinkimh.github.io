@@ -2,19 +2,19 @@
   <h2>Ophtimus: Ophthalmology-specific LLM</h2>
 
   <p class="section-text">
-    <a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank" style="display: inline-block; margin-bottom: 1rem;">
+    <a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank" class="github-badge-link">
       <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
     </a>
   </p>
 
-  <p class="section-text">
+  <div class="badges-container">
     <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge" alt="Python">
     <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge" alt="PyTorch">
     <img src="https://img.shields.io/badge/Transformers-EF5350?style=for-the-badge" alt="Transformers">
     <img src="https://img.shields.io/badge/LangChain-0E8388?style=for-the-badge" alt="LangChain">
     <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge" alt="Streamlit">
     <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge" alt="FastAPI">
-  </p>
+  </div>
 
   <p class="section-text">
     🤗 <a href="https://huggingface.co/collections/BaekSeungJu/ophtimus-series-67d859fedb756527d680ce42" target="_blank"><strong>Models and Datasets</strong></a> &nbsp;|&nbsp; 📕 <a href="https://openreview.net/forum?id=dIJPlNKhgv" target="_blank"><strong>AAAI 2025 workshop Paper</strong></a>
@@ -33,17 +33,17 @@
   </p>
 
   <!-- 대표 이미지 -->
-  <div style="margin: 2rem 0;">
-    <img src="{{ '/images/research/ophtimus/Ophtimus-Overall-Architecture.png' | relative_url }}" alt="Ophtimus Overall Architecture" style="width:100%; max-width:900px; border-radius:0.75rem; border:1px solid #333;" />
+  <div class="image-wrapper">
+    <img src="{{ '/images/research/ophtimus/Ophtimus-Overall-Architecture.png' | relative_url }}" alt="Ophtimus Overall Architecture" class="content-image" style="max-width:900px;" />
   </div>
 
-  <hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+  <hr class="section-divider" />
 
   <!-- Dataset Details -->
   <h3>Dataset Details</h3>
 
-  <div style="background: rgba(255, 204, 51, 0.1); border-left: 4px solid var(--accent); padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0.25rem;">
-    <p class="section-text" style="margin: 0;">
+  <div class="highlight-box">
+    <p class="section-text">
       <strong>Note:</strong> All datasets were either newly constructed or adapted for this project. Pre-training datasets were curated from open-source ophthalmology materials, while instruction-tuning and evaluation datasets were built by extracting only ophthalmology-relevant samples from broader medical corpora. All data underwent preprocessing steps including deduplication, language filtering (English only), and removal of any personally identifiable information (PII).
     </p>
   </div>
@@ -145,13 +145,13 @@
     </table>
   </div>
 
-  <hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+  <hr class="section-divider" />
 
   <!-- Model Details -->
   <h3>Model Details</h3>
 
-  <div style="background: rgba(255, 204, 51, 0.1); border-left: 4px solid var(--accent); padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0.25rem;">
-    <p class="section-text" style="margin: 0;">
+  <div class="highlight-box">
+    <p class="section-text">
       <strong>Note:</strong> The "pre-training" and "fine-tuning" columns in the table refer to the training performed in this project. The base models had already undergone pre-training and/or fine-tuning prior to this project, and we applied transfer learning using those models.
     </p>
   </div>
@@ -207,13 +207,13 @@
     </table>
   </div>
 
-  <hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+  <hr class="section-divider" />
 
   <!-- Performance -->
   <h3>Performance</h3>
 
-  <div style="background: rgba(255, 204, 51, 0.1); border-left: 4px solid var(--accent); padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0.25rem;">
-    <p class="section-text" style="margin: 0;">
+  <div class="highlight-box">
+    <p class="section-text">
       <strong>Note:</strong> Multi-Choice QA: Ophtimus-Eval, MedMCQA, PubMedQA | Essay QA: MedQuAD, Medical Flashcards, Medical Wikidoc<br />
       Ophtimus-Eval is a proprietary dataset collected from a medical platform. The others are established medical benchmark datasets, from which only ophthalmology-related QA pairs were extracted for evaluation.
     </p>
@@ -332,7 +332,7 @@
     </table>
   </div>
 
-  <hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+  <hr class="section-divider" />
 
   <!-- Quickstart -->
   <h3>Quickstart</h3>

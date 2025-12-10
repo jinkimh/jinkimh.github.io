@@ -10,7 +10,7 @@
   <li>최적 경로 생성(Optimal Trajectory)과 고속 레이스 주행</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>2. Embodied AI–World Model + 모델체킹 기반 시뮬레이션 안전성·신뢰성 연구</h3>
 <p class="section-text">
@@ -24,14 +24,14 @@
   <li>Sim-to-real 전환 시 발생할 수 있는 위험 상황 최소화</li>
   <li>시뮬레이터 내 시나리오 생성의 안정성·일관성 강화</li>
 </ul>
-<div style="background: rgba(255, 204, 51, 0.1); border-left: 4px solid var(--accent); padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0.25rem;">
-  <p class="section-text" style="margin: 0;">
+<div class="highlight-box">
+  <p class="section-text">
     <strong>핵심 목표:</strong><br />
     "학습 및 제어 알고리즘이 안전 제약을 위반하지 않도록 보장하는 <strong>검증 기반(verification-aware) Embodied AI 자율주행 프레임워크</strong> 개발."
   </p>
 </div>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>3. 시뮬레이터 기반 자율주행 학습 및 평가</h3>
 <p class="section-text">
@@ -44,7 +44,7 @@
   <li>sim-to-real 성능 격차 최소화 설계</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>4. Formal Verification을 적용한 안전 자율주행</h3>
 <p class="section-text">
@@ -57,7 +57,7 @@
   <li>안전 미준수 상황에 대한 자동 방어동작 제어</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>5. 경량 AI / 세계 모델(World Models)의 자율주행 적용</h3>
 <p class="section-text">
@@ -69,7 +69,7 @@
   <li>Multi-modal state representation 학습</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>6. 교육·오픈소스 기반 자율주행 생태계 구축</h3>
 <p class="section-text">

@@ -35,25 +35,25 @@ title: "Formal Methods Projects"
       <div class="research-content">
         <!-- Uppaal2Go 섹션 -->
         <div id="uppaal2go" class="research-content-section active">
-          <h3>Uppaal2Go</h3>
+          <h2>Uppaal2Go</h2>
           <p class="section-text">
-            <em>To be Updated</em>
+            <em>Content to be updated soon.</em>
           </p>
         </div>
 
         <!-- TADA 섹션 -->
         <div id="tada" class="research-content-section">
-          <h3>TADA</h3>
+          <h2>TADA</h2>
           <p class="section-text">
-            <em>To be Updated</em>
+            <em>Content to be updated soon.</em>
           </p>
         </div>
 
         <!-- Uppaal 섹션 -->
         <div id="uppaal" class="research-content-section">
-          <h3>Uppaal</h3>
+          <h2>Uppaal</h2>
           <p class="section-text">
-            <em>To be Updated</em>
+            <em>Content to be updated soon.</em>
           </p>
         </div>
       </div>

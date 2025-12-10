@@ -1,21 +1,21 @@
 <h2>SD-OCT-based Epiretinal Membrane Diagnostic Assistant System</h2>
 
-<p class="section-text">
+<div class="badges-container">
   <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge" alt="Python">
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge" alt="PyTorch">
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge" alt="OpenCV">
   <img src="https://img.shields.io/badge/YOLO-013243?style=for-the-badge" alt="YOLO">
   <img src="https://img.shields.io/badge/Pillow-CC66CC?style=for-the-badge" alt="Pillow">
-</p>
+</div>
 
 <h3>Introduction</h3>
 <p class="section-text">
   This project presents a low-cost and efficient method for detecting and quantifying Epiretinal Membranes (ERM) using Spectral-Domain Optical Coherence Tomography (SD-OCT). By applying deep learning techniques—specifically, YOLO object detection—we generate en face <strong>"ERM Projection Images"</strong> from B-scan data, enabling intuitive visualization and accurate measurement of ERM areas. The method also introduces a novel approach to quantify the association between ERM and retinal thickness, enhancing clinical decision-making. Our approach aims to bridge the diagnostic performance gap between SD-OCT and Swept-Source OCT (SS-OCT) while maintaining accessibility and reducing diagnostic burden.
 </p>
 
-<div style="margin: 2rem 0; text-align:center;">
-  <img src="{{ '/images/research/erm/Architecture.png' | relative_url }}" alt="ERM System Architecture" style="max-width: 90%; border-radius: 0.5rem; border:1px solid #333;" />
-  <p style="color:#bdbdbd; font-size:0.9rem; margin-top:0.5rem;">
+<div class="image-wrapper">
+  <img src="{{ '/images/research/erm/Architecture.png' | relative_url }}" alt="ERM System Architecture" class="content-image" />
+  <p class="image-caption">
     Overall pipeline architecture for ERM detection & quantification
   </p>
 </div>

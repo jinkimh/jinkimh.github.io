@@ -10,7 +10,7 @@
   <li>Optimal trajectory generation and high-speed racing</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>2. Embodied AI–World Model + Model Checking-based Simulation Safety & Reliability Research</h3>
 <p class="section-text">
@@ -24,14 +24,14 @@
   <li>Minimization of risk situations that may occur during sim-to-real transfer</li>
   <li>Enhancement of stability and consistency in scenario generation within simulators</li>
 </ul>
-<div style="background: rgba(255, 204, 51, 0.1); border-left: 4px solid var(--accent); padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0.25rem;">
-  <p class="section-text" style="margin: 0;">
+<div class="highlight-box">
+  <p class="section-text">
     <strong>Core Objective:</strong><br />
     "Development of a <strong>verification-aware Embodied AI autonomous driving framework</strong> that ensures learning and control algorithms do not violate safety constraints."
   </p>
 </div>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>3. Simulator-based Autonomous Driving Learning and Evaluation</h3>
 <p class="section-text">
@@ -44,7 +44,7 @@
   <li>Design to minimize sim-to-real performance gap</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>4. Safe Autonomous Driving with Formal Verification</h3>
 <p class="section-text">
@@ -57,7 +57,7 @@
   <li>Automatic defensive action control for safety non-compliance situations</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>5. Application of Lightweight AI / World Models to Autonomous Driving</h3>
 <p class="section-text">
@@ -69,7 +69,7 @@
   <li>Multi-modal state representation learning</li>
 </ul>
 
-<hr style="margin:2.5rem 0; border:0.5px solid #333;" />
+<hr class="section-divider" />
 
 <h3>6. Building an Education and Open-Source-based Autonomous Driving Ecosystem</h3>
 <p class="section-text">

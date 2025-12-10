@@ -1,6 +1,8 @@
 <style>
 .research-result {
   padding: 2rem 0;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .research-result .container {
@@ -10,39 +12,40 @@
 }
 
 .research-result h2.section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: var(--accent);
+  color: #ffcc33;
   line-height: 1.3;
 }
 
 .research-result h3 {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   font-weight: 600;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  color: var(--text);
+  color: #ffffff;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid #444444;
 }
 
 .research-result h4 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: #ffcc33;
 }
 
 .research-result p {
   line-height: 1.8;
   margin-bottom: 1.25rem;
-  color: var(--text);
-  font-size: 1.05rem;
+  color: #e6e6e6;
+  font-size: 1.1rem;
 }
 
-.research-result ul {
+.research-result ul,
+.research-result ol {
   margin: 1.5rem 0;
   padding-left: 2rem;
   line-height: 1.8;
@@ -50,19 +53,20 @@
 
 .research-result li {
   margin: 0.75rem 0;
-  color: var(--text);
+  color: #e6e6e6;
   position: relative;
+  font-size: 1.05rem;
 }
 
 .research-result li::marker {
-  color: var(--accent);
+  color: #ffcc33;
 }
 
 .research-result hr {
   margin: 3rem 0;
   border: 0;
-  border-top: 2px solid var(--border);
-  opacity: 0.3;
+  border-top: 2px solid #444444;
+  opacity: 0.5;
 }
 
 .research-result .text-center {
@@ -74,40 +78,59 @@
   max-width: 100%;
   height: auto;
   border-radius: 0.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 1px solid #444444;
   transition: transform 0.3s ease;
 }
 
 .research-result img:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(255, 204, 51, 0.2);
+  box-shadow: 0 12px 32px rgba(255, 204, 51, 0.3);
 }
 
 .research-result .caption {
   margin-top: 1rem;
-  font-size: 0.95rem;
-  color: var(--muted);
+  font-size: 1rem;
+  color: #aaaaaa;
   font-style: italic;
   line-height: 1.6;
 }
 
 .research-result code {
-  background: rgba(255, 204, 51, 0.15);
-  color: var(--accent);
-  padding: 0.2em 0.4em;
+  background: rgba(255, 204, 51, 0.25);
+  color: #ffcc33;
+  padding: 0.25em 0.5em;
   border-radius: 0.25rem;
   font-family: 'Courier New', monospace;
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.research-result pre {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #444444;
+  border-left: 4px solid #ffcc33;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.research-result pre code {
+  background: transparent;
+  color: #e6e6e6;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .research-result strong {
-  color: var(--accent);
+  color: #ffcc33;
   font-weight: 600;
 }
 
 .research-result a {
-  color: var(--accent);
+  color: #5ab4ff;
   text-decoration: underline;
   transition: color 0.2s ease;
 }
@@ -117,7 +140,7 @@
 }
 
 .research-result em {
-  color: var(--muted);
+  color: #aaaaaa;
   font-style: italic;
 }
 
@@ -127,15 +150,31 @@
   }
   
   .research-result h2.section-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   
   .research-result h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   
   .research-result h4 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+  }
+  
+  .research-result p {
+    font-size: 1.05rem;
+  }
+  
+  .research-result li {
+    font-size: 1rem;
+  }
+  
+  .research-result code {
+    font-size: 0.95em;
+  }
+  
+  .research-result pre code {
+    font-size: 0.9rem;
   }
 }
 </style>

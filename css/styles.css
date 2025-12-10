@@ -1919,9 +1919,9 @@ body {
   border-radius: 0.5rem;
   border: 1px solid transparent;
   transition: all 0.2s ease;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .sidebar-menu-link:hover {
@@ -1979,9 +1979,9 @@ body {
   border-radius: 0.5rem;
   border: 1px solid transparent;
   transition: all 0.2s ease;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .sidebar-submenu-link:hover {
@@ -2041,7 +2041,7 @@ body {
 
 .research-content-section h3 {
   color: #fff;
-  font-size: 1.6em;
+  font-size: 1.75em;
   font-weight: 600;
   margin-top: 1.8rem;
   margin-bottom: 1rem;
@@ -2050,7 +2050,7 @@ body {
 
 .research-content-section h4 {
   color: #e0e0e0;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.8rem;
@@ -2060,7 +2060,7 @@ body {
 .research-content-section p.section-text,
 .research-content-section p {
   color: #e6e6e6;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 1.2rem;
 }
@@ -2068,7 +2068,7 @@ body {
 .research-content-section ul.section-text,
 .research-content-section ul {
   color: #e6e6e6;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   padding-left: 1.8rem;
@@ -2078,12 +2078,13 @@ body {
 .research-content-section ul li {
   margin-bottom: 0.8rem;
   line-height: 1.8;
+  font-size: 1.125rem;
 }
 
 .research-content-section ol.section-text,
 .research-content-section ol {
   color: #e6e6e6;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   padding-left: 1.8rem;
@@ -2093,6 +2094,7 @@ body {
 .research-content-section ol li {
   margin-bottom: 0.8rem;
   line-height: 1.8;
+  font-size: 1.125rem;
 }
 
 .research-content-section hr {
@@ -2160,9 +2162,9 @@ body {
   color: #d0d0d0;
   border-bottom: 3px solid transparent;
   transition: all 0.2s ease;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.5;
   min-width: 120px;
   text-align: center;
 }
@@ -2187,6 +2189,254 @@ body {
   display: block;
 }
 
+/* ===== ROBORACER PAGE STYLES ===== */
+.intro-section {
+  margin-bottom: 2.5rem;
+}
+
+.feature-highlights {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.feature-highlights li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #e6e6e6;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.feature-highlights li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #1371AF;
+  font-weight: bold;
+}
+
+.image-container {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.image-container.full-width .content-image {
+  width: 100%;
+  max-width: 100%;
+}
+
+.content-image {
+  max-width: 45%;
+  border-radius: 0.75rem;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 113, 175, 0.2);
+}
+
+.image-caption {
+  color: #b8b8b8;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.section-divider {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid #333;
+  opacity: 0.5;
+}
+
+.research-focus {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid #1371AF;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+}
+
+.research-focus h4 {
+  margin-top: 0;
+  color: #1371AF;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.research-focus h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.research-focus p.section-text,
+.research-focus p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.research-focus ul.section-text,
+.research-focus ul {
+  font-size: 1.125rem;
+}
+
+.research-focus ul.section-text li,
+.research-focus ul li {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.highlight-box {
+  background: rgba(19, 113, 175, 0.08);
+  border-left: 4px solid #1371AF;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+  font-style: italic;
+}
+
+.related-links {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.related-links p.section-text,
+.related-links p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+/* Research Grid and Cards */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.research-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #333;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #1371AF;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.research-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: #1371AF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.research-card:hover::before {
+  opacity: 1;
+}
+
+.research-card-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #1371AF;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.research-card-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.research-card-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: #e6e6e6;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.research-card-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #1371AF;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Lang content styles for roboracer */
+.lang-content h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.lang-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.lang-content h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #e0e0e0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.lang-content p.section-text,
+.lang-content p {
+  color: #e6e6e6;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.lang-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.lang-content li {
+  margin: 0.5rem 0;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .research-layout {
@@ -2199,5 +2449,18 @@ body {
     max-height: none;
     overflow-y: visible;
     padding-right: 0;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .research-card {
+    padding: 1.25rem;
+  }
+
+  .content-image {
+    max-width: 90%;
   }
 }

@@ -15,20 +15,23 @@ title: "International Journals"
 
 ## 2025
 - Soomin Cho, Inhye Kang, and **Kim, Jin Hyun**.  
-  “From timed automata to go: Formally verified code generation and runtime monitoring for cyber-physical systems.”  
-  *IEEE Access*, 13:161729–161749, 2025.
+  "From timed automata to go: Formally verified code generation and runtime monitoring for cyber-physical systems."  
+  *IEEE Access*, 13:161729–161749, 2025. [[PDF]](https://ieeexplore.ieee.org/document/11155038)
 
-- **Kim, Jin Hyun** et al.  
-  “Low-cost and fast epiretinal membrane detection and quantification based on SD-OCT.”  
-  *IEEE Access*, 2025. Accepted for publication, 2025.
+- S. Baek, I. Lee, K. Jin Jang, Y. Han, and **J. H. Kim**.  
+  "Low-Cost and Fast Epiretinal Membrane Detection and Quantification Based on SD-OCT."  
+  *IEEE Access*, vol. 13, pp. 196887-196901, 2025.  
+  doi: 10.1109/ACCESS.2025.3629332. [[PDF]](https://ieeexplore.ieee.org/document/11226998)
 
-- **Kim, Jin Hyun** et al.  
-  “Noise-robust markerless video gait anomaly detection via two-stage acquisition and LSTM autoencoders.”  
-  *Scientific Reports*, 2025. Accepted for publication, 2025.
+- H. Yoon, E. Jo, S. Ryu, J.-I. Yoo, M. Kim, and **J. H. Kim**.  
+  "Noise-robust markerless video gait anomaly detection via two-stage acquisition and LSTM autoencoders."  
+  *Scientific Reports*, 15, 42074, 2025.  
+  doi: 10.1038/s41598-025-26169-9. [[PDF]](https://www.nature.com/articles/s41598-025-26169-9#citeas)
 
-- **Kim, Jin Hyun** et al.  
-  “Ophtimus-V2-Tx: A compact domain-specific LLM for ophthalmic diagnosis and treatment planning.”  
-  *Scientific Reports*, 2025. Accepted for publication, 2025.
+- M. Kwon, K. J. Jang, S. J. Baek, Y. S. Han, H. Choi, I. Lee, and **J. H. Kim**.  
+  "Ophtimus-V2-Tx: a compact domain-specific LLM for ophthalmic diagnosis and treatment planning."  
+  *Scientific Reports*, 15, 43532, 2025.  
+  doi: 10.1038/s41598-025-27410-1. [[PDF]](https://www.nature.com/articles/s41598-025-27410-1#citeas)
 
 ## 2024
 - **Kim, Jin Hyun** et al.  

@@ -341,7 +341,8 @@
       <em>IEEE Access</em>, vol. 13, pp. 161729–1617xx, 2025.<br>
       doi: <a href="https://doi.org/10.1109/ACCESS.2025.3608215" target="_blank" rel="noopener">
         10.1109/ACCESS.2025.3608215
-      </a>
+      </a><br>
+      <a href="https://ieeexplore.ieee.org/document/11155038" target="_blank" rel="noopener">[IEEE Xplore]</a>
     </p>
 
     <p style="margin-top: 10px; font-size: 0.9em; color: var(--muted);">

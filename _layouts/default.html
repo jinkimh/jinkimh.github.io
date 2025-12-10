@@ -77,11 +77,13 @@
   <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
 
-  <!-- Logo style -->
+  <!-- Logo style - 모바일 반응형은 CSS에서 처리 -->
   <style>
+    /* 데스크톱 기본 로고 크기 (CSS에서 오버라이드됨) */
     .navbar-brand img {
-      width: 250px;
       height: auto;
+      width: auto;
+      max-width: 100%;
     }
   </style>
 </head>

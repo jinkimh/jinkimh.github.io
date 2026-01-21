@@ -216,19 +216,30 @@
             <a href="{{ '/teams/' | relative_url }}" role="menuitem">Team</a>
           </li>
 
-          <!-- News -->
-          <li {% if page.nav == "news" %}class="active"{% endif %} role="none">
-            <a href="/news.html" role="menuitem">News</a>
-          </li>
-          
-          <!-- Seminars -->
-          <li {% if page.nav == "seminars" %}class="active"{% endif %} role="none">
-            <a href="/seminars/" role="menuitem">Seminars</a>
-          </li>
-          
-          <!-- Gallery -->
-          <li {% if page.nav == "gallery" %}class="active"{% endif %} role="none">
-            <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+          <!-- Updates (Dropdown) -->
+          <li class="has-dropdown {% if page.nav == 'news' or page.nav == 'seminars' or page.nav == 'gallery' or page.nav == 'updates' %}active{% endif %}" 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/news.html"
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Updates 메뉴"
+               tabindex="0">
+              Updates
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Updates 하위 메뉴">
+              <li role="none">
+                <a href="/news.html" role="menuitem">News</a>
+              </li>
+              <li role="none">
+                <a href="/seminars/" role="menuitem">Seminars</a>
+              </li>
+              <li role="none">
+                <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+              </li>
+            </ul>
           </li>
 
           <!-- Join -->

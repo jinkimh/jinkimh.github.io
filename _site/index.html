@@ -13,7 +13,7 @@
 
    <!-- 🔥 SEO 기본 메타 태그 -->
   <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
-  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, aix lab, ai lab 경상국립대학교, ai lab 경상대, 경상국립대학교 ai lab, 경상대 ai lab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
   <meta name="author" content="AiX Lab">
 
   <title>AiX Lab @ GNU</title>
@@ -77,11 +77,13 @@
   <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
 
-  <!-- Logo style -->
+  <!-- Logo style - 모바일 반응형은 CSS에서 처리 -->
   <style>
+    /* 데스크톱 기본 로고 크기 (CSS에서 오버라이드됨) */
     .navbar-brand img {
-      width: 250px;
       height: auto;
+      width: auto;
+      max-width: 100%;
     }
   </style>
 </head>
@@ -167,6 +169,11 @@
             </ul>
           </li>
 
+          <!-- Patents -->
+          <li  role="none">
+            <a href="/patents/" role="menuitem">Patents</a>
+          </li>
+
           <!-- Research (Dropdown) -->
           <li class="has-dropdown " 
               role="none"
@@ -193,12 +200,7 @@
               </li>
               <li role="none">
                 <a href="/research/robot-racing" role="menuitem">
-                  Robot Racing
-                </a>
-              </li>
-              <li role="none">
-                <a href="/research/etc" role="menuitem">
-                  ETC
+                  Robot AI
                 </a>
               </li>
             </ul>
@@ -214,19 +216,30 @@
             <a href="/teams/" role="menuitem">Team</a>
           </li>
 
-          <!-- News -->
-          <li  role="none">
-            <a href="/news.html" role="menuitem">News</a>
-          </li>
-          
-          <!-- Seminars -->
-          <li  role="none">
-            <a href="/seminars/" role="menuitem">Seminars</a>
-          </li>
-          
-          <!-- Gallery -->
-          <li  role="none">
-            <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+          <!-- Updates (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/news.html"
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Updates 메뉴"
+               tabindex="0">
+              Updates
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Updates 하위 메뉴">
+              <li role="none">
+                <a href="/news.html" role="menuitem">News</a>
+              </li>
+              <li role="none">
+                <a href="/seminars/" role="menuitem">Seminars</a>
+              </li>
+              <li role="none">
+                <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+              </li>
+            </ul>
           </li>
 
           <!-- Join -->
@@ -253,12 +266,12 @@
 
         <!-- Slide 1 -->
         <div class="da-slide">
-          <h2>Formal Methods</h2>
+          <h2>Trustworthy AI</h2>
           <p>
             We design mathematically grounded verification and runtime assurance techniques
             to guarantee the safety and correctness of AI-driven cyber-physical systems.
           </p>
-          <a href="/research/formal-methods" class="da-link button-outline">Explore Formal Methods</a>
+          <a href="/research/formal-methods" class="da-link button-outline">Explore Safety Engineering Methods</a>
           <div class="da-img"></div>
         </div>
 
@@ -442,23 +455,26 @@
           <ul>
             <li>
               <strong>Soomin Cho, Inhye Kang, Kim, Jin Hyun.</strong><br>
-              “From Timed Automata to Go: Formally Verified Code Generation and Runtime Monitoring for Cyber-Physical Systems.”<br>
-              <em>IEEE Access, 13:161729–161749, 2025.</em>
+              "From Timed Automata to Go: Formally Verified Code Generation and Runtime Monitoring for Cyber-Physical Systems."<br>
+              <em>IEEE Access</em>, 13:161729–161749, 2025. <a href="https://ieeexplore.ieee.org/document/11155038" target="_blank">[PDF]</a>
             </li>
             <li>
-              <strong>Kim, Jin Hyun et al.</strong><br>
-              “Low-Cost and Fast Epiretinal Membrane Detection and Quantification Based on SD-OCT.”<br>
-              <em>IEEE Access, Accepted for Publication, 2025.</em>
+              <strong>S. Baek, I. Lee, K. Jin Jang, Y. Han, and J. H. Kim.</strong><br>
+              "Low-Cost and Fast Epiretinal Membrane Detection and Quantification Based on SD-OCT."<br>
+              <em>IEEE Access</em>, vol. 13, pp. 196887-196901, 2025.  
+              doi: 10.1109/ACCESS.2025.3629332. <a href="https://ieeexplore.ieee.org/document/11226998" target="_blank">[PDF]</a>
             </li>
             <li>
-              <strong>Kim, Jin Hyun et al.</strong><br>
-              “Noise-Robust Markerless Video Gait Anomaly Detection via Two-Stage Acquisition and LSTM Autoencoders.”<br>
-              <em>Scientific Reports, Accepted for Publication, 2025.</em>
+              <strong>H. Yoon, E. Jo, S. Ryu, J.-I. Yoo, M. Kim, and J. H. Kim.</strong><br>
+              "Noise-robust markerless video gait anomaly detection via two-stage acquisition and LSTM autoencoders."<br>
+              <em>Scientific Reports</em>, 15, 42074, 2025.  
+              doi: 10.1038/s41598-025-26169-9. <a href="https://www.nature.com/articles/s41598-025-26169-9#citeas" target="_blank">[PDF]</a>
             </li>
             <li>
-              <strong>Kim, Jin Hyun et al.</strong><br>
-              “Ophtimus-V2-Tx: A Compact Domain-Specific LLM for Ophthalmic Diagnosis and Treatment Planning.”<br>
-              <em>Scientific Reports, Accepted for Publication, 2025.</em>
+              <strong>M. Kwon, K. J. Jang, S. J. Baek, Y. S. Han, H. Choi, I. Lee, and J. H. Kim.</strong><br>
+              "Ophtimus-V2-Tx: a compact domain-specific LLM for ophthalmic diagnosis and treatment planning."<br>
+              <em>Scientific Reports</em>, 15, 43532, 2025.  
+              doi: 10.1038/s41598-025-27410-1. <a href="https://www.nature.com/articles/s41598-025-27410-1#citeas" target="_blank">[PDF]</a>
             </li>
           </ul>
         </div>
@@ -489,17 +505,20 @@
         <div class="news-card-body">
           <ul>
             <li>
-              <strong>김지원 (학부 연구생 졸업)</strong> &ndash;
-              고려대 대학원 진학 후 <a href="https://www.samsung.com/" target="_blank">삼성전자</a> 입사.
+              <strong>김지원 (Jiwon Kim)</strong> &ndash; 학부 연구생 졸업 (Undergraduate Research Assistant, Graduated)<br>
+              고려대 대학원 진학 후 <a href="https://www.samsung.com/" target="_blank">삼성전자 (Samsung Electronics)</a> 입사.<br>
+              <em>Joined Samsung Electronics after entering Korea University Graduate School.</em>
             </li>
             <li>
-              <strong>Minwook Kwon (M.S., Aug. 2025)</strong> &ndash;
-              <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a> 입사 (AI Engineer).
+              <strong>권민욱 (Minwook Kwon)</strong> &ndash; 석사 졸업 (M.S., Aug. 2025)<br>
+              <a href="https://www.publicai.co.kr/" target="_blank">Public AI</a> 입사 (AI Engineer).<br>
+              <em>Joined Public AI as an AI Engineer.</em>
             </li>
             <li>
-              <strong>Seungju Baek (M.S., Mar. 2025)</strong> &ndash;
+              <strong>백승주 (Seungju Baek)</strong> &ndash; 석사 졸업 (M.S., Mar. 2025)<br>
               <a href="https://www.saltlux.com/" target="_blank">Saltlux</a> 합류,
-              재학 중 <strong>Ophtimus</strong> 안과 LLM 연구에 핵심 기여.
+              재학 중 <strong>Ophtimus</strong> 안과 LLM 연구에 핵심 기여.<br>
+              <em>Joined Saltlux, made key contributions to the Ophtimus ophthalmology LLM research during studies.</em>
             </li>
           </ul>
         </div>

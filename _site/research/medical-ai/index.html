@@ -13,15 +13,15 @@
 
    <!-- 🔥 SEO 기본 메타 태그 -->
   <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
-  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, aix lab, ai lab 경상국립대학교, ai lab 경상대, 경상국립대학교 ai lab, 경상대 ai lab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
   <meta name="author" content="AiX Lab">
 
-  <title>Projects – Medical AI & LLM</title>
+  <title>Medical AI Projects</title>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aix.gnu.ac.kr/research/medical-ai/">
-  <meta property="og:title" content="Projects – Medical AI & LLM">
+  <meta property="og:title" content="Medical AI Projects">
   <meta property="og:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
   <meta property="og:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
   <meta property="og:site_name" content="AiX Lab @ GNU">
@@ -29,7 +29,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://aix.gnu.ac.kr/research/medical-ai/">
-  <meta name="twitter:title" content="Projects – Medical AI & LLM">
+  <meta name="twitter:title" content="Medical AI Projects">
   <meta name="twitter:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
   <meta name="twitter:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
 
@@ -77,11 +77,13 @@
   <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
 
-  <!-- Logo style -->
+  <!-- Logo style - 모바일 반응형은 CSS에서 처리 -->
   <style>
+    /* 데스크톱 기본 로고 크기 (CSS에서 오버라이드됨) */
     .navbar-brand img {
-      width: 250px;
       height: auto;
+      width: auto;
+      max-width: 100%;
     }
   </style>
 </head>
@@ -167,8 +169,13 @@
             </ul>
           </li>
 
+          <!-- Patents -->
+          <li  role="none">
+            <a href="/patents/" role="menuitem">Patents</a>
+          </li>
+
           <!-- Research (Dropdown) -->
-          <li class="has-dropdown " 
+          <li class="has-dropdown active" 
               role="none"
               aria-haspopup="true" 
               aria-expanded="false">
@@ -193,19 +200,14 @@
               </li>
               <li role="none">
                 <a href="/research/robot-racing" role="menuitem">
-                  Robot Racing
-                </a>
-              </li>
-              <li role="none">
-                <a href="/research/etc" role="menuitem">
-                  ETC
+                  Robot AI
                 </a>
               </li>
             </ul>
           </li>
 
           <!-- Project -->
-          <li class="active" role="none">
+          <li  role="none">
             <a href="/projects/" role="menuitem">Project</a>
           </li>
 
@@ -214,19 +216,30 @@
             <a href="/teams/" role="menuitem">Team</a>
           </li>
 
-          <!-- News -->
-          <li  role="none">
-            <a href="/news.html" role="menuitem">News</a>
-          </li>
-          
-          <!-- Seminars -->
-          <li  role="none">
-            <a href="/seminars/" role="menuitem">Seminars</a>
-          </li>
-          
-          <!-- Gallery -->
-          <li  role="none">
-            <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+          <!-- Updates (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/news.html"
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Updates 메뉴"
+               tabindex="0">
+              Updates
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Updates 하위 메뉴">
+              <li role="none">
+                <a href="/news.html" role="menuitem">News</a>
+              </li>
+              <li role="none">
+                <a href="/seminars/" role="menuitem">Seminars</a>
+              </li>
+              <li role="none">
+                <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+              </li>
+            </ul>
           </li>
 
           <!-- Join -->
@@ -245,170 +258,1132 @@
 <div id="top"></div>
 
 <!-- Page Content -->
-<!-- =========================== -->
-<!-- 1. Projects 페이지 헤더 -->
-<!-- =========================== -->
-<section id="project" class="page-section section appear clearfix">
+<section class="section">
   <div class="container">
+    <h2 class="section-title">Medical AI Projects</h2>
 
-    <div class="heading text-center">
-      <h2>Medical AI & LLM Projects<br>
-        <small>의료 인공지능 및 LLM 연구</small>
-      </h2>
+    <div class="research-layout">
+      <!-- 좌측 사이드바 메뉴 -->
+      <aside class="research-sidebar">
+        <nav>
+          <ul class="sidebar-menu">
+            <li class="sidebar-menu-item">
+              <a href="#overview" class="sidebar-menu-link" data-section="overview">Overview</a>
+            </li>
+            <li class="sidebar-menu-item has-submenu">
+              <a href="#medical-llm" class="sidebar-menu-link" data-section="medical-llm">Medical LLM</a>
+              <ul class="sidebar-submenu">
+                <li class="sidebar-submenu-item">
+                  <a href="#ophtimus-v2" class="sidebar-submenu-link" data-section="ophtimus-v2">Ophtimus-V2</a>
+                </li>
+                <li class="sidebar-submenu-item">
+                  <a href="#ophtimus-v2-tx" class="sidebar-submenu-link" data-section="ophtimus-v2-tx">Ophtimus-V2-TX</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#erm-quantification" class="sidebar-menu-link" data-section="erm-quantification">ERM Quantification</a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#gait-anomaly-detection" class="sidebar-menu-link" data-section="gait-anomaly-detection">Gait Anomaly Detection</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-      <p>
-        AiX Lab at Gyeongsang National University leads research in medical AI 
-        and ophthalmology-focused large language models that bridge clinical 
-        practice and trustworthy AI. Our work spans fundus-based oculomics, 
-        visual acuity estimation, video gait analysis, wearable sensing, and 
-        domain-specialized LLMs for ophthalmic diagnosis and treatment planning.
-        <br><br>
+      <!-- 우측 콘텐츠 영역 -->
+      <div class="research-content">
+        <!-- Overview / Research Vision 섹션 (기본 표시) -->
+        <div id="overview" class="research-content-section active">
+          <!-- Language Tabs -->
+          <div class="language-tabs">
+            <input type="radio" id="overview-lang-ko" name="overview-language" value="ko" checked="" />
+            <label for="overview-lang-ko" class="lang-tab">한국어</label>
+            <input type="radio" id="overview-lang-en" name="overview-language" value="en" />
+            <label for="overview-lang-en" class="lang-tab">English</label>
+          </div>
 
-        경상국립대학교 AiX Lab은 임상 현장과 신뢰할 수 있는 AI 기술을 연결하는 
-        의료 인공지능 및 안과 특화 대규모 언어 모델(LLM)을 선도적으로 개발하고 있습니다. 
-        안저 기반 오큘로믹스(oculomics), 시력 추정, 보행 이상 분석, 웨어러블 기반 생체신호 분석, 
-        그리고 안과 진단·치료 계획을 위한 도메인 특화 LLM까지 폭넓은 연구를 수행하고 있습니다.
-        <br><br>
+          <!-- Content Area -->
+          <div id="overview-content-area" class="content-area">
+            <!-- Korean Content -->
+            <div id="overview-ko-content" class="lang-content" data-lang="ko" style="display: block;">
+              <h2>1. Core Vision</h2>
+<p class="section-text">
+  의료 영상에서 <strong>단순 분류(Classification)가 아니라, 질병을 정량화(Quantification)하고, 구조화된 임상 표현(structured clinical representations)을 생성하여 LLM 기반의 임상 추론으로 연결되는 "End-to-End Clinical Reasoning Pipeline"을 구축</strong>하는 것이 전체적인 연구 비전입니다.
+</p>
+<p class="section-text">
+  이 비전은 다음과 같은 핵심 목표를 가집니다:
+</p>
+<ul class="section-text">
+  <li>의료 영상 → 병변 분할(segmentation) → 수치화(quantification) → 정량 지표 기반 예측 모델</li>
+  <li>정량 지표 + 이미지 + 텍스트 리포트 → Multimodal LLM 기반 AI Doctor Assistant</li>
+  <li>안전성·신뢰성 강화: 모델 검증(Formal Verification), 안전 뉴런 분석, mechanistic interpretability</li>
+</ul>
 
-        <strong>We developed Korea’s first ophthalmology-specialized xsLM-Ophtimus LLM series 
-        (Ophtimus-Base, Ophtimus-1B/3B/8B, Ophtimus-Instruct-8B),</strong> now publicly available at:  
-        <a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank">
-          GITHUB REPOSITORY
-        </a>.
-        <br>
-        <strong>저희 연구실은 국내 최초로 안과 의학 지식에 특화된 
-        xsLM-Ophtimus 시리즈(Ophtimus-Base, Ophtimus-1B/3B/8B, Ophtimus-Instruct-8B)를 개발하여 공개했습니다.</strong>
-      </p>
+<hr class="section-divider" />
 
-    </div>
+<h2>2. Research Theme A: Medical Image Quantification &amp; Disease Modeling</h2>
+<p class="section-text">
+  전통적인 CNN 기반 분류를 넘어, <strong>질병의 진행 정도를 수치화하고 임상적으로 해석 가능한 continuous biomarker</strong>를 생성하는 연구 라인입니다.
+</p>
 
-  </div>
-</section>
-
-
-<!-- =========================== -->
-<!-- 2. Representative Publications 섹션 -->
-<!-- =========================== -->
-<section id="projects" class="section section-alt">
-  <div class="container">
-
-    <!-- =============================== -->
-    <!-- 3. Medical AI / LLM Publications -->
-    <!-- =============================== -->
-    <h3 style="margin-top:40px;">Representative Medical AI &amp; LLM Publications</h3>
-
-    <ul class="section-text" style="margin-top:15px;">
-
-      <!-- 2025 – LLMs -->
-      <li>
-        <strong>2025 – Ophtimus-V2-Tx: Ophthalmic treatment-planning LLM</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Ophtimus-V2-Tx: A compact domain-specific LLM for ophthalmic diagnosis and treatment planning.”<br>
-        <em>Scientific Reports</em>, 2025. Accepted for publication, 2025.<br>
-        &nbsp;&nbsp;→ 안과 진단과 처치 계획을 지원하기 위한 도메인 특화 의료 LLM으로,
-        소형(8B급) 구조에서 hallucination 감소와 설명 가능한 임상 추론을 지향하는 모델.
-      </li>
-
-      <li>
-        <strong>2025 – Ophtimus-LLM: Specialized LLM for ophthalmology</strong><br>
-        Seung Ju Baek, Kuk Jin Jang, Sooyong Jang, Hyonyoung Choi, Minwook Kwon,
-        Yong Seop Han, Seongjin Lee, <strong>Kim, Jin Hyun</strong>, and Insup Lee.<br>
-        “Ophtimus-LLM: Development of a specialized large language model for ophthalmology.”<br>
-        In <em>AAAI 2025 Workshop on Generative AI for Health (GenAI4Health)</em>, 2025.<br>
-        &nbsp;&nbsp;→ 안과 임상 데이터를 학습한 전문 LLM으로, 안저 소견 기술, 임상 질문응답,
-        진단·치료 reasoning을 실험한 초기 버전 모델.
-      </li>
-
-      <!-- 2025 – Medical AI models -->
-      <li>
-        <strong>2025 – Low-cost ERM detection on SD-OCT</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Low-cost and fast epiretinal membrane detection and quantification based on SD-OCT.”<br>
-        <em>IEEE Access</em>, 2025. Accepted for publication, 2025.<br>
-        &nbsp;&nbsp;→ 표준 SD-OCT 장비에서 얻은 영상을 이용해 황반부 망막앞막(ERM)을 자동 검출·정량화하는
-        경량 딥러닝 파이프라인으로, 임상 현장에서 빠른 스크리닝을 목표로 함.
-      </li>
-
-      <li>
-        <strong>2025 – Noise-robust markerless gait anomaly detection</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Noise-robust markerless video gait anomaly detection via two-stage acquisition and LSTM autoencoders.”<br>
-        <em>Scientific Reports</em>, 2025. Accepted for publication, 2025.<br>
-        &nbsp;&nbsp;→ 마커 없이 촬영한 보행 비디오에서 두 단계 데이터 취득과 LSTM 오토인코더를 통해
-        노이즈에 강인한 보행 이상 탐지를 수행하는 모델.
-      </li>
-
-      <!-- 2024 -->
-      <li>
-        <strong>2024 – Fundus-based oculomics for HbA1c</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Development of oculomics artificial intelligence for cardiovascular risk factors:
-        A case study in fundus oculomics for HbA1c assessment and clinically relevant considerations for clinicians.”<br>
-        <em>Asia-Pacific Journal of Ophthalmology</em>, 13(4), July 2024.<br>
-        &nbsp;&nbsp;→ 안저 영상만으로 당화혈색소(HbA1c) 등 심혈관 위험 인자를 추정하는 oculomics AI를
-        구축하고, 임상의 관점에서 해석 시 주의점과 활용 가능성을 논의.
-      </li>
-
-      <!-- 2022 -->
-      <li>
-        <strong>2022 – Visual acuity estimation from fundus images</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Estimation of best corrected visual acuity based on deep neural network.”<br>
-        <em>Scientific Reports</em>, 12(1), October 2022.<br>
-        &nbsp;&nbsp;→ 안저 이미지를 입력으로 환자의 최대 교정시력(BCVA)을 추정하는 딥러닝 모델을 제안하여,
-        전통적인 시력검사의 보조 도구로서 가능성을 제시.
-      </li>
-
-      <li>
-        <strong>2022 – Deep learning ensemble for visual acuity measurement</strong><br>
-        <strong>Jin Hyun Kim</strong> et al.<br>
-        “A deep learning ensemble method to visual acuity measurement using fundus images.”<br>
-        <em>Applied Sciences</em>, 12(6), March 2022.<br>
-        &nbsp;&nbsp;→ 서로 다른 네트워크 구조를 앙상블해 안저 기반 시력 추정의 정확도와 안정성을
-        향상시키는 방법을 제시.
-      </li>
-
-      <li>
-        <strong>2022 – Asymmetry between right and left fundus images</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Asymmetry between right and left fundus images identified using convolutional neural networks.”<br>
-        <em>Scientific Reports</em>, 12(1), April 2022. Corrigendum noted 2022-10-25.<br>
-        &nbsp;&nbsp;→ 양안 안저 영상에서 CNN으로 구조적 비대칭성을 탐지하여, 질환 관련
-        비대칭 지표를 정량화하는 연구.
-      </li>
-
-      <li>
-        <strong>2022 – Smartwatch-based pre-symptomatic COVID-19 detection</strong><br>
-        <strong>Jin Hyun Kim</strong> et al.<br>
-        “Machine learning-based optimization of pre-symptomatic COVID-19 detection through smartwatch.”<br>
-        <em>Scientific Reports</em>, 12(1), May 2022.<br>
-        &nbsp;&nbsp;→ 스마트워치 생체 신호를 이용해 증상 발현 전에 COVID-19 감염 가능성을 탐지하는
-        머신러닝 기반 모델 및 피처 설계.
-      </li>
-
-      <!-- 2021 -->
-      <li>
-        <strong>2021 – Automated anterior chamber cell analysis</strong><br>
-        <strong>Kim, Jin Hyun</strong> et al.<br>
-        “Development of fully automated anterior chamber cell analysis based on image software.”<br>
-        <em>Scientific Reports</em>, 11(1), May 2021.<br>
-        &nbsp;&nbsp;→ 슬릿램프 영상 등에서 전방세포(AC cell)를 자동 계측하는 이미지 기반 분석 소프트웨어를
-        개발하여, 안과 염증 평가의 객관화·자동화를 시도.
-      </li>
-
+<h3>A.1. Ophthalmology (안과 영상 기반 정량화)</h3>
+<ul class="section-text">
+  <li>Epiretinal Membrane(ERM), Diabetic Retinopathy, Macular Disease 등</li>
+  <li>Fundus / OCT-B-scans 기반:
+    <ul>
+      <li>병변 segmentation (Membrane, Retina layers, cyst regions)</li>
+      <li>Thickness map, curvature, reflectance profile 등 정량 지표 생성</li>
     </ul>
+  </li>
+  <li>정량 지표 기반 disease staging, progression prediction 모델</li>
+</ul>
 
-    <div class="text-center" style="margin-top:30px;">
-      <a href="/about.html" class="btn btn-primary">
-        Learn more about AiX Lab
-      </a>
-      <a href="/team.html" class="btn btn-primary" style="margin-left:8px;">
-        Meet the Team
-      </a>
+<h3>A.2. Gait / Orthopedics (정형외과 보행 분석)</h3>
+<ul class="section-text">
+  <li>Markerless video (pose estimation) → biomechanical features → gait anomaly quantification</li>
+  <li>Clinical grading 대신 정량 feature를 활용한 진단 및 progression 모델</li>
+  <li>Pediatric, elderly imbalance assessment 등 확장 가능</li>
+</ul>
+
+<h3>A.3. Multi-modal structured data integration</h3>
+<p class="section-text">
+  영상, 정량 feature, EMR, 검사 수치(labs) 등 통합.<br />
+  최종 목적: <strong>disease progression world model</strong> 구축.
+</p>
+
+<hr class="section-divider" />
+
+<h2>3. Research Theme B: Domain-Specialized Medical LLMs (Ophtimus-V2 계열)</h2>
+<p class="section-text">
+  사용자가 직접 개발한 <strong>Ophthalmology 특화 LLM(Ophtimus-V2-Tx)</strong> 연구 라인입니다.
+</p>
+
+<h3>B.1. Clinical reasoning 모델</h3>
+<ul class="section-text">
+  <li>케이스 리포트 기반 fine-tuning</li>
+  <li>증상–영상–진단–치료로 이어지는 "임상 지식 경로(clinical knowledge pathway)" 학습</li>
+  <li>hallucination 감소 및 안전성 강화 목적의 LoRA 및 structured LoRA 실험</li>
+</ul>
+
+<h3>B.2. Multi-modal 입력 확장</h3>
+<ul class="section-text">
+  <li>Fundus / OCT(B-scan) embedding + structured quantification + textual description</li>
+  <li>나아가 의료용 World Model과 결합하여 progression simulator 연동 가능</li>
+</ul>
+
+<h3>B.3. Safety &amp; Trustworthiness</h3>
+<ul class="section-text">
+  <li>"Safety Neurons" 분석</li>
+  <li>Mechanistic interpretability (circuit-level patterns in reasoning)</li>
+  <li>Clinically harmful output 검출 및 unlearning</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>4. Research Theme C: Formal Verification + AI Safety for Medical AI</h2>
+<p class="section-text">
+  의료 AI의 신뢰성과 규제 대응(의료기기 인허가 등)을 위해<br />
+  <strong>정형 기법(Formal Methods) + AI Safety</strong>를 결합한 독자적 연구 라인.
+</p>
+
+<h3>C.1. Verified Environment Models</h3>
+<ul class="section-text">
+  <li>Timed Automata 기반 의료 프로세스 모델</li>
+  <li>Model checking(PCTL, CTL, TCTL)을 통한 안전 제약 조건 검증</li>
+  <li>강화학습 또는 AI inference가 이 제약을 위반하지 않도록 control shield 제공</li>
+</ul>
+
+<h3>C.2. Verified AI Controllers</h3>
+<ul class="section-text">
+  <li>Medical AI inference pipeline에 safety property 강제</li>
+  <li>"언제 어떤 입력에서 위험한 출력이 발생 가능한가"를 검증하는 분석</li>
+  <li>Verification-aware fine-tuning 또는 pruning</li>
+</ul>
+
+<h3>C.3. Trustworthy Data &amp; Contamination Check</h3>
+<ul class="section-text">
+  <li>Crowd annotation에서 LLM-cheating 탐지(peer prediction 기반)</li>
+  <li>의료 데이터 라벨의 신뢰성 확보</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>5. Research Theme D: Medical World Models &amp; Embodied AI</h2>
+<p class="section-text">
+  NeurIPS 2025의 핵심 트렌드("World Models", "Embodied AI for Healthcare")와 직접적으로 정렬되는 연구 방향.
+</p>
+
+<h3>D.1. Disease Progression World Model</h3>
+<ul class="section-text">
+  <li>Retina / ERM progression dynamics를 모델링하는 generative world model</li>
+  <li>OCT/B-scan 연속 영상 기반 temporal latent dynamics</li>
+  <li>"만약 환자의 상태가 X라면, 6개월 후의 OCT는 어떻게 변할까?" 같은 counterfactual simulation 가능</li>
+</ul>
+
+<h3>D.2. Multi-modal Clinical Simulator</h3>
+<ul class="section-text">
+  <li>이미지, 정량 biomarker, 텍스트 리포트, 치료 이력 포함</li>
+  <li>LLM에게 구조화된 임상 시뮬레이션 컨텍스트 제공</li>
+  <li>임상 결정지원(Decision Support) 최대 강화</li>
+</ul>
+
+<h3>D.3. Reinforcement Learning in Verified Clinical Simulation</h3>
+<ul class="section-text">
+  <li>실세계 의료를 직접 학습시키는 것이 금지되는 경우</li>
+  <li>Verified world model 기반 safe RL 적용 가능</li>
+  <li>Treatment planning 또는 screening 정책 최적화 연구로 확장 가능</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>6. Research Theme E: Foundations for AI-Driven Clinical Decision Support</h2>
+<p class="section-text">
+  위의 모든 축(A~D)를 통합하여 <strong>임상 추론 자동화</strong>라는 궁극적인 의료 AI 목적을 지원.
+</p>
+
+<h3>E.1. Image → Biomarker → Reasoner → Recommendation</h3>
+<ul class="section-text">
+  <li>완전히 end-to-end 연결 가능한 pipeline 구축</li>
+  <li>영상 기반 quantification이 LLM reasoning의 입력 구조로 연결됨</li>
+</ul>
+
+<h3>E.2. Multi-lingual / Multi-institution Generalization</h3>
+<ul class="section-text">
+  <li>한국, 미국(UPenn), 기타 기관 데이터 협력 기반</li>
+  <li>Robustness, distribution shift 연구 수행</li>
+</ul>
+
+<h3>E.3. Regulatory-readiness</h3>
+<ul class="section-text">
+  <li>신뢰성 평가 지표(specificity, sensitivity, FN-critical tasks)</li>
+  <li>"Safety case" 구조를 갖춘 의료 AI 문서화 가능</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>7. 전체 테마 요약 (One-page Executive Summary)</h2>
+<p class="section-text">
+  <strong>사용자의 Medical AI 연구는 단순한 이미지 분류를 넘어서 다음의 통합적 연구 생태계를 구축하는 것에 초점을 둔다.</strong>
+</p>
+<ol class="section-text">
+  <li><strong>질병 정량화 기술</strong>
+    <ul>
+      <li>영상 기반 병변 분석, 수치화, progression modeling</li>
+    </ul>
+  </li>
+  <li><strong>임상 특화 LLM 개발(Ophtimus-V2-Tx)</strong>
+    <ul>
+      <li>Ophthalmology 전문 reasoning 모델</li>
+      <li>Multi-modal (OCT/Fundus + EMR + biomarkers) 처리</li>
+    </ul>
+  </li>
+  <li><strong>AI Safety &amp; Formal Verification 적용</strong>
+    <ul>
+      <li>의료 AI를 위한 safety constraints 보장</li>
+      <li>Verified environment + verified inference</li>
+    </ul>
+  </li>
+  <li><strong>World Model 기반 임상 시뮬레이션</strong>
+    <ul>
+      <li>질병 진행 시뮬레이션</li>
+      <li>LLM의 clinical decision reasoning을 위한 foundation</li>
+    </ul>
+  </li>
+  <li><strong>전반적 의료 의사결정 지원 시스템 구축</strong>
+    <ul>
+      <li>Data → Image → Quantification → LLM → Decision까지 end-to-end</li>
+    </ul>
+  </li>
+</ol>
+
+
+
+            </div>
+            
+            <!-- English Content -->
+            <div id="overview-en-content" class="lang-content" data-lang="en" style="display: none;">
+              <h2>1. Core Vision</h2>
+<p class="section-text">
+  Our overall research vision is to build an <strong>"End-to-End Clinical Reasoning Pipeline"</strong> that goes beyond simple classification in medical imaging—quantifying diseases, generating structured clinical representations, and connecting them to LLM-based clinical reasoning.
+</p>
+<p class="section-text">
+  This vision encompasses the following core objectives:
+</p>
+<ul class="section-text">
+  <li>Medical images → Lesion segmentation → Quantification → Prediction models based on quantitative indicators</li>
+  <li>Quantitative indicators + Images + Text reports → Multimodal LLM-based AI Doctor Assistant</li>
+  <li>Safety and reliability enhancement: Model verification (Formal Verification), safety neuron analysis, mechanistic interpretability</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>2. Research Theme A: Medical Image Quantification &amp; Disease Modeling</h2>
+<p class="section-text">
+  This research line focuses on generating <strong>continuous biomarkers that quantify disease progression and are clinically interpretable</strong>, moving beyond traditional CNN-based classification.
+</p>
+
+<h3>A.1. Ophthalmology (Ophthalmology Image-based Quantification)</h3>
+<ul class="section-text">
+  <li>Epiretinal Membrane (ERM), Diabetic Retinopathy, Macular Disease, etc.</li>
+  <li>Based on Fundus / OCT-B-scans:
+    <ul>
+      <li>Lesion segmentation (Membrane, Retina layers, cyst regions)</li>
+      <li>Generation of quantitative indicators such as thickness map, curvature, reflectance profile</li>
+    </ul>
+  </li>
+  <li>Disease staging and progression prediction models based on quantitative indicators</li>
+</ul>
+
+<h3>A.2. Gait / Orthopedics (Orthopedic Gait Analysis)</h3>
+<ul class="section-text">
+  <li>Markerless video (pose estimation) → Biomechanical features → Gait anomaly quantification</li>
+  <li>Diagnosis and progression models utilizing quantitative features instead of clinical grading</li>
+  <li>Extendable to pediatric, elderly imbalance assessment, etc.</li>
+</ul>
+
+<h3>A.3. Multi-modal Structured Data Integration</h3>
+<p class="section-text">
+  Integration of images, quantitative features, EMR, lab values, etc.<br />
+  Final goal: Building a <strong>disease progression world model</strong>.
+</p>
+
+<hr class="section-divider" />
+
+<h2>3. Research Theme B: Domain-Specialized Medical LLMs (Ophtimus-V2 Series)</h2>
+<p class="section-text">
+  A research line on <strong>Ophthalmology-specific LLMs (Ophtimus-V2-Tx)</strong> developed directly by the research team.
+</p>
+
+<h3>B.1. Clinical Reasoning Models</h3>
+<ul class="section-text">
+  <li>Fine-tuning based on case reports</li>
+  <li>Learning "clinical knowledge pathways" connecting symptoms–images–diagnosis–treatment</li>
+  <li>Experiments with LoRA and structured LoRA to reduce hallucination and enhance safety</li>
+</ul>
+
+<h3>B.2. Multi-modal Input Extension</h3>
+<ul class="section-text">
+  <li>Fundus / OCT (B-scan) embedding + Structured quantification + Textual description</li>
+  <li>Further integration with medical World Models to enable progression simulator linkage</li>
+</ul>
+
+<h3>B.3. Safety &amp; Trustworthiness</h3>
+<ul class="section-text">
+  <li>"Safety Neurons" analysis</li>
+  <li>Mechanistic interpretability (circuit-level patterns in reasoning)</li>
+  <li>Detection and unlearning of clinically harmful outputs</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>4. Research Theme C: Formal Verification + AI Safety for Medical AI</h2>
+<p class="section-text">
+  An independent research line combining <strong>Formal Methods + AI Safety</strong> to ensure reliability and regulatory compliance (e.g., medical device approval) for medical AI.
+</p>
+
+<h3>C.1. Verified Environment Models</h3>
+<ul class="section-text">
+  <li>Medical process models based on Timed Automata</li>
+  <li>Verification of safety constraints through model checking (PCTL, CTL, TCTL)</li>
+  <li>Providing control shields to prevent reinforcement learning or AI inference from violating these constraints</li>
+</ul>
+
+<h3>C.2. Verified AI Controllers</h3>
+<ul class="section-text">
+  <li>Enforcing safety properties in Medical AI inference pipelines</li>
+  <li>Analysis to verify "when and what inputs can lead to dangerous outputs"</li>
+  <li>Verification-aware fine-tuning or pruning</li>
+</ul>
+
+<h3>C.3. Trustworthy Data &amp; Contamination Check</h3>
+<ul class="section-text">
+  <li>LLM-cheating detection in crowd annotation (based on peer prediction)</li>
+  <li>Ensuring reliability of medical data labels</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>5. Research Theme D: Medical World Models &amp; Embodied AI</h2>
+<p class="section-text">
+  A research direction directly aligned with core trends at NeurIPS 2025 ("World Models", "Embodied AI for Healthcare").
+</p>
+
+<h3>D.1. Disease Progression World Model</h3>
+<ul class="section-text">
+  <li>Generative world models that model Retina / ERM progression dynamics</li>
+  <li>Temporal latent dynamics based on OCT/B-scan sequential images</li>
+  <li>Enabling counterfactual simulation such as "If a patient's condition is X, how would the OCT change after 6 months?"</li>
+</ul>
+
+<h3>D.2. Multi-modal Clinical Simulator</h3>
+<ul class="section-text">
+  <li>Including images, quantitative biomarkers, text reports, treatment history</li>
+  <li>Providing structured clinical simulation contexts to LLMs</li>
+  <li>Maximizing clinical decision support enhancement</li>
+</ul>
+
+<h3>D.3. Reinforcement Learning in Verified Clinical Simulation</h3>
+<ul class="section-text">
+  <li>For cases where direct learning from real-world medical settings is prohibited</li>
+  <li>Application of safe RL based on verified world models</li>
+  <li>Extendable to research on treatment planning or screening policy optimization</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>6. Research Theme E: Foundations for AI-Driven Clinical Decision Support</h2>
+<p class="section-text">
+  Supporting the ultimate goal of medical AI—<strong>automated clinical reasoning</strong>—by integrating all the above axes (A~D).
+</p>
+
+<h3>E.1. Image → Biomarker → Reasoner → Recommendation</h3>
+<ul class="section-text">
+  <li>Building fully end-to-end connectable pipelines</li>
+  <li>Linking image-based quantification to input structures for LLM reasoning</li>
+</ul>
+
+<h3>E.2. Multi-lingual / Multi-institution Generalization</h3>
+<ul class="section-text">
+  <li>Based on collaborations with Korea, USA (UPenn), and other institutions</li>
+  <li>Conducting research on robustness and distribution shift</li>
+</ul>
+
+<h3>E.3. Regulatory-readiness</h3>
+<ul class="section-text">
+  <li>Reliability assessment metrics (specificity, sensitivity, FN-critical tasks)</li>
+  <li>Enabling medical AI documentation with "Safety case" structures</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h2>7. Overall Theme Summary (One-page Executive Summary)</h2>
+<p class="section-text">
+  <strong>Our Medical AI research focuses on building the following integrated research ecosystem, going beyond simple image classification.</strong>
+</p>
+<ol class="section-text">
+  <li><strong>Disease Quantification Technology</strong>
+    <ul>
+      <li>Image-based lesion analysis, quantification, progression modeling</li>
+    </ul>
+  </li>
+  <li><strong>Development of Clinical Domain-Specialized LLMs (Ophtimus-V2-Tx)</strong>
+    <ul>
+      <li>Ophthalmology-specific reasoning models</li>
+      <li>Multi-modal processing (OCT/Fundus + EMR + biomarkers)</li>
+    </ul>
+  </li>
+  <li><strong>Application of AI Safety &amp; Formal Verification</strong>
+    <ul>
+      <li>Ensuring safety constraints for medical AI</li>
+      <li>Verified environment + verified inference</li>
+    </ul>
+  </li>
+  <li><strong>Clinical Simulation Based on World Models</strong>
+    <ul>
+      <li>Disease progression simulation</li>
+      <li>Foundation for LLM's clinical decision reasoning</li>
+    </ul>
+  </li>
+  <li><strong>Building Comprehensive Medical Decision Support Systems</strong>
+    <ul>
+      <li>End-to-end from Data → Image → Quantification → LLM → Decision</li>
+    </ul>
+  </li>
+</ol>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Medical LLM 섹션 -->
+        <div id="medical-llm" class="research-content-section">
+          <h3>Key Themes</h3>
+<ul class="section-text">
+  <li>Domain-specialized LLMs for ophthalmology (e.g., Ophtimus-V2-Tx)</li>
+  <li>Noise-robust medical image analysis and quantification</li>
+  <li>Reliable mapping from model outputs to clinical coding systems</li>
+  <li>Evaluation frameworks for safety, robustness, and explainability</li>
+</ul>
+
+<h3>Selected Projects</h3>
+<ul class="section-text">
+  <li>
+    <strong>Ophtimus-V2-Tx:</strong>
+    An 8B-parameter ophthalmology LLM
+    trained on case reports and evaluated with CliBench-based coding.
+  </li>
+  <li>
+    <a href="#erm">
+      <strong>ERM Quantification:</strong>
+      Low-cost and fast SD-OCT based
+      epiretinal membrane detection and thickness quantification.
+    </a>
+  </li>
+</ul>
+
+        </div>
+
+        <!-- Ophtimus-V2 섹션 -->
+        <div id="ophtimus-v2" class="research-content-section">
+          <section id="ophtimus" class="section" style="padding-top: 2rem;">
+  <h2>Ophtimus: Ophthalmology-specific LLM</h2>
+
+  <p class="section-text">
+    <a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank" class="github-badge-link">
+      <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&amp;logo=github" alt="GitHub Repository" />
+    </a>
+  </p>
+
+  <div class="badges-container">
+    <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge" alt="Python" />
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge" alt="PyTorch" />
+    <img src="https://img.shields.io/badge/Transformers-EF5350?style=for-the-badge" alt="Transformers" />
+    <img src="https://img.shields.io/badge/LangChain-0E8388?style=for-the-badge" alt="LangChain" />
+    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge" alt="Streamlit" />
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge" alt="FastAPI" />
+  </div>
+
+  <p class="section-text">
+    🤗 <a href="https://huggingface.co/collections/BaekSeungJu/ophtimus-series-67d859fedb756527d680ce42" target="_blank"><strong>Models and Datasets</strong></a> &nbsp;|&nbsp; 📕 <a href="https://openreview.net/forum?id=dIJPlNKhgv" target="_blank"><strong>AAAI 2025 workshop Paper</strong></a>
+  </p>
+
+  <h3>Introduction</h3>
+  <p class="section-text">
+    Ophtimus is an open-source <strong>large language model (LLM)</strong> specialized in ophthalmology, built with <strong>8 billion parameters</strong> based on the LLaMA architecture. It was trained on carefully curated ophthalmology-specific data, including medical papers, textbooks, and research reports. Through filtering, summarization, and preprocessing, only the most relevant and high-quality information was retained.
+  </p>
+  <p class="section-text">
+    Designed to be both <strong>lightweight</strong> and <strong>high-performing</strong>, Ophtimus is suitable for real-world applications such as <strong>clinical decision support</strong>, <strong>medical education</strong>, and <strong>patient communication</strong>. The model and its training pipeline are fully open-sourced, providing a practical reference for developing similar domain-specific LLMs in other areas of medicine.
+  </p>
+
+  <p class="section-text">
+    <strong>GitHub Repository:</strong> <a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank">github.com/jinkimh/Ophtimus-Ophthalmology-LLM</a>
+  </p>
+
+  <!-- 대표 이미지 -->
+  <div class="image-wrapper">
+    <img src="/images/research/ophtimus/Ophtimus-Overall-Architecture.png" alt="Ophtimus Overall Architecture" class="content-image" style="max-width:900px;" />
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Dataset Details -->
+  <h3>Dataset Details</h3>
+
+  <div class="highlight-box">
+    <p class="section-text">
+      <strong>Note:</strong> All datasets were either newly constructed or adapted for this project. Pre-training datasets were curated from open-source ophthalmology materials, while instruction-tuning and evaluation datasets were built by extracting only ophthalmology-relevant samples from broader medical corpora. All data underwent preprocessing steps including deduplication, language filtering (English only), and removal of any personally identifiable information (PII).
+    </p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="degree-table">
+      <thead>
+        <tr>
+          <th>Dataset name</th>
+          <th>Source</th>
+          <th>Size</th>
+          <th>Purpose</th>
+          <th>Key Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ophthalmology-pubmed-corpus <a href="https://huggingface.co/datasets/BaekSeungJu/Ophthalmology-PubMed-Corpus" target="_blank">[Link]</a></td>
+          <td>Ophthalmology paper</td>
+          <td>18.4M Tokens</td>
+          <td>Pre-Training</td>
+          <td>
+            • Map-reduce method summary<br />
+            • Broad ophthalmic keywords
+          </td>
+        </tr>
+        <tr>
+          <td>Ophthalmology-textbook-corpus <a href="https://huggingface.co/datasets/BaekSeungJu/Ophthalmology-Textbook-Corpus" target="_blank">[Link]</a></td>
+          <td>Ophthalmology textbook</td>
+          <td>4M Tokens</td>
+          <td>Pre-Training</td>
+          <td>
+            • Trusted medical sources<br />
+            • Rich in diagnostic cases
+          </td>
+        </tr>
+        <tr>
+          <td>Ophthalmology MCQA Inst dataset <a href="https://huggingface.co/datasets/BaekSeungJu/Ophthalmology-MCQA-v3" target="_blank">[Link]</a></td>
+          <td>Ophthalmology Docs</td>
+          <td>51.7k QAs</td>
+          <td>Inst-Tuning</td>
+          <td>
+            • Diverse multiple-choice formats<br />
+            • Reasoning included<br />
+            • Variety of ophthalmic topics
+          </td>
+        </tr>
+        <tr>
+          <td>Ophthalmology EQA Inst dataset <a href="https://huggingface.co/datasets/BaekSeungJu/Ophthalmology-EQA-v3" target="_blank">[Link]</a></td>
+          <td>Ophthalmology Docs</td>
+          <td>49.3k QAs</td>
+          <td>Inst-Tuning</td>
+          <td>
+            • Variety of ophthalmic topics
+          </td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Eval-Dataset <a href="https://huggingface.co/datasets/BaekSeungJu/OphtimusEval-Dataset" target="_blank">[Link]</a></td>
+          <td>Medical platform data</td>
+          <td>2,153 QAs</td>
+          <td>Evaluation</td>
+          <td>
+            • expert-verified data<br />
+            • MCQA dataset
+          </td>
+        </tr>
+        <tr>
+          <td>PubMedQA-ophthal-Dataset <a href="https://huggingface.co/datasets/BaekSeungJu/PubMedQA-Ophthal-Dataset" target="_blank">[Link]</a></td>
+          <td>PubMedQA</td>
+          <td>297 QAs</td>
+          <td>Evaluation</td>
+          <td>
+            • Ophthalmology domain filtered<br />
+            • True/False MCQA dataset
+          </td>
+        </tr>
+        <tr>
+          <td>MedMCQA-Ophthal-Dataset <a href="https://huggingface.co/datasets/BaekSeungJu/MedMCQA-Ophthal-Dataset" target="_blank">[Link]</a></td>
+          <td>MedMCQA</td>
+          <td>6,932 QAs</td>
+          <td>Evaluation</td>
+          <td>
+            • Ophthalmology domain filtered<br />
+            • MCQA dataset
+          </td>
+        </tr>
+        <tr>
+          <td>EQAEval-Dataset <a href="https://huggingface.co/datasets/BaekSeungJu/EQAEval-Ophthal-Dataset" target="_blank">[Link]</a></td>
+          <td>MedQuAD, Others</td>
+          <td>1,389 QAs</td>
+          <td>Evaluation</td>
+          <td>
+            • Diverse open-source datasets<br />
+            • Ophthalmology domain filtered<br />
+            • Essay QA
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Model Details -->
+  <h3>Model Details</h3>
+
+  <div class="highlight-box">
+    <p class="section-text">
+      <strong>Note:</strong> The "pre-training" and "fine-tuning" columns in the table refer to the training performed in this project. The base models had already undergone pre-training and/or fine-tuning prior to this project, and we applied transfer learning using those models.
+    </p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="degree-table">
+      <thead>
+        <tr>
+          <th>Model name</th>
+          <th>Base model</th>
+          <th>Parameters</th>
+          <th>Pre-training</th>
+          <th>Instruction-tuning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ophtimus-Base <a href="https://huggingface.co/BaekSeungJu/Ophtimus-8B-Base" target="_blank">[Link]</a></td>
+          <td>Llama-3.1-8B</td>
+          <td>8B</td>
+          <td>✅</td>
+          <td>❌</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Llama-1B <a href="https://huggingface.co/BaekSeungJu/Ophtimus-1B-Instruct" target="_blank">[Link]</a></td>
+          <td>Llama-3.2-1B-Instruct</td>
+          <td>1B</td>
+          <td>❌</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Llama-3B <a href="https://huggingface.co/BaekSeungJu/Ophtimus-3B-Instruct" target="_blank">[Link]</a></td>
+          <td>Llama-3.2-3B-Instruct</td>
+          <td>3B</td>
+          <td>❌</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Llama-8B <a href="https://huggingface.co/BaekSeungJu/Ophtimus-8B-Instruct" target="_blank">[Link]</a></td>
+          <td>Llama-3.1-8B-Instruct</td>
+          <td>8B</td>
+          <td>❌</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Instruct-8B <a href="https://huggingface.co/your-link-here" target="_blank">[Link]</a></td>
+          <td>Ophtimus-Base</td>
+          <td>8B</td>
+          <td>✅</td>
+          <td>✅</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Performance -->
+  <h3>Performance</h3>
+
+  <div class="highlight-box">
+    <p class="section-text">
+      <strong>Note:</strong> Multi-Choice QA: Ophtimus-Eval, MedMCQA, PubMedQA | Essay QA: MedQuAD, Medical Flashcards, Medical Wikidoc<br />
+      Ophtimus-Eval is a proprietary dataset collected from a medical platform. The others are established medical benchmark datasets, from which only ophthalmology-related QA pairs were extracted for evaluation.
+    </p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="degree-table">
+      <thead>
+        <tr>
+          <th rowspan="2">Model</th>
+          <th colspan="3">Multi-Choice Question</th>
+          <th colspan="4">Essay Question</th>
+        </tr>
+        <tr>
+          <th>Ophtimus Eval</th>
+          <th>MedMCQA (Ophth)</th>
+          <th>PubmedQA (Ophth)</th>
+          <th>RougeL</th>
+          <th>BLEU</th>
+          <th>METEOR</th>
+          <th>SemScore</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>OpenAI GPT-4o</strong></td>
+          <td><strong>71.95%</strong></td>
+          <td><strong>81.95%</strong></td>
+          <td><strong>89.90%</strong></td>
+          <td>0.193</td>
+          <td>0.082</td>
+          <td><strong>0.341</strong></td>
+          <td><strong>0.761</strong></td>
+        </tr>
+        <tr>
+          <td>Llama-3-8B-Instrct</td>
+          <td>48.60%</td>
+          <td>74.02%</td>
+          <td>63.97%</td>
+          <td>0.193</td>
+          <td>0.064</td>
+          <td>0.244</td>
+          <td>0.684</td>
+        </tr>
+        <tr>
+          <td>Llama-3.1-8B-Instrct</td>
+          <td>39.78%</td>
+          <td>57.96%</td>
+          <td>83.84%</td>
+          <td>0.177</td>
+          <td>0.054</td>
+          <td>0.215</td>
+          <td>0.641</td>
+        </tr>
+        <tr>
+          <td>Eye-Llama</td>
+          <td>32.56%</td>
+          <td>59.43%</td>
+          <td>66.11%</td>
+          <td>0.183</td>
+          <td>0.062</td>
+          <td>0.211</td>
+          <td>0.686</td>
+        </tr>
+        <tr>
+          <td>PMC-Llama-13B</td>
+          <td>48.28%</td>
+          <td>63.45%</td>
+          <td>72.48%</td>
+          <td>0.223</td>
+          <td>0.082</td>
+          <td>0.288</td>
+          <td>0.714</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Llama-1B</td>
+          <td>41.45%</td>
+          <td>45.74%</td>
+          <td>61.95%</td>
+          <td>0.219</td>
+          <td>0.076</td>
+          <td>0.217</td>
+          <td>0.711</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Llama-3B</td>
+          <td>52.70%</td>
+          <td>62.10%</td>
+          <td>69.36%</td>
+          <td>0.224</td>
+          <td>0.077</td>
+          <td>0.225</td>
+          <td>0.726</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Llama-8B</td>
+          <td>60.78%</td>
+          <td>68.25%</td>
+          <td>69.70%</td>
+          <td><strong>0.226</strong></td>
+          <td><strong>0.083</strong></td>
+          <td>0.230</td>
+          <td>0.733</td>
+        </tr>
+        <tr>
+          <td>Ophtimus-Instruct-8B</td>
+          <td>63.85%</td>
+          <td>71.51%</td>
+          <td>72.73%</td>
+          <td>0.222</td>
+          <td>0.079</td>
+          <td>0.224</td>
+          <td><strong>0.735</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="section-divider" />
+
+  <!-- Quickstart -->
+  <h3>Quickstart</h3>
+
+  <h4>Install Dependencies</h4>
+  <pre><code>cd Ophtimus-Ophthalmology-LLM
+pip install -r requirements.txt</code></pre>
+
+  <h4>Ophtimus Inference</h4>
+  <pre><code>import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# model_name example : BaekSeungJu/Ophtimus-Instruct-8B or Ophtimus-Llama-1B or Ophtimus-Llama-3B or Ophtimus-Llama-8B
+model_name = "BaekSeungJu/Ophtimus-Instruct-8B"
+
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    torch_dtype=torch.bfloat16,
+    trust_remote_code=True,
+).to("cuda")
+
+tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
+tokenizer.pad_token = tokenizer.eos_token
+
+system_instruction = (
+    "You are an expert ophthalmologist. Please provide accurate and "
+    "medically sound answers to the user's ophthalmology-related question."
+)
+
+# Enter your questions in the list
+questions = [
+    "Please describe the symptoms and treatment of epiretinal membrane.",
+    "What's good for eyes?"
+]
+
+prompts = []
+for question in questions:
+    row_json = [
+        {"role": "system", "content": system_instruction},
+        {"role": "user", "content": question}
+    ]
+    prompt = tokenizer.apply_chat_template(row_json, add_generation_prompt=True, tokenize=False)
+    prompts.append(prompt)
+
+input_ids = tokenizer(
+    prompts,
+    padding=True,
+    return_tensors="pt",
+)["input_ids"].to("cuda")
+
+model.eval()
+with torch.no_grad():
+    outputs = model.generate(
+        input_ids,
+        max_new_tokens=1024,
+        do_sample=False,
+    )
+
+decoded = tokenizer.batch_decode(outputs, skip_special_tokens=False)
+for i, text in enumerate(decoded):
+    print(f"------------------------\nAnswer for question {i+1}:\n{text}")</code></pre>
+
+  <p class="section-text" style="margin-top: 1.5rem;">
+    For more details, visit the <a href="https://github.com/jinkimh/Ophtimus-Ophthalmology-LLM" target="_blank">GitHub repository</a>.
+  </p>
+</section>
+
+        </div>
+
+        <!-- Ophtimus-V2-TX 섹션 -->
+        <div id="ophtimus-v2-tx" class="research-content-section">
+          <h3>Ophtimus-V2-TX</h3>
+<p class="section-text">
+  To be Updated
+</p>
+
+
+        </div>
+
+        <!-- ERM Quantification 섹션 -->
+        <div id="erm-quantification" class="research-content-section">
+          <h2>SD-OCT-based Epiretinal Membrane Diagnostic Assistant System</h2>
+
+<div class="badges-container">
+  <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge" alt="Python" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/YOLO-013243?style=for-the-badge" alt="YOLO" />
+  <img src="https://img.shields.io/badge/Pillow-CC66CC?style=for-the-badge" alt="Pillow" />
+</div>
+
+<h3>Introduction</h3>
+<p class="section-text">
+  This project presents a low-cost and efficient method for detecting and quantifying Epiretinal Membranes (ERM) using Spectral-Domain Optical Coherence Tomography (SD-OCT). By applying deep learning techniques—specifically, YOLO object detection—we generate en face <strong>"ERM Projection Images"</strong> from B-scan data, enabling intuitive visualization and accurate measurement of ERM areas. The method also introduces a novel approach to quantify the association between ERM and retinal thickness, enhancing clinical decision-making. Our approach aims to bridge the diagnostic performance gap between SD-OCT and Swept-Source OCT (SS-OCT) while maintaining accessibility and reducing diagnostic burden.
+</p>
+
+<div class="image-wrapper">
+  <img src="/images/research/erm/Architecture.png" alt="ERM System Architecture" class="content-image" />
+  <p class="image-caption">
+    Overall pipeline architecture for ERM detection &amp; quantification
+  </p>
+</div>
+
+<h3>YOLO Model Evaluation</h3>
+<p class="section-text">
+  We evaluated three YOLO-based models (v5, v8, v11) for ERM detection using SD-OCT B-scan images.<br />
+  Each model was trained on two datasets (2,200 images for <strong>Full</strong>, 1,100 images for <strong>Half</strong>) and tested on 650 expert-labeled images.
+</p>
+
+<div class="table-wrapper">
+  <table class="degree-table">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Size</th>
+        <th>Params (M)</th>
+        <th>Precision</th>
+        <th>Recall</th>
+        <th>mAP@50</th>
+        <th>mAP@50:95</th>
+        <th>Dataset Size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- YOLOv5 -->
+      <tr><td rowspan="8">YOLOv5</td><td>S</td><td>7.02</td><td>0.752</td><td>0.703</td><td>0.722</td><td>0.423</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.694</td><td>0.642</td><td>0.664</td><td>0.376</td><td>Half</td></tr>
+      <tr><td>M</td><td>20.87</td><td>0.783</td><td>0.734</td><td>0.752</td><td>0.444</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.723</td><td>0.685</td><td>0.701</td><td>0.396</td><td>Half</td></tr>
+      <tr><td>L</td><td>46.14</td><td>0.813</td><td>0.762</td><td>0.784</td><td>0.463</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.745</td><td>0.704</td><td>0.726</td><td>0.414</td><td>Half</td></tr>
+      <tr><td>X</td><td>86.22</td><td>0.836</td><td>0.784</td><td>0.802</td><td>0.485</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.763</td><td>0.725</td><td>0.743</td><td>0.437</td><td>Half</td></tr>
+
+      <!-- YOLOv8 -->
+      <tr><td rowspan="8">YOLOv8</td><td>S</td><td>11.14</td><td>0.781</td><td>0.736</td><td>0.764</td><td>0.447</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.723</td><td>0.676</td><td>0.701</td><td>0.393</td><td>Half</td></tr>
+      <tr><td>M</td><td>25.86</td><td>0.813</td><td>0.762</td><td>0.791</td><td>0.466</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.748</td><td>0.705</td><td>0.724</td><td>0.412</td><td>Half</td></tr>
+      <tr><td>L</td><td>43.63</td><td>0.844</td><td>0.792</td><td>0.823</td><td>0.482</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.774</td><td>0.731</td><td>0.754</td><td>0.436</td><td>Half</td></tr>
+      <tr><td>X</td><td>68.15</td><td>0.867</td><td>0.814</td><td>0.842</td><td>0.504</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.793</td><td>0.752</td><td>0.772</td><td>0.454</td><td>Half</td></tr>
+
+      <!-- YOLOv11 -->
+      <tr><td rowspan="8">YOLOv11</td><td>S</td><td>9.43</td><td>0.804</td><td>0.752</td><td>0.783</td><td>0.468</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.746</td><td>0.692</td><td>0.714</td><td>0.417</td><td>Half</td></tr>
+      <tr><td>M</td><td>20.05</td><td>0.846</td><td>0.794</td><td>0.821</td><td>0.493</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.774</td><td>0.736</td><td>0.757</td><td>0.443</td><td>Half</td></tr>
+      <tr><td>L</td><td>25.31</td><td>0.873</td><td>0.823</td><td>0.854</td><td>0.524</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.807</td><td>0.773</td><td>0.793</td><td>0.476</td><td>Half</td></tr>
+      <tr><td>X</td><td>56.87</td><td>0.902</td><td>0.857</td><td>0.882</td><td>0.556</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.836</td><td>0.803</td><td>0.826</td><td>0.507</td><td>Half</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="section-text" style="margin-top: 1.5rem;">
+  <strong>GitHub repository:</strong>
+  <a href="https://github.com/jinkimh/SD-OCT-ERM-Quantification" target="_blank">
+    github.com/jinkimh/SD-OCT-ERM-Quantification
+  </a>
+</p>
+
+        </div>
+
+        <!-- Gait Anomaly Detection 섹션 -->
+        <div id="gait-anomaly-detection" class="research-content-section">
+          <h3>Gait Anomaly Detection</h3>
+<p class="section-text">
+  To be Updated
+</p>
+
+
+        </div>
+      </div>
     </div>
-
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('.sidebar-menu-link');
+  const submenuLinks = document.querySelectorAll('.sidebar-submenu-link');
+  const contentSections = document.querySelectorAll('.research-content-section');
+
+  // Main menu links
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetSection = this.getAttribute('data-section');
+      const menuItem = this.closest('.sidebar-menu-item');
+      
+      // If it's a submenu parent, toggle the submenu
+      if (menuItem && menuItem.classList.contains('has-submenu')) {
+        // Close other submenus
+        document.querySelectorAll('.sidebar-menu-item.has-submenu').forEach(item => {
+          if (item !== menuItem) {
+            item.classList.remove('active');
+          }
+        });
+        
+        // Toggle active state for this submenu
+        menuItem.classList.toggle('active');
+        
+        // If opening submenu and no submenu item is active, activate first submenu item
+        if (menuItem.classList.contains('active')) {
+          const activeSubmenuLink = menuItem.querySelector('.sidebar-submenu-link.active');
+          if (!activeSubmenuLink) {
+            const firstSubmenuLink = menuItem.querySelector('.sidebar-submenu-link');
+            if (firstSubmenuLink) {
+              // Remove active from all sections first
+              contentSections.forEach(s => s.classList.remove('active'));
+              // Activate first submenu
+              firstSubmenuLink.classList.add('active');
+              const firstSection = document.getElementById(firstSubmenuLink.getAttribute('data-section'));
+              if (firstSection) {
+                firstSection.classList.add('active');
+              }
+            }
+          }
+        }
+        
+        return;
+      }
+      
+      // For non-submenu items, normal behavior
+      // Close all submenus
+      document.querySelectorAll('.sidebar-menu-item.has-submenu').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Remove active class from all links and sections
+      menuLinks.forEach(l => l.classList.remove('active'));
+      submenuLinks.forEach(l => l.classList.remove('active'));
+      contentSections.forEach(s => s.classList.remove('active'));
+      
+      // Add active class to clicked link and corresponding section
+      this.classList.add('active');
+      const section = document.getElementById(targetSection);
+      if (section) {
+        section.classList.add('active');
+        // Don't scroll - let CSS handle the alignment
+        // This prevents the sidebar from moving
+      }
+    });
+  });
+
+  // Submenu links
+  submenuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetSection = this.getAttribute('data-section');
+      
+      // Remove active class from all links and sections
+      menuLinks.forEach(l => l.classList.remove('active'));
+      submenuLinks.forEach(l => l.classList.remove('active'));
+      contentSections.forEach(s => s.classList.remove('active'));
+      
+      // Add active class to clicked submenu link and corresponding section
+      this.classList.add('active');
+      // Also activate parent menu item and keep submenu open
+      const parentMenuItem = this.closest('.sidebar-menu-item');
+      if (parentMenuItem) {
+        const parentLink = parentMenuItem.querySelector('.sidebar-menu-link');
+        if (parentLink) {
+          parentLink.classList.add('active');
+        }
+        parentMenuItem.classList.add('active');
+      }
+      
+      const section = document.getElementById(targetSection);
+      if (section) {
+        section.classList.add('active');
+        // Don't scroll - let CSS handle the alignment
+        // This prevents the sidebar from moving
+      }
+    });
+  });
+
+  // Handle hash navigation on page load
+  const hash = window.location.hash;
+  if (hash) {
+    const sectionId = hash.replace('#', '');
+    const link = document.querySelector(`[data-section="${sectionId}"]`);
+    if (link) {
+      link.click();
+    }
+  } else {
+    // If no hash, show overview section by default
+    // Activate overview menu link
+    const overviewLink = document.querySelector('[data-section="overview"]');
+    if (overviewLink) {
+      overviewLink.classList.add('active');
+    }
+    // The overview section already has 'active' class in HTML
+  }
+
+  // Language tab switching for Overview section
+  const overviewLangRadios = document.querySelectorAll('input[name="overview-language"]');
+  const overviewKoContent = document.getElementById('overview-ko-content');
+  const overviewEnContent = document.getElementById('overview-en-content');
+
+  if (overviewLangRadios.length > 0 && overviewKoContent && overviewEnContent) {
+    overviewLangRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value === 'ko') {
+          overviewKoContent.style.display = 'block';
+          overviewEnContent.style.display = 'none';
+        } else if (this.value === 'en') {
+          overviewKoContent.style.display = 'none';
+          overviewEnContent.style.display = 'block';
+        }
+      });
+    });
+  }
+});
+</script>
+
 
 
 <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>

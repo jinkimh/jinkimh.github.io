@@ -4,12 +4,177 @@ title: "Patents"
 nav: patents
 ---
 
+<style>
+  .patent-certificate-section {
+    margin-bottom: 3rem;
+  }
+
+  .patent-certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .patent-certificate-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .patent-certificate-card:hover {
+    transform: translateY(-4px);
+    border-color: #1371AF;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .patent-certificate-preview {
+    display: block;
+    background: linear-gradient(180deg, #f6f6f6 0%, #dedede 100%);
+    padding: 12px;
+    aspect-ratio: 3 / 4.2;
+  }
+
+  .patent-certificate-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .patent-certificate-body {
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+  }
+
+  .patent-certificate-date {
+    color: #8cb7d3;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .patent-certificate-title {
+    color: #f4f4f4;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .patent-certificate-meta {
+    color: #c9c9c9;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .patent-certificate-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    background: #1371AF;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .patent-certificate-action:hover,
+  .patent-certificate-preview:hover,
+  .patent-certificate-preview:focus,
+  .patent-certificate-action:focus {
+    text-decoration: none;
+  }
+
+  @media (max-width: 1199px) {
+    .patent-certificate-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .patent-certificate-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 <section id="patents" class="page-section">
   <div class="container">
 
     <div class="heading text-center">
       <h2>Patents</h2>
       <p>AiX Lab 특허 현황 (등록 및 출원)</p>
+    </div>
+
+    <div class="patents-section patent-certificate-section">
+      <h3>Patent Certificates</h3>
+      <p>Click each preview to open the original patent certificate PDF.</p>
+
+      <div class="patent-certificate-grid">
+        <article class="patent-certificate-card">
+          <a class="patent-certificate-preview" href="/patents/2022-12-07_cell-count-quantification-in-anterior-eye-images.pdf" target="_blank" rel="noopener">
+            <img src="/patents/previews/2022-12-07_cell-count-quantification-in-anterior-eye-images.png" alt="Preview of the patent certificate for cell-count quantification in anterior eye images">
+          </a>
+          <div class="patent-certificate-body">
+            <p class="patent-certificate-date">2022-12-07</p>
+            <h4 class="patent-certificate-title">Cell-Count Quantification in Anterior Eye Images</h4>
+            <p class="patent-certificate-meta">Korean Patent Registration No. 10-2476472</p>
+            <a class="patent-certificate-action" href="/patents/2022-12-07_cell-count-quantification-in-anterior-eye-images.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </article>
+
+        <article class="patent-certificate-card">
+          <a class="patent-certificate-preview" href="/patents/2025-04-11_deep-learning-model-training-and-ophthalmic-diagnosis.pdf" target="_blank" rel="noopener">
+            <img src="/patents/previews/2025-04-11_deep-learning-model-training-and-ophthalmic-diagnosis.png" alt="Preview of the patent certificate for deep-learning model training and ophthalmic diagnosis">
+          </a>
+          <div class="patent-certificate-body">
+            <p class="patent-certificate-date">2025-04-11</p>
+            <h4 class="patent-certificate-title">Deep-Learning Model Training and Ophthalmic Diagnosis</h4>
+            <p class="patent-certificate-meta">Korean Patent Registration No. 10-2796505</p>
+            <a class="patent-certificate-action" href="/patents/2025-04-11_deep-learning-model-training-and-ophthalmic-diagnosis.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </article>
+
+        <article class="patent-certificate-card">
+          <a class="patent-certificate-preview" href="/patents/2025-10-15_deep-learning-model-training-and-visual-acuity-measurement.pdf" target="_blank" rel="noopener">
+            <img src="/patents/previews/2025-10-15_deep-learning-model-training-and-visual-acuity-measurement.png" alt="Preview of the patent certificate for deep-learning model training and visual-acuity measurement">
+          </a>
+          <div class="patent-certificate-body">
+            <p class="patent-certificate-date">2025-10-15</p>
+            <h4 class="patent-certificate-title">Deep-Learning Model Training and Visual-Acuity Measurement</h4>
+            <p class="patent-certificate-meta">Korean Patent Registration No. 10-2873243</p>
+            <a class="patent-certificate-action" href="/patents/2025-10-15_deep-learning-model-training-and-visual-acuity-measurement.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </article>
+
+        <article class="patent-certificate-card">
+          <a class="patent-certificate-preview" href="/patents/2026-01-23_machine-learning-model-training-and-covid-19-prodrome-detection.pdf" target="_blank" rel="noopener">
+            <img src="/patents/previews/2026-01-23_machine-learning-model-training-and-covid-19-prodrome-detection.png" alt="Preview of the patent certificate for machine-learning model training and COVID-19 prodrome detection">
+          </a>
+          <div class="patent-certificate-body">
+            <p class="patent-certificate-date">2026-01-23</p>
+            <h4 class="patent-certificate-title">Machine-Learning Model Training and COVID-19 Prodrome Detection</h4>
+            <p class="patent-certificate-meta">Korean Patent Registration No. 10-2918977</p>
+            <a class="patent-certificate-action" href="/patents/2026-01-23_machine-learning-model-training-and-covid-19-prodrome-detection.pdf" target="_blank" rel="noopener">Open PDF</a>
+          </div>
+        </article>
+      </div>
     </div>
 
     <div class="patents-section">

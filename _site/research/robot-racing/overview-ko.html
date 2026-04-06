@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; frame-src 'self' https://www.youtube.com https://www.google.com; connect-src 'self' https://formspree.io https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+   <!-- 🔥 SEO 기본 메타 태그 -->
+  <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, aix lab, ai lab 경상국립대학교, ai lab 경상대, 경상국립대학교 ai lab, 경상대 ai lab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="author" content="AiX Lab">
+
+  <title>AiX Lab @ GNU</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aix.gnu.ac.kr/research/robot-racing/overview-ko.html">
+  <meta property="og:title" content="AiX Lab @ GNU">
+  <meta property="og:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta property="og:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+  <meta property="og:site_name" content="AiX Lab @ GNU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aix.gnu.ac.kr/research/robot-racing/overview-ko.html">
+  <meta name="twitter:title" content="AiX Lab @ GNU">
+  <meta name="twitter:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="twitter:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AiX Lab",
+    "alternateName": "AiX Lab @ GNU",
+    "url": "https://aix.gnu.ac.kr",
+    "logo": "https://aix.gnu.ac.kr/images/aix_lab_logo.png",
+    "description": "AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ICT Convergence Center (601), Room 302, 501 Jinju-daero",
+      "addressLocality": "Jinju-si",
+      "addressRegion": "Gyeongsangnam-do",
+      "postalCode": "52828",
+      "addressCountry": "KR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-55-772-9174",
+      "email": "jin.kim@gnu.ac.kr",
+      "contactType": "Research Lab"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Gyeongsang National University",
+      "url": "https://www.gnu.ac.kr"
+    },
+    "sameAs": [
+      "https://jin-kim.net"
+    ]
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/da-slider.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
+
+  <!-- Logo style - 모바일 반응형은 CSS에서 처리 -->
+  <style>
+    /* 데스크톱 기본 로고 크기 (CSS에서 오버라이드됨) */
+    .navbar-brand img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+
+      <!-- Mobile toggle -->
+      <div class="navbar-header">
+        <button type="button" 
+                id="nav-toggle" 
+                class="navbar-toggle" 
+                data-toggle="collapse" 
+                data-target="#main-nav"
+                aria-label="메뉴 열기/닫기"
+                aria-expanded="false"
+                aria-controls="main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="navbar-brand logo" aria-label="AiX Lab 홈페이지">
+          <img src="/images/aix_lab_logo.png" alt="AiX Lab" loading="eager" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+
+      <div id="main-nav" class="collapse navbar-collapse" role="menubar">
+        <ul class="nav navbar-nav" id="mainNav" role="menu">
+
+          <!-- About Us -->
+          <li  role="none">
+            <a href="/about.html" role="menuitem">About Us</a>
+          </li>
+
+          <!-- Academy Portfolio 
+          <li >
+            <a href="/portfolio.html">Academy Portfolio</a>
+          </li>
+          -->
+          
+          <!-- Publication (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/publications/journals" 
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Publication 메뉴"
+               tabindex="0">
+              Publication
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Publication 하위 메뉴">
+              <li role="none">
+                <a href="/publications/journals" role="menuitem">
+                  Journals
+                </a>
+              </li>
+              <li role="none">
+                <a href="/publications/conferences" role="menuitem">
+                  Conferences
+                </a>
+              </li>
+              <li role="none">
+                <a href="/publications/korean-journals" role="menuitem">
+                  Korean Journals
+                </a>
+              </li>
+              <li role="none">
+                <a href="/publications/korean-conferences" role="menuitem">
+                  Korean Conferences
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Patents -->
+          <li  role="none">
+            <a href="/patents/" role="menuitem">Patents</a>
+          </li>
+
+          <!-- Research (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/research/" 
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Research 메뉴"
+               tabindex="0">
+              Research
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Research 하위 메뉴">
+              <li role="none">
+                <a href="/research/formal-methods" role="menuitem">
+                  Formal Methods
+                </a>
+              </li>
+              <li role="none">
+                <a href="/research/medical-ai" role="menuitem">
+                  Medical AI
+                </a>
+              </li>
+              <li role="none">
+                <a href="/research/robot-racing" role="menuitem">
+                  Robot AI
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Project -->
+          <li  role="none">
+            <a href="/projects/" role="menuitem">Project</a>
+          </li>
+
+          <!-- Team -->
+          <li  role="none">
+            <a href="/teams/" role="menuitem">Team</a>
+          </li>
+
+          <!-- Updates (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/news.html"
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Updates 메뉴"
+               tabindex="0">
+              Updates
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Updates 하위 메뉴">
+              <li role="none">
+                <a href="/news.html" role="menuitem">News</a>
+              </li>
+              <li role="none">
+                <a href="/seminars/" role="menuitem">Seminars</a>
+              </li>
+              <li role="none">
+                <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Join -->
+          <li  role="none">
+            <a href="/join.html" role="menuitem">Join</a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- Page Content -->
+<h2>RoboRacer &amp; Autonomous Driving 연구 테마</h2>
+
+<h3>1. 소형 자율주행 플랫폼(RoboRacer, 1/10-scale) 기반 알고리즘 연구</h3>
+<p class="section-text">
+  RoboRacer(F1TENTH) 차량을 활용하여 <strong>실세계 자율주행 알고리즘을 실험 가능한 형태로 축소·구현</strong>하는 연구를 수행합니다.
+</p>
+<ul class="section-text">
+  <li>SLAM, Localization, Mapping</li>
+  <li>Obstacle avoidance(Follow-The-Gap, AEB), Pure Pursuit 기반 경로 추종</li>
+  <li>최적 경로 생성(Optimal Trajectory)과 고속 레이스 주행</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h3>2. Embodied AI–World Model + 모델체킹 기반 시뮬레이션 안전성·신뢰성 연구</h3>
+<p class="section-text">
+  자율주행 에이전트가 <strong>환경과 상호작용하며 학습·추론하는 Embodied AI 환경</strong>에서,
+  <strong>World Model</strong>과 <strong>Formal Verification(모델체킹)</strong>을 결합하여 <strong>안정적이고 신뢰할 수 있는 시뮬레이션 및 주행 제어</strong>를 연구합니다.
+</p>
+<ul class="section-text">
+  <li>World Model을 통한 환경 동역학 예측 및 미래 상태 시뮬레이션</li>
+  <li>Timed Automata 기반 환경·상황 모델의 안전성 검증</li>
+  <li>모델체킹으로 도출된 제약(safety constraints)을 RL·planning에 연동</li>
+  <li>Sim-to-real 전환 시 발생할 수 있는 위험 상황 최소화</li>
+  <li>시뮬레이터 내 시나리오 생성의 안정성·일관성 강화</li>
+</ul>
+<div class="highlight-box">
+  <p class="section-text">
+    <strong>핵심 목표:</strong><br />
+    "학습 및 제어 알고리즘이 안전 제약을 위반하지 않도록 보장하는 <strong>검증 기반(verification-aware) Embodied AI 자율주행 프레임워크</strong> 개발."
+  </p>
+</div>
+
+<hr class="section-divider" />
+
+<h3>3. 시뮬레이터 기반 자율주행 학습 및 평가</h3>
+<p class="section-text">
+  실차 실험의 위험성과 비용을 줄이기 위해 <strong>Gazebo / Isaac / custom simulator</strong> 환경에서 알고리즘을 반복 검증합니다.
+</p>
+<ul class="section-text">
+  <li>RL 및 imitation learning 정책 학습</li>
+  <li>도전적 시나리오 자동 생성 및 stress-testing</li>
+  <li>World Model 기반 predictive simulation과 결합한 연속적 학습</li>
+  <li>sim-to-real 성능 격차 최소화 설계</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h3>4. Formal Verification을 적용한 안전 자율주행</h3>
+<p class="section-text">
+  자율주행 알고리즘의 <strong>안전성·신뢰성 보장을 정형 기법으로 체계화</strong>합니다.
+</p>
+<ul class="section-text">
+  <li>Timed Automata 기반 주행·충돌·제동 시나리오 모델링</li>
+  <li>충돌/제동 조건에 대한 safety property 모델체킹</li>
+  <li>Verification-guided control 및 runtime shielding 설계</li>
+  <li>안전 미준수 상황에 대한 자동 방어동작 제어</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h3>5. 경량 AI / 세계 모델(World Models)의 자율주행 적용</h3>
+<p class="section-text">
+  LLM·World Model 기술을 자율주행 환경에 맞게 <strong>경량화하고 실시간성 요구에 부합하도록 구현</strong>합니다.
+</p>
+<ul class="section-text">
+  <li>World Model 기반 환경 예측 및 미래 trajectory 샘플링</li>
+  <li>불확실성을 고려한 planning 및 제어</li>
+  <li>Multi-modal state representation 학습</li>
+</ul>
+
+<hr class="section-divider" />
+
+<h3>6. 교육·오픈소스 기반 자율주행 생태계 구축</h3>
+<p class="section-text">
+  RoboRacer Korea를 중심으로 <strong>교육–연구–경진대회</strong> 생태계를 구축합니다.
+</p>
+<ul class="section-text">
+  <li>ROS2 기반 랩 과제 및 실습 자료(Lab-06~Lab-12) 개발</li>
+  <li>초급~고급 워크숍 및 실차 실습 기반 교육 커리큘럼 운영</li>
+  <li>전국 RoboRacer 네트워크 및 오픈소스 프로젝트 활성화</li>
+</ul>
+
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!-- JS -->
+<script src="/js/modernizr-latest.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.nav.js"></script>
+<script src="/js/jquery.cslider.js"></script>
+<script src="/js/custom.js" defer></script>
+
+</body>
+</html>

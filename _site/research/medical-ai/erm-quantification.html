@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; frame-src 'self' https://www.youtube.com https://www.google.com; connect-src 'self' https://formspree.io https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+   <!-- 🔥 SEO 기본 메타 태그 -->
+  <meta name="description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="keywords" content="AiX Lab, AiXLab, AiXlab, aixlab, aix lab, ai lab 경상국립대학교, ai lab 경상대, 경상국립대학교 ai lab, 경상대 ai lab, GNU, 경상국립대학교 AiX Lab, 김진현 교수, 김진현, Medical AI, AI Safety, Autonomous Driving, RoboRacer, F1TENTH, LLM, Ophthalmology AI">
+  <meta name="author" content="AiX Lab">
+
+  <title>AiX Lab @ GNU</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aix.gnu.ac.kr/research/medical-ai/erm-quantification.html">
+  <meta property="og:title" content="AiX Lab @ GNU">
+  <meta property="og:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta property="og:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+  <meta property="og:site_name" content="AiX Lab @ GNU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://aix.gnu.ac.kr/research/medical-ai/erm-quantification.html">
+  <meta name="twitter:title" content="AiX Lab @ GNU">
+  <meta name="twitter:description" content="AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실">
+  <meta name="twitter:image" content="https://aix.gnu.ac.kr/images/aix_lab_logo.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AiX Lab",
+    "alternateName": "AiX Lab @ GNU",
+    "url": "https://aix.gnu.ac.kr",
+    "logo": "https://aix.gnu.ac.kr/images/aix_lab_logo.png",
+    "description": "AiX Lab at Gyeongsang National University — Medical AI, Autonomous Driving, AI Safety 연구실",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ICT Convergence Center (601), Room 302, 501 Jinju-daero",
+      "addressLocality": "Jinju-si",
+      "addressRegion": "Gyeongsangnam-do",
+      "postalCode": "52828",
+      "addressCountry": "KR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-55-772-9174",
+      "email": "jin.kim@gnu.ac.kr",
+      "contactType": "Research Lab"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Gyeongsang National University",
+      "url": "https://www.gnu.ac.kr"
+    },
+    "sameAs": [
+      "https://jin-kim.net"
+    ]
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/da-slider.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="/font/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="/font/css/font-awesome.min.css" rel="stylesheet"></noscript>
+
+  <!-- Logo style - 모바일 반응형은 CSS에서 처리 -->
+  <style>
+    /* 데스크톱 기본 로고 크기 (CSS에서 오버라이드됨) */
+    .navbar-brand img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="header">
+  <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+
+      <!-- Mobile toggle -->
+      <div class="navbar-header">
+        <button type="button" 
+                id="nav-toggle" 
+                class="navbar-toggle" 
+                data-toggle="collapse" 
+                data-target="#main-nav"
+                aria-label="메뉴 열기/닫기"
+                aria-expanded="false"
+                aria-controls="main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="navbar-brand logo" aria-label="AiX Lab 홈페이지">
+          <img src="/images/aix_lab_logo.png" alt="AiX Lab" loading="eager" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+
+      <div id="main-nav" class="collapse navbar-collapse" role="menubar">
+        <ul class="nav navbar-nav" id="mainNav" role="menu">
+
+          <!-- About Us -->
+          <li  role="none">
+            <a href="/about.html" role="menuitem">About Us</a>
+          </li>
+
+          <!-- Academy Portfolio 
+          <li >
+            <a href="/portfolio.html">Academy Portfolio</a>
+          </li>
+          -->
+          
+          <!-- Publication (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/publications/journals" 
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Publication 메뉴"
+               tabindex="0">
+              Publication
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Publication 하위 메뉴">
+              <li role="none">
+                <a href="/publications/journals" role="menuitem">
+                  Journals
+                </a>
+              </li>
+              <li role="none">
+                <a href="/publications/conferences" role="menuitem">
+                  Conferences
+                </a>
+              </li>
+              <li role="none">
+                <a href="/publications/korean-journals" role="menuitem">
+                  Korean Journals
+                </a>
+              </li>
+              <li role="none">
+                <a href="/publications/korean-conferences" role="menuitem">
+                  Korean Conferences
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Patents -->
+          <li  role="none">
+            <a href="/patents/" role="menuitem">Patents</a>
+          </li>
+
+          <!-- Research (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/research/" 
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Research 메뉴"
+               tabindex="0">
+              Research
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Research 하위 메뉴">
+              <li role="none">
+                <a href="/research/formal-methods" role="menuitem">
+                  Formal Methods
+                </a>
+              </li>
+              <li role="none">
+                <a href="/research/medical-ai" role="menuitem">
+                  Medical AI
+                </a>
+              </li>
+              <li role="none">
+                <a href="/research/robot-racing" role="menuitem">
+                  Robot AI
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Project -->
+          <li  role="none">
+            <a href="/projects/" role="menuitem">Project</a>
+          </li>
+
+          <!-- Team -->
+          <li  role="none">
+            <a href="/teams/" role="menuitem">Team</a>
+          </li>
+
+          <!-- Updates (Dropdown) -->
+          <li class="has-dropdown " 
+              role="none"
+              aria-haspopup="true" 
+              aria-expanded="false">
+            <a href="/news.html"
+               class="dropdown-toggle"
+               role="menuitem"
+               aria-label="Updates 메뉴"
+               tabindex="0">
+              Updates
+              <i class="fa fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown" role="menu" aria-label="Updates 하위 메뉴">
+              <li role="none">
+                <a href="/news.html" role="menuitem">News</a>
+              </li>
+              <li role="none">
+                <a href="/seminars/" role="menuitem">Seminars</a>
+              </li>
+              <li role="none">
+                <a href="/gallery/photos.html" role="menuitem">Gallery</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Join -->
+          <li  role="none">
+            <a href="/join.html" role="menuitem">Join</a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- Page Content -->
+<h2>SD-OCT-based Epiretinal Membrane Diagnostic Assistant System</h2>
+
+<div class="badges-container">
+  <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge" alt="Python" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/YOLO-013243?style=for-the-badge" alt="YOLO" />
+  <img src="https://img.shields.io/badge/Pillow-CC66CC?style=for-the-badge" alt="Pillow" />
+</div>
+
+<h3>Introduction</h3>
+<p class="section-text">
+  This project presents a low-cost and efficient method for detecting and quantifying Epiretinal Membranes (ERM) using Spectral-Domain Optical Coherence Tomography (SD-OCT). By applying deep learning techniques—specifically, YOLO object detection—we generate en face <strong>"ERM Projection Images"</strong> from B-scan data, enabling intuitive visualization and accurate measurement of ERM areas. The method also introduces a novel approach to quantify the association between ERM and retinal thickness, enhancing clinical decision-making. Our approach aims to bridge the diagnostic performance gap between SD-OCT and Swept-Source OCT (SS-OCT) while maintaining accessibility and reducing diagnostic burden.
+</p>
+
+<div class="image-wrapper">
+  <img src="/images/research/erm/Architecture.png" alt="ERM System Architecture" class="content-image" />
+  <p class="image-caption">
+    Overall pipeline architecture for ERM detection &amp; quantification
+  </p>
+</div>
+
+<h3>YOLO Model Evaluation</h3>
+<p class="section-text">
+  We evaluated three YOLO-based models (v5, v8, v11) for ERM detection using SD-OCT B-scan images.<br />
+  Each model was trained on two datasets (2,200 images for <strong>Full</strong>, 1,100 images for <strong>Half</strong>) and tested on 650 expert-labeled images.
+</p>
+
+<div class="table-wrapper">
+  <table class="degree-table">
+    <thead>
+      <tr>
+        <th>Model</th>
+        <th>Size</th>
+        <th>Params (M)</th>
+        <th>Precision</th>
+        <th>Recall</th>
+        <th>mAP@50</th>
+        <th>mAP@50:95</th>
+        <th>Dataset Size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- YOLOv5 -->
+      <tr><td rowspan="8">YOLOv5</td><td>S</td><td>7.02</td><td>0.752</td><td>0.703</td><td>0.722</td><td>0.423</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.694</td><td>0.642</td><td>0.664</td><td>0.376</td><td>Half</td></tr>
+      <tr><td>M</td><td>20.87</td><td>0.783</td><td>0.734</td><td>0.752</td><td>0.444</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.723</td><td>0.685</td><td>0.701</td><td>0.396</td><td>Half</td></tr>
+      <tr><td>L</td><td>46.14</td><td>0.813</td><td>0.762</td><td>0.784</td><td>0.463</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.745</td><td>0.704</td><td>0.726</td><td>0.414</td><td>Half</td></tr>
+      <tr><td>X</td><td>86.22</td><td>0.836</td><td>0.784</td><td>0.802</td><td>0.485</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.763</td><td>0.725</td><td>0.743</td><td>0.437</td><td>Half</td></tr>
+
+      <!-- YOLOv8 -->
+      <tr><td rowspan="8">YOLOv8</td><td>S</td><td>11.14</td><td>0.781</td><td>0.736</td><td>0.764</td><td>0.447</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.723</td><td>0.676</td><td>0.701</td><td>0.393</td><td>Half</td></tr>
+      <tr><td>M</td><td>25.86</td><td>0.813</td><td>0.762</td><td>0.791</td><td>0.466</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.748</td><td>0.705</td><td>0.724</td><td>0.412</td><td>Half</td></tr>
+      <tr><td>L</td><td>43.63</td><td>0.844</td><td>0.792</td><td>0.823</td><td>0.482</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.774</td><td>0.731</td><td>0.754</td><td>0.436</td><td>Half</td></tr>
+      <tr><td>X</td><td>68.15</td><td>0.867</td><td>0.814</td><td>0.842</td><td>0.504</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.793</td><td>0.752</td><td>0.772</td><td>0.454</td><td>Half</td></tr>
+
+      <!-- YOLOv11 -->
+      <tr><td rowspan="8">YOLOv11</td><td>S</td><td>9.43</td><td>0.804</td><td>0.752</td><td>0.783</td><td>0.468</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.746</td><td>0.692</td><td>0.714</td><td>0.417</td><td>Half</td></tr>
+      <tr><td>M</td><td>20.05</td><td>0.846</td><td>0.794</td><td>0.821</td><td>0.493</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.774</td><td>0.736</td><td>0.757</td><td>0.443</td><td>Half</td></tr>
+      <tr><td>L</td><td>25.31</td><td>0.873</td><td>0.823</td><td>0.854</td><td>0.524</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.807</td><td>0.773</td><td>0.793</td><td>0.476</td><td>Half</td></tr>
+      <tr><td>X</td><td>56.87</td><td>0.902</td><td>0.857</td><td>0.882</td><td>0.556</td><td>Full</td></tr>
+      <tr><td></td><td></td><td>0.836</td><td>0.803</td><td>0.826</td><td>0.507</td><td>Half</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="section-text" style="margin-top: 1.5rem;">
+  <strong>GitHub repository:</strong>
+  <a href="https://github.com/jinkimh/SD-OCT-ERM-Quantification" target="_blank">
+    github.com/jinkimh/SD-OCT-ERM-Quantification
+  </a>
+</p>
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!-- JS -->
+<script src="/js/modernizr-latest.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.nav.js"></script>
+<script src="/js/jquery.cslider.js"></script>
+<script src="/js/custom.js" defer></script>
+
+</body>
+</html>

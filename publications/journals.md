@@ -37,33 +37,33 @@ title: "International Journals"
 - **Kim, Jin Hyun** et al.  
   “Development of oculomics artificial intelligence for cardiovascular risk factors: A case study in fundus oculomics for HbA1c assessment and clinically relevant considerations for clinicians.”  
   *Asia-Pacific Journal of Ophthalmology*, 13(4), July 2024.  
-  Affiliation correction in progress as of 2024-11-01.
+  Affiliation correction in progress as of 2024-11-01. [[PDF]](https://doi.org/10.1016/j.apjo.2024.100095)
 
 ## 2022
 - **Kim, Jin Hyun** et al.  
   “Estimation of best corrected visual acuity based on deep neural network.”  
-  *Scientific Reports*, 12(1), October 2022.
+  *Scientific Reports*, 12(1), October 2022. [[PDF]](https://doi.org/10.1038/s41598-022-22586-2)
 
 - **Jin Hyun Kim** et al.  
   “Machine learning-based optimization of pre-symptomatic COVID-19 detection through smartwatch.”  
-  *Scientific Reports*, 12(1), May 2022.
+  *Scientific Reports*, 12(1), May 2022. [[PDF]](https://doi.org/10.1038/s41598-022-11329-y)
 
 - **Kim, Jin Hyun** et al.  
   “Asymmetry between right and left fundus images identified using convolutional neural networks.”  
-  *Scientific Reports*, 12(1), April 2022. Corrigendum noted 2022-10-25.
+  *Scientific Reports*, 12(1), April 2022. Corrigendum noted 2022-10-25. [[PDF]](https://doi.org/10.1038/s41598-021-04323-3)
 
 - **Jin Hyun Kim** et al.  
   “A deep learning ensemble method to visual acuity measurement using fundus images.”  
-  *Applied Sciences*, 12(6), March 2022.
+  *Applied Sciences*, 12(6), March 2022. [[PDF]](https://doi.org/10.3390/app12063190)
 
 ## 2021
 - **Kim, Jin Hyun** et al.  
   “Development of fully automated anterior chamber cell analysis based on image software.”  
-  *Scientific Reports*, 11(1), May 2021.
+  *Scientific Reports*, 11(1), May 2021. [[PDF]](https://doi.org/10.1038/s41598-021-89794-0)
 
 - **Kim, Jin Hyun** et al.  
   “Model checking resiliency and sustainability of in-vehicle network for real-time authenticity.”  
-  *Applied Sciences*, 11(3), February 2021.
+  *Applied Sciences*, 11(3), February 2021. [[PDF]](https://doi.org/10.3390/app11031068)
 
 ## 2016
 - Abdeldjalil Boudjadar, Alexandre David, **Jin Hyun Kim**, Kim G. Larsen, Marius Mikucionis, Ulrik Nyman, and Arne Skou.  
